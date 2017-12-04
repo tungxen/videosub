@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+	<meta charset="utf-8" />
+	<title>Cross Browser Video Player - Mozilla</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/styles.css" />
+	
+</head>
+<body>
+
+	<h1>Tears of Steel</h1>
+	<figure id="videoContainer" data-fullscreen="false">
+		<video id="video" controls preload="metadata" poster="img/poster.jpg">
+			<source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
+			<source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+			<source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+			<!-- Offer download -->
+			<a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+		</video>
+		<ul id="video-controls" class="controls">
+			<li><button id="playpause" type="button">Play/Pause</button></li>
+			<li><button id="stop" type="button">Stop</button></li>
+			<li class="progress">
+				<progress id="progress" value="0" min="0">
+					<span id="progress-bar"></span>
+				</progress>
+			</li>
+			<li><button id="mute" type="button">Mute/Unmute</button></li>
+			<li><button id="volinc" type="button">Vol+</button></li>
+			<li><button id="voldec" type="button">Vol-</button></li>
+			<li><button id="fs" type="button">Fullscreen</button></li>
+		</ul>
+	</figure>
+	<script src="js/video-player.js"></script>
+</body>
+</html>
