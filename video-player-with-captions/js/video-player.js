@@ -154,7 +154,6 @@
 				video.textTracks[i].mode = 'hidden';
 				textTracks[video.textTracks[i].language] = video.textTracks[i];
 			}
-				console.log(textTracks);
 
 			// Creates and returns a menu item for the subtitles language menu
 			var subtitleMenuButtons = [];
@@ -192,14 +191,14 @@
 			// Go through each one and build a small clickable list, and when each item is clicked on, set its mode to be "showing" and the others to be "hidden"
 			var subtitlesMenu;
 			if (video.textTracks) {
-				var df = document.createDocumentFragment();
-				var subtitlesMenu = df.appendChild(document.createElement('ul'));
-				subtitlesMenu.className = 'subtitles-menu';
-				subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-				for (var i = 0; i < video.textTracks.length; i++) {
-					subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
-				}
-				videoContainer.appendChild(subtitlesMenu);
+				// var df = document.createDocumentFragment();
+				// var subtitlesMenu = df.appendChild(document.createElement('ul'));
+				// subtitlesMenu.className = 'subtitles-menu';
+				// subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
+				// for (var i = 0; i < video.textTracks.length; i++) {
+				// 	subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
+				// }
+				// videoContainer.appendChild(subtitlesMenu);
 			}
 			subtitles.addEventListener('click', function(e) {
 				if (subtitlesMenu) {
@@ -208,23 +207,23 @@
 			});
 
 			// The Media API has no 'stop()' function, so pause the video and reset its time and the progress bar
-			stop.addEventListener('click', function(e) {
-				video.pause();
-				video.currentTime = 0;
-				progress.value = 0;
-				// Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
-				changeButtonState('playpause');
-			});
+			// stop.addEventListener('click', function(e) {
+			// 	video.pause();
+			// 	video.currentTime = 0;
+			// 	progress.value = 0;
+			// 	// Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
+			// 	changeButtonState('playpause');
+			// });
 			mute.addEventListener('click', function(e) {
 				video.muted = !video.muted;
 				changeButtonState('mute');
 			});
-			volinc.addEventListener('click', function(e) {
-				alterVolume('+');
-			});
-			voldec.addEventListener('click', function(e) {
-				alterVolume('-');
-			});
+			// volinc.addEventListener('click', function(e) {
+			// 	alterVolume('+');
+			// });
+			// voldec.addEventListener('click', function(e) {
+			// 	alterVolume('-');
+			// });
 			fs.addEventListener('click', function(e) {
 				handleFullscreen();
 			});
