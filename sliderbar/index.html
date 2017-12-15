@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+	<meta charset="utf-8" />
+	<title>Cross Browser Video Player - Mozilla</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/styles.css" />
+	
+</head>
+<body>
+	<div id="stage-container">
+	  
+	  <div class="progress">
+	    <div id="progress-value">0</div>
+	  </div>
+	  
+	  <svg id="stage">
+
+	    <g id="slider-group">
+	      <rect id="slider-inner" />
+
+	      <g id="track-group">
+	        <rect id="track-inner" />
+	        <rect id="track-fill" />
+	      </g>
+
+	      <g id="handle-group">
+	        <circle id="handle-inner" />        
+	        <!--<circle id="handle-clone" />-->
+	      </g>      
+	    </g>    
+	  </svg>
+	</div>
+
+	<script src="./app.js"></script>
+</body>
+</html>

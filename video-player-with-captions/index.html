@@ -29,13 +29,24 @@
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M8 8h20v48h-20zM36 8h20v48h-20z' fill='green' %3E%3C/path%3E %3C/svg%3E");
 			background-repeat: no-repeat;
 		}
+		video::cue {
+			background-color: transparent;
+		    color: yellow;
+    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    		/*text-shadow:2px 2px 0 #aaa;*/
+		    /*color: red; */
+		    font-size: 19px;
+		}
+	</style>
+	<style id="stylehead" type="text/css">
+		
 	</style>
 </head>
 <body>
-	<div id="videoContainerFull" style="display: inline-block; width: 640px">
+	<div id="videoContainerFull" style="display: inline-block;position:relative; width: 640px">
 		<div id="videoContainer" style="position: relative;" data-fullscreen="false">
-			<video id="video" controls preload="metadata">
-				<source src="video/tung.mp4" type="video/mp4">
+			<video data="" id="video" width="100%" controls preload="metadata">
+				<!-- <source src="video/tung.mp4" type="video/mp4"> -->
 				<source src="video/sintel-short.mp4" type="video/mp4">
 				<source src="video/sintel-short.webm" type="video/webm">
 				<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default>
@@ -45,15 +56,17 @@
 			<div id="video-controls-inside" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
 				<table style="width: 100%;">
 					<tr>
-						<td style="width:40px">
-							<div style="width: 20px; height: 20px" id="playpause" type="button" data-state="play">
-							</div>
-						</td>
 						<td>
-							<div class="progress" >
-								<progress id="progress" value="0" min="0" style="width: 100%">
-									<span id="progress-bar"></span>
-								</progress>
+							<div id="svgprogress" onmousemove="(flag==true)?changeWidth(event):''"
+							onmouseup="flag = false" onmouseleave="flag=false" 
+							onmousedown="flag = true;changeWidth(event)">
+								<svg height="20" width="100%">
+								    <line id="line1" x1="0" y1="8" x2="100%" y2="8"
+								    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
+								    <line id="line2" x1="0" y1="8" x2="0%" y2="8"
+								    	style="stroke:rgb(255,0,0);stroke-width:2" />
+								  <circle id="line3" cx="0%" cy="8" r="3" fill="red" />
+								</svg>
 							</div>
 						</td>
 						<td style="width:100px">
@@ -66,31 +79,35 @@
 				</table>
 			</div>
 		</div>
-		<div id="video-controls" class="controls" data-state="hidden">
+		<div id="videoControls" class="controls" data-state="hidden">
+			<button id="playpause" type="button" data-state="play">play</button>
+			<button id="stop" type="button" data-state="stop">stop</button>
 			<button id="mute" type="button" data-state="mute">Mute</button>
-			<button id="playpause" type="button" data-state="play">tat den</button>
-			<button id="playpause" type="button" data-state="play">phong to</button>
-			<select id="line-sub">
-				<option value="1">tắt</option>
-				<option value="6">nhật</option>
+  			<input style="width: 50px" type="range" step="0.1" min="0" max="1" value="1" id="rangemute">
+			<button id="turnlight" type="button" data-state="off">tat den</button>
+			<button id="zoomvd" type="button" data-state="-">phong to</button>
+			<select id="listsub">
 			</select>
-			<select id="line-sub">
-				<option value="1">ở trên</option>
+			<select id="linesub">
+				<option value="0">ở trên</option>
 				<option value="6">giữa</option>
 				<option value="12">dưới</option>
 			</select>
 			<select id="fontsizesub">
-				<option value="8">8</option>
-				<option value="10">10</option>
-				<option value="12">12</option>
-				<option value="14">14</option>
+				<option value="13">13</option>
+				<option value="16">16</option>
+				<option selected="selected" value="19">19</option>
+				<option value="22">22</option>
+				<option value="25">25</option>
+				<option value="28">28</option>
 			</select>
 			<select id="colorsub">
-				<option value="black">black</option>
+				<option value="yellow">yellow</option>
+				<option value="white">white</option>
 				<option value="blue">blue</option>
 				<option value="red">red</option>
 			</select>
-			<input id="timelatesub" type="number" step="0.5" value="0" />
+			<input id="timelatesub" type="number" step="1" value="0" />
 			<button id="subtitles" type="button" data-state="subtitles">huong dan</button>
 		</div>
 	</div>

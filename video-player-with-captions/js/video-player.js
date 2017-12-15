@@ -9,7 +9,7 @@
 		var textTracks = {};
 		var videoContainer = document.getElementById('videoContainer');
 		var video = document.getElementById('video');
-		var videoControls = document.getElementById('video-controls');
+		var videoControls = document.getElementById('videoControls');
 
 		// Hide the default controls
 		video.controls = false;
@@ -23,20 +23,32 @@
 		var mute = document.getElementById('mute');
 		var volinc = document.getElementById('volinc');
 		var voldec = document.getElementById('voldec');
-		var progress = document.getElementById('progress');
-		var progressBar = document.getElementById('progress-bar');
 		var fullscreen = document.getElementById('fs');
 		var subtitles = document.getElementById('subtitles');
-		var linesub = document.getElementById('line-sub');
+		var linesub = document.getElementById('linesub');
 		var timelatesub = document.getElementById('timelatesub');
 		var fontsizesub = document.getElementById('fontsizesub');
 	    var curtimetext = document.getElementById("curtimetext");
 	    var durtimetext = document.getElementById("durtimetext");
+	    var rangemute = document.getElementById("rangemute");
+	    var turnlight = document.getElementById("turnlight");
+	    var zoomvd = document.getElementById("zoomvd");
+	    var listsub = document.getElementById("listsub");
+	    var colorsub = document.getElementById("colorsub");
 
-		// If the browser doesn't support the progress element, set its state for some different styling
-		var supportsProgress = (document.createElement('progress').max !== undefined);
-		if (!supportsProgress) progress.setAttribute('data-state', 'fake');
 
+		flag= false;
+		var svgprogress = document.getElementById('svgprogress');
+		window.changeWidth = function (ev) {
+			var left = svgprogress.getBoundingClientRect().left;
+			var width = ev.pageX - left;
+		    var percent = width * 100/svgprogress.offsetWidth;
+			document.getElementById('line2').setAttribute("x2", ""+percent+"%");
+			document.getElementById('line3').setAttribute("cx",""+percent+"%");
+
+			var pos = (ev.pageX  - left) / svgprogress.offsetWidth;
+				video.currentTime = pos * video.duration;
+		}
 		// Check if the browser supports the Fullscreen API
 		var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
 		// If the browser doesn't support the Fulscreen API then hide the fullscreen button
@@ -46,14 +58,9 @@
 
 		// Check the volume
 		var checkVolume = function(dir) {
-			if (dir) {
-				var currentVolume = Math.floor(video.volume * 10) / 10;
-				if (dir === '+') {
-					if (currentVolume < 1) video.volume += 0.1;
-				}
-				else if (dir === '-') {
-					if (currentVolume > 0) video.volume -= 0.1;
-				}
+			if (dir || dir === 0) {
+				currentVolume = dir;
+				video.volume = dir;
 				// If the volume has been turned off, also set it as muted
 				// Note: can only do this with the custom control set as when the 'volumechange' event is raised, there is no way to know if it was via a volume or a mute change
 				if (currentVolume <= 0) video.muted = true;
@@ -112,7 +119,7 @@
 		if (document.addEventListener) {
 			// Wait for the video's meta data to be loaded, then set the progress bar's max value to the duration of the video
 			video.addEventListener('loadedmetadata', function() {
-				progress.setAttribute('max', video.duration);
+
 			});
 
 			// Changes the button state of certain button's so the correct visuals can be displayed with CSS
@@ -131,7 +138,6 @@
 					mute.setAttribute('data-state', video.muted ? 'unmute' : 'mute');
 				}
 			}
-
 			// Add event listeners for video specific events
 			video.addEventListener('play', function() {
 				changeButtonState('playpause');
@@ -141,7 +147,55 @@
 			}, false);
 			video.addEventListener('volumechange', function() {
 				checkVolume();
+			}, false);		
+			video.addEventListener('click', function(e) {
+				if (video.paused || video.ended) video.play();
+				else video.pause();
+			});	
+			rangemute.addEventListener('change', function() {
+				checkVolume(this.value);
+			}, false);	
+			turnlight.addEventListener('click', function(e) {
+				if (this.getAttribute('data-state') == 'off') {
+					var div = document.createElement('div');
+					div.setAttribute('style', 'position: fixed;top:0;left:0;right:0;bottom:0;background-color:black;opacity:0.97;');
+					div.setAttribute('onclick', 'turnOfLight(this)');
+					div.id = "blocktv";
+					document.body.appendChild(div);
+					videoContainerFull.style.zIndex = 100;
+					videoControls.style.display = 'none';
+					this.setAttribute('data-state', 'on');
+				} else {
+					// var el = document.getElementById('blocktv');
+					// el.parentNode.removeChild(el);
+				}
+			});	
+			zoomvd.addEventListener('click', function() {
+				if (this.getAttribute('data-state') == '-') {
+					videoContainerFull.style.width = '854px';
+					videoContainerFull.style.position = 'fixed';
+					videoContainerFull.style.left = '0';
+					videoContainerFull.style.right = '0';
+					videoContainerFull.style.margin = 'auto';
+					this.setAttribute('data-state', '+');
+					turnlight.click();
+				} else {
+					videoContainerFull.style.width = '640px';
+					videoContainerFull.style.position = 'auto';
+					videoContainerFull.style.left = 'auto';
+					videoContainerFull.style.right = 'auto';
+					videoContainerFull.style.margin = 'auto';
+					this.setAttribute('data-state', '-');
+				}
 			}, false);
+
+			// The Media API has no 'stop()' function, so pause the video and reset its time and the progress bar
+			stop.addEventListener('click', function(e) {
+				video.pause();
+				video.currentTime = 0;
+				// Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
+				changeButtonState('playpause');
+			});
 
 			// Add events for all buttons			
 			playpause.addEventListener('click', function(e) {
@@ -158,47 +212,47 @@
 			// Creates and returns a menu item for the subtitles language menu
 			var subtitleMenuButtons = [];
 			var createMenuItem = function(id, lang, label) {
-				var listItem = document.createElement('li');
-				var button = listItem.appendChild(document.createElement('button'));
+				var button = document.createElement('option');
+				//var button = listItem.appendChild(document.createElement('button'));
 				button.setAttribute('id', id);
 				button.className = 'subtitles-button';
 				if (lang.length > 0) button.setAttribute('lang', lang);
 				button.value = label;
 				button.setAttribute('data-state', 'inactive');
 				button.appendChild(document.createTextNode(label));
-				button.addEventListener('click', function(e) {
-					// Set all buttons to inactive
-					subtitleMenuButtons.map(function(v, i, a) {
-						subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
-					});
-					// Find the language to activate
-					var lang = this.getAttribute('lang');
-					for (var i = 0; i < video.textTracks.length; i++) {
-						// For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-						if (video.textTracks[i].language == lang) {
-							video.textTracks[i].mode = 'showing';
-							this.setAttribute('data-state', 'active');
-						}
-						else {
-							video.textTracks[i].mode = 'hidden';
-						}
-					}
-					subtitlesMenu.style.display = 'none';
-				});
+				// button.addEventListener('click', function(e) {
+				// 	// Set all buttons to inactive
+				// 	subtitleMenuButtons.map(function(v, i, a) {
+				// 		subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
+				// 	});
+				// 	// Find the language to activate
+				// 	var lang = this.getAttribute('lang');
+				// 	for (var i = 0; i < video.textTracks.length; i++) {
+				// 		// For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+				// 		if (video.textTracks[i].language == lang) {
+				// 			video.textTracks[i].mode = 'showing';
+				// 			this.setAttribute('data-state', 'active');
+				// 		}
+				// 		else {
+				// 			video.textTracks[i].mode = 'hidden';
+				// 		}
+				// 	}
+				// 	subtitlesMenu.style.display = 'none';
+				// });
 				subtitleMenuButtons.push(button);
-				return listItem;
+				return button;
 			}
 			// Go through each one and build a small clickable list, and when each item is clicked on, set its mode to be "showing" and the others to be "hidden"
 			var subtitlesMenu;
 			if (video.textTracks) {
-				// var df = document.createDocumentFragment();
-				// var subtitlesMenu = df.appendChild(document.createElement('ul'));
-				// subtitlesMenu.className = 'subtitles-menu';
-				// subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-				// for (var i = 0; i < video.textTracks.length; i++) {
-				// 	subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
-				// }
-				// videoContainer.appendChild(subtitlesMenu);
+				//var df = document.createDocumentFragment();
+				//var subtitlesMenu = df.appendChild(document.createElement('option'));
+				listsub.className = 'subtitles-menu';
+				listsub.appendChild(createMenuItem('subtitles-off', '', 'Off'));
+				for (var i = 0; i < video.textTracks.length; i++) {
+					listsub.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
+				}
+				//videoContainer.appendChild(subtitlesMenu);
 			}
 			subtitles.addEventListener('click', function(e) {
 				if (subtitlesMenu) {
@@ -206,42 +260,24 @@
 				}
 			});
 
-			// The Media API has no 'stop()' function, so pause the video and reset its time and the progress bar
-			// stop.addEventListener('click', function(e) {
-			// 	video.pause();
-			// 	video.currentTime = 0;
-			// 	progress.value = 0;
-			// 	// Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
-			// 	changeButtonState('playpause');
-			// });
 			mute.addEventListener('click', function(e) {
 				video.muted = !video.muted;
 				changeButtonState('mute');
 			});
-			// volinc.addEventListener('click', function(e) {
-			// 	alterVolume('+');
-			// });
-			// voldec.addEventListener('click', function(e) {
-			// 	alterVolume('-');
-			// });
+
 			fs.addEventListener('click', function(e) {
 				handleFullscreen();
 			});
 
 			// As the video is playing, update the progress bar
 			video.addEventListener('timeupdate', function() {
-				// For mobile browsers, ensure that the progress element's max attribute is set
-				if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
-				progress.value = video.currentTime;
-				progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
-				seektimeupdate();
-			});
 
-			// React to the user clicking within the progress bar
-			progress.addEventListener('click', function(e) {
-				// Also need to take the parents into account here as .controls and figure now have position:relative
-				var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft + this.offsetParent.offsetParent.offsetLeft)) / this.offsetWidth;
-				video.currentTime = pos * video.duration;
+	    		
+			    var percent = video.currentTime * 100 / video.duration;
+				document.getElementById('line2').setAttribute("x2", ""+percent+"%");
+				document.getElementById('line3').setAttribute("cx",""+percent+"%");
+
+				seektimeupdate();
 			});
 
 			// Listen for fullscreen change events (from other controls, e.g. right clicking on the video itself)
@@ -258,9 +294,29 @@
 				setFullscreenData(!!document.msFullscreenElement);
 			});
 
+			listsub.addEventListener('change', function(e) {
+				// Set all buttons to inactive
+				subtitleMenuButtons.map(function(v, i, a) {
+					subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
+				});
+				// Find the language to activate
+				var el = this.options[this.selectedIndex];
+				var lang = el.getAttribute('lang');
+				for (var i = 0; i < video.textTracks.length; i++) {
+					// For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+					if (video.textTracks[i].language == lang) {
+						video.textTracks[i].mode = 'showing';
+						el.setAttribute('data-state', 'active');
+					}
+					else {
+						video.textTracks[i].mode = 'hidden';
+					}
+				}
+				//subtitlesMenu.style.display = 'none';
+			});
 			// Add events for all buttons			
 			linesub.addEventListener('change', function(e) {
-				var activelang = document.querySelector(".subtitles-menu button[data-state='active']").lang;
+				var activelang = document.querySelector(".subtitles-menu option[data-state='active']").lang;
 				window.track = textTracks[activelang];
 				var linenymber = parseInt(this.value);
 				for (var i = 0; i < track.cues.length; i++) {
@@ -270,10 +326,9 @@
 				window.track.mode = 'showing';
 			}); 
 			timelatesub.addEventListener('change', function(e) {
-				var activelang = document.querySelector(".subtitles-menu button[data-state='active']").lang;
+				var activelang = document.querySelector(".subtitles-menu option[data-state='active']").lang;
 				window.track = textTracks[activelang];
 				var time = parseFloat(this.value);
-				console.log(time);
 				for (var i = 0; i < track.cues.length; i++) {
 					track.cues[i].startTime = track.cues[i].startTime + time;
 					track.cues[i].endTime = track.cues[i].endTime + time;
@@ -282,16 +337,12 @@
 				window.track.mode = 'showing';
 			});	
 			fontsizesub.addEventListener('change', function(e) {
-				var activelang = document.querySelector(".subtitles-menu button[data-state='active']").lang;
-				window.track = textTracks[activelang];
-				var time = parseFloat(this.value);
-				console.log(time);
-				for (var i = 0; i < track.cues.length; i++) {
-					track.cues[i].startTime = track.cues[i].startTime + time;
-					track.cues[i].endTime = track.cues[i].endTime + time;
-				}
-				window.track.mode = 'hidden';
-				window.track.mode = 'showing';
+				document.getElementById('stylehead').innerHTML = 'video::cue{color:' + 
+					colorsub.value + '; font-size:' + fontsizesub.value + 'px;}';
+			});	
+			colorsub.addEventListener('change', function(e) {
+				document.getElementById('stylehead').innerHTML = 'video::cue{color:' + 
+					colorsub.value + '; font-size:' + fontsizesub.value + 'px;}';
 			});	
 		}
 	 }
@@ -312,3 +363,13 @@
 	    durtimetext.innerHTML = durmins+":"+dursecs;
 	}
  })();
+
+	function turnOfLight(el){
+		videoControls.style.display = "block";
+		turnlight.setAttribute("data-state", "off");
+		el.parentNode.removeChild(el);
+		videoContainerFull.style.zIndex = "auto";
+		if (zoomvd.getAttribute('data-state') == '+') {
+			zoomvd.click();
+		}
+	}
