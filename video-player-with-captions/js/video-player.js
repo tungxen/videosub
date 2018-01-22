@@ -1,7 +1,6 @@
+var hide = false;
 (function () {
 	//'use strict';
-
-	// Does the browser actually support the video element?
 	var supportsVideo = !!document.createElement('video').canPlayType;
 
 	if (supportsVideo) {
@@ -9,15 +8,9 @@
 		var textTracks = {};
 		var videoContainer = document.getElementById('videoContainer');
 		var video = document.getElementById('video');
-		var videoControls = document.getElementById('videoControls');
-
-		// Hide the default controls
 		video.controls = false;
-
-		// Display the user defined video controls
+		var videoControls = document.getElementById('videoControls');
 		videoControls.setAttribute('data-state', 'visible');
-
-		// Obtain handles to buttons and other elements
 		var playpause = document.getElementById('playpause');
 		var stop = document.getElementById('stop');
 		var mute = document.getElementById('mute');
@@ -152,6 +145,17 @@
 				if (video.paused || video.ended) video.play();
 				else video.pause();
 			});	
+			videoContainer.addEventListener('mousemove', function(e) {
+				if (hide) {
+					videocontrolsinside.style.display = 'block';
+					hide = false;
+					clearTimeout(idtimeout);
+					idtimeout = setTimeout( function(){
+						videocontrolsinside.style.display = 'none';
+						hide = true;
+					}, 3000);
+				}
+			});	
 			rangemute.addEventListener('change', function() {
 				checkVolume(this.value);
 			}, false);	
@@ -159,9 +163,17 @@
 				if (this.getAttribute('data-state') == 'off') {
 					var div = document.createElement('div');
 					div.setAttribute('style', 'position: fixed;top:0;left:0;right:0;bottom:0;background-color:black;opacity:0.97;');
-					div.setAttribute('onclick', 'turnOfLight(this)');
 					div.id = "blocktv";
 					document.body.appendChild(div);
+					div.addEventListener('click', function () {
+						videoControls.style.display = "block";
+						turnlight.setAttribute("data-state", "off");
+						this.parentNode.removeChild(this);
+						videoContainerFull.style.zIndex = "auto";
+						if (zoomvd.getAttribute('data-state') == '+') {
+							zoomvd.click();
+						}
+					});
 					videoContainerFull.style.zIndex = 100;
 					videoControls.style.display = 'none';
 					this.setAttribute('data-state', 'on');
@@ -220,25 +232,6 @@
 				button.value = label;
 				button.setAttribute('data-state', 'inactive');
 				button.appendChild(document.createTextNode(label));
-				// button.addEventListener('click', function(e) {
-				// 	// Set all buttons to inactive
-				// 	subtitleMenuButtons.map(function(v, i, a) {
-				// 		subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
-				// 	});
-				// 	// Find the language to activate
-				// 	var lang = this.getAttribute('lang');
-				// 	for (var i = 0; i < video.textTracks.length; i++) {
-				// 		// For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-				// 		if (video.textTracks[i].language == lang) {
-				// 			video.textTracks[i].mode = 'showing';
-				// 			this.setAttribute('data-state', 'active');
-				// 		}
-				// 		else {
-				// 			video.textTracks[i].mode = 'hidden';
-				// 		}
-				// 	}
-				// 	subtitlesMenu.style.display = 'none';
-				// });
 				subtitleMenuButtons.push(button);
 				return button;
 			}
@@ -271,8 +264,6 @@
 
 			// As the video is playing, update the progress bar
 			video.addEventListener('timeupdate', function() {
-
-	    		
 			    var percent = video.currentTime * 100 / video.duration;
 				document.getElementById('line2').setAttribute("x2", ""+percent+"%");
 				document.getElementById('line3').setAttribute("cx",""+percent+"%");
@@ -347,6 +338,10 @@
 		}
 	 }
 
+	 function setColor (color) {
+	 	
+
+	 }
 
 	function seektimeupdate(){
 	    var nt = video.currentTime * (100 / video.duration);
@@ -364,12 +359,4 @@
 	}
  })();
 
-	function turnOfLight(el){
-		videoControls.style.display = "block";
-		turnlight.setAttribute("data-state", "off");
-		el.parentNode.removeChild(el);
-		videoContainerFull.style.zIndex = "auto";
-		if (zoomvd.getAttribute('data-state') == '+') {
-			zoomvd.click();
-		}
-	}
+idtimeout = setTimeout(function(){ videocontrolsinside.style.display = 'none'; hide = true;}, 3000);

@@ -37,13 +37,33 @@
 		    /*color: red; */
 		    font-size: 19px;
 		}
+		#svgprogress[data-state="red"] .lineload{
+			stroke:red;
+			stroke-width:2;
+		}
+		#svgprogress[data-state="red"] .linecircle{
+			fill:red; 
+		}
+		#svgprogress[data-state="blue"] .lineload{
+			stroke:#0099FF;
+			stroke-width:2;
+		}
+		#svgprogress[data-state="blue"] .linecircle{
+			fill:#0099FF; 
+		}
+		#mute {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM16.828 13.172c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c0.781 0.781 0.781 2.047 0 2.828-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.414 0c1.562-1.562 1.562-4.095 0-5.657zM19.657 10.343c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c2.343 2.343 2.343 6.142 0 8.485-0.39 0.391-0.39 1.024 0 1.414s1.024 0.39 1.414 0c3.124-3.124 3.124-8.19 0-11.314zM22.485 7.515c-0.391-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c3.905 3.905 3.905 10.237 0 14.142-0.39 0.391-0.39 1.024 0 1.414s1.024 0.391 1.414 0c4.686-4.686 4.686-12.284 0-16.971z'%3E%3C/path%3E%3C/svg%3E ");
+			/*background-size: 100% 100%;*/
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		}
 	</style>
 	<style id="stylehead" type="text/css">
 		
 	</style>
 </head>
 <body>
-	<div id="videoContainerFull" style="display: inline-block;position:relative; width: 640px">
+	<div id="videoContainerFull" style="display: inline-block;position:relative; width: 100%">
 		<div id="videoContainer" style="position: relative;" data-fullscreen="false">
 			<video data="" id="video" width="100%" controls preload="metadata">
 				<!-- <source src="video/tung.mp4" type="video/mp4"> -->
@@ -53,19 +73,18 @@
 				<track label="Deutsch" kind="subtitles" srclang="de" src="subtitles/vtt/sintel-de.vtt">
 				<track label="Español" kind="subtitles" srclang="es" src="subtitles/vtt/sintel-es.vtt">
 			</video>
-			<div id="video-controls-inside" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
+			<div id="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
 				<table style="width: 100%;">
 					<tr>
 						<td>
-							<div id="svgprogress" onmousemove="(flag==true)?changeWidth(event):''"
+							<div id="svgprogress" data-state="red" onmousemove="(flag==true)?changeWidth(event):''"
 							onmouseup="flag = false" onmouseleave="flag=false" 
 							onmousedown="flag = true;changeWidth(event)">
 								<svg height="20" width="100%">
-								    <line id="line1" x1="0" y1="8" x2="100%" y2="8"
+								    <line class="linetotal" id="line1" x1="0" y1="8" x2="100%" y2="8"
 								    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
-								    <line id="line2" x1="0" y1="8" x2="0%" y2="8"
-								    	style="stroke:rgb(255,0,0);stroke-width:2" />
-								  <circle id="line3" cx="0%" cy="8" r="3" fill="red" />
+								    <line class="lineload" id="line2" x1="0" y1="8" x2="0%" y2="8" />
+								  <circle class="linecircle" id="line3" cx="0%" cy="8" r="3" />
 								</svg>
 							</div>
 						</td>
@@ -80,12 +99,20 @@
 			</div>
 		</div>
 		<div id="videoControls" class="controls" data-state="hidden">
-			<button id="playpause" type="button" data-state="play">play</button>
-			<button id="stop" type="button" data-state="stop">stop</button>
-			<button id="mute" type="button" data-state="mute">Mute</button>
+			<button style="display: none;" id="playpause" type="button" data-state="play">play</button>
+			<button style="display: none" id="stop" type="button" data-state="stop">stop</button>
+			<div style="width: 28px; height: 28px; display: inline-block;" id="mute" type="button" data-state="mute"></div>
+			<div style="display: inline-block; width: 50px">
+				<svg height="20" width="100%">
+				    <line x1="0" y1="8" x2="100%" y2="8"
+				    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
+				    <line x1="0" y1="8" x2="0%" y2="8" />
+				  <circle cx="0%" cy="8" r="3" />
+				</svg>
+			</div>
   			<input style="width: 50px" type="range" step="0.1" min="0" max="1" value="1" id="rangemute">
 			<button id="turnlight" type="button" data-state="off">tat den</button>
-			<button id="zoomvd" type="button" data-state="-">phong to</button>
+			<button style="display: none" id="zoomvd" type="button" data-state="-">phong to</button>
 			<select id="listsub">
 			</select>
 			<select id="linesub">
@@ -107,8 +134,10 @@
 				<option value="blue">blue</option>
 				<option value="red">red</option>
 			</select>
-			<input id="timelatesub" type="number" step="1" value="0" />
-			<button id="subtitles" type="button" data-state="subtitles">huong dan</button>
+		    <button class='qtyminus'>-sub</button>
+			<input id="timelatesub" readonly="readonly" type="number" value="0" style="width:30px" />
+		    <button class='qtyplus'>+sub</button>
+			<button style="display: none" id="subtitles" type="button" data-state="subtitles">huong dan</button>
 		</div>
 	</div>
 	<script src="js/video-player.js"></script>
