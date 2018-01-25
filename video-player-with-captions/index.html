@@ -5,31 +5,34 @@
 	<title>Styled Video Player with Subtitles - Mozilla</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv-printshiv.min.js" type="text/javascript"></script><![endif]-->
 	<style type="text/css">
-		#videoContainer video::-webkit-media-controls {
+		.videoContainerFull .videoContainer video::-webkit-media-controls {
 			display:none !important;
 		}
-		#videoContainer[data-fullscreen=true] #video-controls-inside {
+		.videoContainerFull .videoContainer[data-fullscreen=true] #video-controls-inside {
 			z-index: 2147483647;
 		}
-		#fs[data-state="go-fullscreen"] {
+		.videoContainerFull .fs[data-state="go-fullscreen"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='green'%3E%3C/path%3E %3C/svg%3E");
 			background-repeat: no-repeat;
 		}
-		#fs[data-state="cancel-fullscreen"] {
+		.videoContainerFull .fs[data-state="cancel-fullscreen"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-shrink2' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z' fill='green' %3E%3C/path%3E %3C/svg%3E");
 			background-repeat: no-repeat;
 		}
-		#playpause[data-state="play"] {
+		.videoContainerFull .playpause[data-state="play"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E%3Cpath d='M12 8l40 24-40 24z' fill='green' %3E%3C/path%3E%3C/svg%3E");
 			background-repeat: no-repeat;
 		}
-		#playpause[data-state="pause"] {
+		.videoContainerFull .playpause[data-state="pause"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M8 8h20v48h-20zM36 8h20v48h-20z' fill='green' %3E%3C/path%3E %3C/svg%3E");
 			background-repeat: no-repeat;
 		}
-		video::cue {
+		.videoContainerFull video::cue {
 			background-color: transparent;
 		    color: yellow;
     		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -37,25 +40,36 @@
 		    /*color: red; */
 		    font-size: 19px;
 		}
-		#svgprogress[data-state="red"] .lineload{
+		.videoContainerFull .containsubtext {
+			font-family: Helvetica;
+			background-color: transparent;
+		    color: yellow;
+    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		    font-size: 19px;
+		}
+		.videoContainerFull .svgprogress[data-state="red"] .lineload{
 			stroke:red;
 			stroke-width:2;
 		}
-		#svgprogress[data-state="red"] .linecircle{
+		.videoContainerFull .svgprogress[data-state="red"] .linecircle{
 			fill:red; 
 		}
-		#svgprogress[data-state="blue"] .lineload{
+		.videoContainerFull .svgprogress[data-state="blue"] .lineload{
 			stroke:#0099FF;
 			stroke-width:2;
 		}
-		#svgprogress[data-state="blue"] .linecircle{
+		.videoContainerFull .svgprogress[data-state="blue"] .linecircle{
 			fill:#0099FF; 
 		}
-		#mute {
+		.videoContainerFull .mute {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM16.828 13.172c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c0.781 0.781 0.781 2.047 0 2.828-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.414 0c1.562-1.562 1.562-4.095 0-5.657zM19.657 10.343c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c2.343 2.343 2.343 6.142 0 8.485-0.39 0.391-0.39 1.024 0 1.414s1.024 0.39 1.414 0c3.124-3.124 3.124-8.19 0-11.314zM22.485 7.515c-0.391-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c3.905 3.905 3.905 10.237 0 14.142-0.39 0.391-0.39 1.024 0 1.414s1.024 0.391 1.414 0c4.686-4.686 4.686-12.284 0-16.971z'%3E%3C/path%3E%3C/svg%3E ");
 			/*background-size: 100% 100%;*/
 		    background-repeat: no-repeat;
 		    background-size: contain;
+		}
+		.videoContainerFull .turnlight{
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 8.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5-3.358-7.5-7.5-7.5zM16 20.688v-9.375c2.585 0 4.688 2.103 4.688 4.688s-2.103 4.688-4.688 4.688zM16 25.375c1.036 0 1.875 0.839 1.875 1.875v1.875c0 1.036-0.839 1.875-1.875 1.875s-1.875-0.839-1.875-1.875v-1.875c0-1.036 0.839-1.875 1.875-1.875zM16 6.625c-1.036 0-1.875-0.839-1.875-1.875v-1.875c0-1.036 0.839-1.875 1.875-1.875s1.875 0.839 1.875 1.875v1.875c0 1.036-0.839 1.875-1.875 1.875zM29.125 14.125c1.036 0 1.875 0.839 1.875 1.875s-0.839 1.875-1.875 1.875h-1.875c-1.036 0-1.875-0.839-1.875-1.875s0.839-1.875 1.875-1.875h1.875zM6.625 16c0 1.036-0.839 1.875-1.875 1.875h-1.875c-1.036 0-1.875-0.839-1.875-1.875s0.839-1.875 1.875-1.875h1.875c1.036 0 1.875 0.839 1.875 1.875zM25.281 22.629l1.326 1.326c0.732 0.732 0.732 1.919 0 2.652s-1.919 0.732-2.652 0l-1.326-1.326c-0.732-0.732-0.732-1.919 0-2.652s1.919-0.732 2.652 0zM6.719 9.371l-1.326-1.326c-0.732-0.732-0.732-1.919 0-2.652s1.919-0.732 2.652 0l1.326 1.326c0.732 0.732 0.732 1.919 0 2.652s-1.919 0.732-2.652 0zM25.281 9.371c-0.732 0.732-1.919 0.732-2.652 0s-0.732-1.919 0-2.652l1.326-1.326c0.732-0.732 1.919-0.732 2.652 0s0.732 1.919 0 2.652l-1.326 1.326zM6.719 22.629c0.732-0.732 1.919-0.732 2.652 0s0.732 1.919 0 2.652l-1.326 1.326c-0.732 0.732-1.919 0.732-2.652 0s-0.732-1.919 0-2.652l1.326-1.326z'%3E%3C/path%3E%3C/svg%3E");
+		    background-repeat: no-repeat;
 		}
 	</style>
 	<style id="stylehead" type="text/css">
@@ -63,64 +77,62 @@
 	</style>
 </head>
 <body>
-	<div id="videoContainerFull" style="display: inline-block;position:relative; width: 100%">
-		<div id="videoContainer" style="position: relative;" data-fullscreen="false">
-			<video data="" id="video" width="100%" controls preload="metadata">
+	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%">
+		<div class="videoContainer" style="position: relative;" data-fullscreen="false">
+			<div class="draggable divsub" style="position: absolute; width: 100%; text-align: center;">
+				<div class="containsubtext">tung tung xen</div>
+			</div>
+			<video data="" class="video" width="100%" preload="metadata">
 				<!-- <source src="video/tung.mp4" type="video/mp4"> -->
+				<source src="video/developerStories-en.webm" type="video/webm">
 				<source src="video/sintel-short.mp4" type="video/mp4">
 				<source src="video/sintel-short.webm" type="video/webm">
-				<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default>
+				<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/developerStories-subtitles-en.vtt" default>
+				<!-- <track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default> -->
 				<track label="Deutsch" kind="subtitles" srclang="de" src="subtitles/vtt/sintel-de.vtt">
 				<track label="Español" kind="subtitles" srclang="es" src="subtitles/vtt/sintel-es.vtt">
 			</video>
-			<div id="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
+			<div class="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
 				<table style="width: 100%;">
 					<tr>
 						<td>
-							<div id="svgprogress" data-state="red" onmousemove="(flag==true)?changeWidth(event):''"
-							onmouseup="flag = false" onmouseleave="flag=false" 
-							onmousedown="flag = true;changeWidth(event)">
+							<div class="svgprogress" data-state="red">
 								<svg height="20" width="100%">
-								    <line class="linetotal" id="line1" x1="0" y1="8" x2="100%" y2="8"
+								    <line class="linetotal line1" x1="0" y1="8" x2="100%" y2="8"
 								    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
-								    <line class="lineload" id="line2" x1="0" y1="8" x2="0%" y2="8" />
-								  <circle class="linecircle" id="line3" cx="0%" cy="8" r="3" />
+								    <line class="lineload line2"  x1="0" y1="8" x2="0%" y2="8" />
+								  <circle class="linecircle line3"  cx="0%" cy="8" r="3" />
 								</svg>
 							</div>
 						</td>
 						<td style="width:100px">
-	    					<div><span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span></div>
+	    					<div><span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span></div>
 	    				</td>
 						<td style="width:20px">
-							<div  style="height: 20px; width: 20px" id="fs" type="button" data-state="go-fullscreen"></div>
+							<div  style="height: 20px; width: 20px" class="fs" type="button" data-state="go-fullscreen"></div>
 						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
-		<div id="videoControls" class="controls" data-state="hidden">
-			<button style="display: none;" id="playpause" type="button" data-state="play">play</button>
-			<button style="display: none" id="stop" type="button" data-state="stop">stop</button>
-			<div style="width: 28px; height: 28px; display: inline-block;" id="mute" type="button" data-state="mute"></div>
-			<div style="display: inline-block; width: 50px">
+		<div class="videoControls" class="controls" data-state="visible">
+			<button style="display: none;" class="playpause" type="button" data-state="play">play</button>
+			<button style="display: none" class="stop" type="button" data-state="stop">stop</button>
+			<div style="width: 28px; height: 28px; display: inline-block;" class="mute" type="button" data-state="mute"></div>
+			<div class="muteSvg" style="display: inline-block; width: 50px">
 				<svg height="20" width="100%">
 				    <line x1="0" y1="8" x2="100%" y2="8"
 				    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
-				    <line x1="0" y1="8" x2="0%" y2="8" />
-				  <circle cx="0%" cy="8" r="3" />
+				    <line class="muteline2" x1="0" y1="8" x2="0%" y2="8" />
+				  <circle class="muteline3" cx="0%" cy="8" r="3" />
 				</svg>
 			</div>
-  			<input style="width: 50px" type="range" step="0.1" min="0" max="1" value="1" id="rangemute">
-			<button id="turnlight" type="button" data-state="off">tat den</button>
-			<button style="display: none" id="zoomvd" type="button" data-state="-">phong to</button>
-			<select id="listsub">
+  			<input style="width: 50px; display: none" type="range" step="0.1" min="0" max="1" value="1" class="rangemute">
+			<button class="turnlight" style="width: 30px; height: 30px" type="button" data-state="off"></button>
+			<button style="display: none" class="zoomvd" type="button" data-state="-">phong to</button>
+			<select class="listsub">
 			</select>
-			<select id="linesub">
-				<option value="0">ở trên</option>
-				<option value="6">giữa</option>
-				<option value="12">dưới</option>
-			</select>
-			<select id="fontsizesub">
+			<select class="fontsizesub">
 				<option value="13">13</option>
 				<option value="16">16</option>
 				<option selected="selected" value="19">19</option>
@@ -128,16 +140,15 @@
 				<option value="25">25</option>
 				<option value="28">28</option>
 			</select>
-			<select id="colorsub">
+			<select class="colorsub">
 				<option value="yellow">yellow</option>
 				<option value="white">white</option>
 				<option value="blue">blue</option>
 				<option value="red">red</option>
 			</select>
 		    <button class='qtyminus'>-sub</button>
-			<input id="timelatesub" readonly="readonly" type="number" value="0" style="width:30px" />
+			<input class="timelatesub" readonly="readonly" type="text" value="0" style="width:30px" />
 		    <button class='qtyplus'>+sub</button>
-			<button style="display: none" id="subtitles" type="button" data-state="subtitles">huong dan</button>
 		</div>
 	</div>
 	<script src="js/video-player.js"></script>
