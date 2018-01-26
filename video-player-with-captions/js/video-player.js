@@ -63,7 +63,7 @@
 	var setFullscreenData = function(state) {
 		videoContainer.attr('data-fullscreen', !!state);
 		// Set the fullscreen button's 'data-state' which allows the correct button image to be set via CSS
-		fullscreen.setAttribute('data-state', !!state ? 'cancel-fullscreen' : 'go-fullscreen');
+		fullscreen.attr('data-state', !!state ? 'cancel-fullscreen' : 'go-fullscreen');
 	}
 
 	// Checks if the document is currently in fullscreen mode
@@ -74,6 +74,7 @@
 	// Fullscreen
 	var handleFullscreen = function() {
 		// If fullscreen mode is active...	
+		console.log(isFullScreen());
 		if (isFullScreen()) {
 				// ...exit fullscreen mode
 				// (Note: this can only be called on document)
@@ -85,16 +86,20 @@
 		} else {
 			// ...otherwise enter fullscreen mode
 			// (Note: can be called on document, but here the specific element is used as it will also ensure that the element's children, e.g. the custom controls, go fullscreen also)
-			if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
-			else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
-			else if (videoContainer.webkitRequestFullScreen) {
+			if (videoContainer[0].requestFullscreen){
+				videoContainer[0].requestFullscreen();
+			}
+			else if (videoContainer[0].mozRequestFullScreen){
+				videoContainer[0].mozRequestFullScreen();
+			}
+			else if (videoContainer[0].webkitRequestFullScreen) {
 				// Safari 5.1 only allows proper fullscreen on the video element. This also works fine on other WebKit browsers as the following CSS (set in styles.css) hides the default controls that appear again, and 
 				// ensures that our custom controls are visible:
 				// figure[data-fullscreen=true] video::-webkit-media-controls { display:none !important; }
 				// figure[data-fullscreen=true] .controls { z-index:2147483647; }
-				video.webkitRequestFullScreen();
+				videoContainer[0].webkitRequestFullScreen();
 			}
-			else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
+			else if (videoContainer[0].msRequestFullscreen) videoContainer[0].msRequestFullscreen();
 			setFullscreenData(true);
 		}
 	}
@@ -121,17 +126,17 @@
 	videojq.on('volumechange', function() {
 		checkVolume();
 	}, false);
-	videojq.on('click', function(e) {
-		if (video.paused || video.ended) video.play();
-		else video.pause();
-	});	
+	// videojq.on('click', function(e) {
+	// 	if (video.paused || video.ended) video.play();
+	// 	else video.pause();
+	// });	
 	videoContainer.on('mousemove', function(e) {
 		if (hide) {
 			videocontrolsinside.css('display', 'block');
 			hide = false;
 			clearTimeout(idtimeout);
 			idtimeout = setTimeout( function(){
-				videocontrolsinside.css('display', 'none');
+				//videocontrolsinside.css('display', 'none');
 				hide = true;
 			}, 3000);
 		}
@@ -225,7 +230,7 @@
 		changeButtonState('mute');
 	});
 
-	fs.on('click', function(e) {
+	fs.on('mousedown', function(e) {
 		handleFullscreen();
 	});
 
@@ -234,12 +239,12 @@
 	    var percent = video.currentTime * 100 / video.duration;
 		p.find('.line2').attr("x2", ""+percent+"%");
 		p.find('.line3').attr("cx",""+percent+"%");
-
 		seektimeupdate();
 	});
 
 	// Listen for fullscreen change events (from other controls, e.g. right clicking on the video itself)
 	document.addEventListener('fullscreenchange', function(e) {
+
 		setFullscreenData(!!(document.fullScreen || document.fullscreenElement));
 	});
 	document.addEventListener('webkitfullscreenchange', function() {
@@ -299,8 +304,7 @@
 			colorsub.value + '; font-size:' + fontsizesub.value + 'px;}';
 	});	
 	colorsub.on('change', function(e) {
-		document.getElementById('stylehead').innerHTML = 'video::cue{color:' + 
-			colorsub.value + '; font-size:' + fontsizesub.value + 'px;}';
+		containsubtext.attr('data-color', $(this).val());
 	});
 	qtyminus.on('click', function(e) {
 		timelatesub.value = parseInt(timelatesub.value) - 1;
@@ -308,14 +312,13 @@
 	qtyplus.on('click', function(e) {
 		timelatesub.value = parseInt(timelatesub.value) + 1;
 	});
-	 function setColor (color) {
-	 	
 
-	 }
+	function setColor (color) {
+	 	
+	}
 
 	function seektimeupdate(){
 	    var nt = video.currentTime * (100 / video.duration);
-	    //seekslider.value = nt;
 	    var curmins = Math.floor(video.currentTime / 60);
 	    var cursecs = Math.floor(video.currentTime - curmins * 60);
 	    var durmins = Math.floor(video.duration / 60);
@@ -324,8 +327,8 @@
 	    if(dursecs < 10){ dursecs = "0"+dursecs; }
 	    if(curmins < 10){ curmins = "0"+curmins; }
 	    if(durmins < 10){ durmins = "0"+durmins; }
-	    curtimetext.innerHTML = curmins+":"+cursecs;
-	    durtimetext.innerHTML = durmins+":"+dursecs;
+	    curtimetext[0].innerHTML = curmins+":"+cursecs;
+	    durtimetext[0].innerHTML = durmins+":"+dursecs;
 	}
 
 	var flagmute = false;
@@ -354,8 +357,8 @@
 		console.log(parseFloat(width/muteSvg.offsetWidth));
 		checkVolume(parseFloat(width/muteSvg.offsetWidth));
 	}
-
-	idtimeout = setTimeout(function(){ videocontrolsinside.css('display', 'none'); hide = true;}, 3000);
+	idtimeout = setTimeout(function(){ //videocontrolsinside.css('display', 'none'); hide = true;
+}, 3000);
 	$( function() {
 		$( ".draggable" ).draggable({ containment: "parent" });
 	});

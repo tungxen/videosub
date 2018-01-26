@@ -13,8 +13,12 @@
 		.videoContainerFull .videoContainer video::-webkit-media-controls {
 			display:none !important;
 		}
-		.videoContainerFull .videoContainer[data-fullscreen=true] #video-controls-inside {
-			z-index: 2147483647;
+		.videoContainerFull .videoContainer[data-fullscreen=true]{
+			width: 100%;
+			height: 100%;
+		}
+		.videoContainerFull .videoContainer[data-fullscreen=true] .videocontrolsinside {
+			z-index: 2147483648;
 		}
 		.videoContainerFull .fs[data-state="go-fullscreen"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='green'%3E%3C/path%3E %3C/svg%3E");
@@ -35,17 +39,34 @@
 		.videoContainerFull video::cue {
 			background-color: transparent;
 		    color: yellow;
-    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    		text-shadow: -1px 0 violet, 0 1px violet, 1px 0 violet, 0 -1px violet;
     		/*text-shadow:2px 2px 0 #aaa;*/
 		    /*color: red; */
 		    font-size: 19px;
 		}
-		.videoContainerFull .containsubtext {
+		.videoContainerFull .containsubtext[data-color="yellow"] {
 			font-family: Helvetica;
-			background-color: transparent;
 		    color: yellow;
-    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-		    font-size: 19px;
+		    font-size: 2em;
+    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+		}
+		.videoContainerFull .containsubtext[data-color="black"] {
+			font-family: Helvetica;
+		    color: black;
+		    font-size: 2em;
+    		text-shadow: -1.1px 0 white, 0 1.1px white, 1.1px 0 white, 0 -1.1px white;
+		}
+		.videoContainerFull .containsubtext[data-color="white"] {
+			font-family: Helvetica;
+		    color: white;
+		    font-size: 2em;
+    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+		}
+		.videoContainerFull .containsubtext[data-color="red"] {
+			font-family: Helvetica;
+		    color: red;
+		    font-size: 2em;
+    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 		}
 		.videoContainerFull .svgprogress[data-state="red"] .lineload{
 			stroke:red;
@@ -78,9 +99,9 @@
 </head>
 <body>
 	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%">
-		<div class="videoContainer" style="position: relative;" data-fullscreen="false">
+		<div class="videoContainer" style="position: relative; text-align: center;" data-fullscreen="false">
 			<div class="draggable divsub" style="position: absolute; width: 100%; text-align: center;">
-				<div class="containsubtext">tung tung xen</div>
+				<div class="containsubtext" data-color="white">tung tung xen</div>
 			</div>
 			<video data="" class="video" width="100%" preload="metadata">
 				<!-- <source src="video/tung.mp4" type="video/mp4"> -->
@@ -109,6 +130,7 @@
 	    					<div><span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span></div>
 	    				</td>
 						<td style="width:20px">
+							<button onclick="alert('s')">tung</button>
 							<div  style="height: 20px; width: 20px" class="fs" type="button" data-state="go-fullscreen"></div>
 						</td>
 					</tr>
@@ -141,9 +163,9 @@
 				<option value="28">28</option>
 			</select>
 			<select class="colorsub">
-				<option value="yellow">yellow</option>
 				<option value="white">white</option>
-				<option value="blue">blue</option>
+				<option value="black">black</option>
+				<option value="yellow">yellow</option>
 				<option value="red">red</option>
 			</select>
 		    <button class='qtyminus'>-sub</button>
