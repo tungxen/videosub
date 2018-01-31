@@ -1,0 +1,37 @@
+<style>
+#div1 {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var droppedFiles = ev.dataTransfer.files; // the files that were dropped
+    var img = document.getElementById('img');
+    img.onload = function () {
+        window.URL.revokeObjectURL(this.src);
+    };
+    img.height = 100;
+    img.src = window.URL.createObjectURL(droppedFiles[0]);
+    document.getElementById('div1').appendChild(img);
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img id="img" />
+</div>

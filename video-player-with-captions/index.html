@@ -2,7 +2,7 @@
 <html lang="en-IE">
 <head>
 	<meta charset="utf-8" />
-	<title>Styled Video Player with Subtitles - Mozilla</title>
+	<title>bbStyled Video Player with Subtitles - Mozilla</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -16,9 +16,15 @@
 		.videoContainerFull .videoContainer[data-fullscreen=true]{
 			width: 100%;
 			height: 100%;
+			background-color: black;
 		}
 		.videoContainerFull .videoContainer[data-fullscreen=true] .videocontrolsinside {
 			z-index: 2147483648;
+		}
+		.videoContainerFull .videoContainer[data-fullscreen=true] video {
+			position: absolute;
+		    top: 50%;
+		    transform: translate(0%, -50%);
 		}
 		.videoContainerFull .fs[data-state="go-fullscreen"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='green'%3E%3C/path%3E %3C/svg%3E");
@@ -26,6 +32,14 @@
 		}
 		.videoContainerFull .fs[data-state="cancel-fullscreen"] {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-shrink2' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z' fill='green' %3E%3C/path%3E %3C/svg%3E");
+			background-repeat: no-repeat;
+		}
+		.videoContainerFull[data-paused="true"] .fs{
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='red'%3E%3C/path%3E %3C/svg%3E");
+			background-repeat: no-repeat;
+		}
+		.videoContainerFull[data-paused="true"] .videoContainer[data-fullscreen=true] .fs{
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-shrink2' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z' fill='red' %3E%3C/path%3E %3C/svg%3E");
 			background-repeat: no-repeat;
 		}
 		.videoContainerFull .playpause[data-state="play"] {
@@ -68,22 +82,28 @@
 		    font-size: 2em;
     		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 		}
-		.videoContainerFull .svgprogress[data-state="red"] .lineload{
+		.videoContainerFull .svgprogress .lineload{
 			stroke:red;
 			stroke-width:2;
 		}
-		.videoContainerFull .svgprogress[data-state="red"] .linecircle{
+		.videoContainerFull .svgprogress .linecircle{
 			fill:red; 
 		}
-		.videoContainerFull .svgprogress[data-state="blue"] .lineload{
-			stroke:#0099FF;
-			stroke-width:2;
+		.videoContainerFull[data-paused="false"] .svgprogress .lineload{
+			stroke: green;
 		}
-		.videoContainerFull .svgprogress[data-state="blue"] .linecircle{
-			fill:#0099FF; 
+		.videoContainerFull[data-paused="false"] .svgprogress .linecircle {
+			fill: green;
 		}
+
 		.videoContainerFull .mute {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM16.828 13.172c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c0.781 0.781 0.781 2.047 0 2.828-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.414 0c1.562-1.562 1.562-4.095 0-5.657zM19.657 10.343c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c2.343 2.343 2.343 6.142 0 8.485-0.39 0.391-0.39 1.024 0 1.414s1.024 0.39 1.414 0c3.124-3.124 3.124-8.19 0-11.314zM22.485 7.515c-0.391-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c3.905 3.905 3.905 10.237 0 14.142-0.39 0.391-0.39 1.024 0 1.414s1.024 0.391 1.414 0c4.686-4.686 4.686-12.284 0-16.971z'%3E%3C/path%3E%3C/svg%3E ");
+			/*background-size: 100% 100%;*/
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		}
+		.videoContainerFull .mute[data-state="unmute"] {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM27 13l-2-2-3 3-3-3-1.969 1.984 2.969 3.016-3 3 2 2 3-3 3 3 2-2-3-3 3-3z'%3E%3C/path%3E%3C/svg%3E");
 			/*background-size: 100% 100%;*/
 		    background-repeat: no-repeat;
 		    background-size: contain;
@@ -93,13 +113,11 @@
 		    background-repeat: no-repeat;
 		}
 	</style>
-	<style id="stylehead" type="text/css">
-		
-	</style>
 </head>
 <body>
-	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%">
-		<div class="videoContainer" style="position: relative; text-align: center;" data-fullscreen="false">
+	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%"
+			data-paused="true">
+		<div class="videoContainer" style="position: relative;" data-fullscreen="false">
 			<div class="draggable divsub" style="position: absolute; width: 100%; text-align: center;">
 				<div class="containsubtext" data-color="white">tung tung xen</div>
 			</div>
@@ -117,8 +135,8 @@
 				<table style="width: 100%;">
 					<tr>
 						<td>
-							<div class="svgprogress" data-state="red">
-								<svg height="20" width="100%">
+							<div class="svgprogress" data-state="red" style="padding-right: 9px">
+								<svg height="20" width="100%" style="overflow: visible;">
 								    <line class="linetotal line1" x1="0" y1="8" x2="100%" y2="8"
 								    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
 								    <line class="lineload line2"  x1="0" y1="8" x2="0%" y2="8" />
@@ -126,23 +144,22 @@
 								</svg>
 							</div>
 						</td>
-						<td style="width:100px">
+						<!-- <td style="width:100px">
 	    					<div><span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span></div>
-	    				</td>
+	    				</td> -->
 						<td style="width:20px">
-							<button onclick="alert('s')">tung</button>
 							<div  style="height: 20px; width: 20px" class="fs" type="button" data-state="go-fullscreen"></div>
 						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
-		<div class="videoControls" class="controls" data-state="visible">
+		<div class="videoControls" class="controls" data-state="visible" style="user-select: none;">
 			<button style="display: none;" class="playpause" type="button" data-state="play">play</button>
 			<button style="display: none" class="stop" type="button" data-state="stop">stop</button>
 			<div style="width: 28px; height: 28px; display: inline-block;" class="mute" type="button" data-state="mute"></div>
 			<div class="muteSvg" style="display: inline-block; width: 50px">
-				<svg height="20" width="100%">
+				<svg height="20" width="100%"  style="overflow: visible;" >
 				    <line x1="0" y1="8" x2="100%" y2="8"
 				    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
 				    <line class="muteline2" x1="0" y1="8" x2="0%" y2="8" />
@@ -155,12 +172,14 @@
 			<select class="listsub">
 			</select>
 			<select class="fontsizesub">
-				<option value="13">13</option>
-				<option value="16">16</option>
-				<option selected="selected" value="19">19</option>
-				<option value="22">22</option>
-				<option value="25">25</option>
-				<option value="28">28</option>
+				<option value="1.5">rất nhỏ</option>
+				<option value="2">nhỏ vừa</option>
+				<option selected="selected" value="2.5">nhỏ</option>
+				<option value="3">bình thường</option>
+				<option value="3.5">lớn</option>
+				<option value="4">lớn vừa</option>
+				<option value="4.5">rất lớn</option>
+				<option value="5">rất lớn lớn</option>
 			</select>
 			<select class="colorsub">
 				<option value="white">white</option>
