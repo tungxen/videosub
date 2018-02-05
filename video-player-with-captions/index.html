@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/styles.css" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery-ui.js"></script>
 	<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv-printshiv.min.js" type="text/javascript"></script><![endif]-->
 	<style type="text/css">
 		.videoContainerFull .videoContainer video::-webkit-media-controls {
@@ -21,7 +21,7 @@
 		.videoContainerFull .videoContainer[data-fullscreen=true] .videocontrolsinside {
 			z-index: 2147483648;
 		}
-		.videoContainerFull .videoContainer[data-fullscreen=true] video {
+		.videoContainerFull .videoContainer[data-fullscreen=true] .videoContaineritem {
 			position: absolute;
 		    top: 50%;
 		    transform: translate(0%, -50%);
@@ -61,25 +61,21 @@
 		.videoContainerFull .containsubtext[data-color="yellow"] {
 			font-family: Helvetica;
 		    color: yellow;
-		    font-size: 2em;
     		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 		}
 		.videoContainerFull .containsubtext[data-color="black"] {
 			font-family: Helvetica;
 		    color: black;
-		    font-size: 2em;
     		text-shadow: -1.1px 0 white, 0 1.1px white, 1.1px 0 white, 0 -1.1px white;
 		}
 		.videoContainerFull .containsubtext[data-color="white"] {
 			font-family: Helvetica;
 		    color: white;
-		    font-size: 2em;
     		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 		}
 		.videoContainerFull .containsubtext[data-color="red"] {
 			font-family: Helvetica;
 		    color: red;
-		    font-size: 2em;
     		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 		}
 		.videoContainerFull .svgprogress .lineload{
@@ -118,19 +114,21 @@
 	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%"
 			data-paused="true">
 		<div class="videoContainer" style="position: relative;" data-fullscreen="false">
-			<div class="draggable divsub" style="position: absolute; width: 100%; text-align: center;">
-				<div class="containsubtext" data-color="white">tung tung xen</div>
+			<div class="videoContaineritem" style="position: relative;">
+				<div class="draggable divsub draggablesub" style="position: absolute; width: 100%; text-align: center; user-select: none; z-index: 10">
+					<div class="containsubtext" data-color="white">tung tung xen</div>
+				</div>
+				<video data="" class="video" width="100%" preload="metadata">
+					<!-- <source src="video/tung.mp4" type="video/mp4"> -->
+					<source src="video/developerStories-en.webm" type="video/webm">
+					<source src="video/sintel-short.mp4" type="video/mp4">
+					<source src="video/sintel-short.webm" type="video/webm">
+					<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/developerStories-subtitles-en.vtt" default>
+					<!-- <track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default> -->
+					<track label="Deutsch" kind="subtitles" srclang="de" src="subtitles/vtt/sintel-de.vtt">
+					<track label="Español" kind="subtitles" srclang="es" src="subtitles/vtt/sintel-es.vtt">
+				</video>
 			</div>
-			<video data="" class="video" width="100%" preload="metadata">
-				<!-- <source src="video/tung.mp4" type="video/mp4"> -->
-				<source src="video/developerStories-en.webm" type="video/webm">
-				<source src="video/sintel-short.mp4" type="video/mp4">
-				<source src="video/sintel-short.webm" type="video/webm">
-				<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/developerStories-subtitles-en.vtt" default>
-				<!-- <track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default> -->
-				<track label="Deutsch" kind="subtitles" srclang="de" src="subtitles/vtt/sintel-de.vtt">
-				<track label="Español" kind="subtitles" srclang="es" src="subtitles/vtt/sintel-es.vtt">
-			</video>
 			<div class="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
 				<table style="width: 100%;">
 					<tr>
@@ -144,9 +142,9 @@
 								</svg>
 							</div>
 						</td>
-						<!-- <td style="width:100px">
+						<td style="width:100px; display: none;">
 	    					<div><span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span></div>
-	    				</td> -->
+	    				</td>
 						<td style="width:20px">
 							<div  style="height: 20px; width: 20px" class="fs" type="button" data-state="go-fullscreen"></div>
 						</td>
@@ -172,14 +170,14 @@
 			<select class="listsub">
 			</select>
 			<select class="fontsizesub">
-				<option value="1.5">rất nhỏ</option>
-				<option value="2">nhỏ vừa</option>
-				<option selected="selected" value="2.5">nhỏ</option>
-				<option value="3">bình thường</option>
-				<option value="3.5">lớn</option>
-				<option value="4">lớn vừa</option>
-				<option value="4.5">rất lớn</option>
-				<option value="5">rất lớn lớn</option>
+				<option value="5">rất nhỏ</option>
+				<option value="4.5">nhỏ vừa</option>
+				<option selected="selected" value="4">nhỏ</option>
+				<option value="3.5">bình thường</option>
+				<option value="3">lớn</option>
+				<option value="2.5">lớn vừa</option>
+				<option value="2">rất lớn</option>
+				<option value="1.5">rất lớn lớn</option>
 			</select>
 			<select class="colorsub">
 				<option value="white">white</option>
@@ -193,5 +191,9 @@
 		</div>
 	</div>
 	<script src="js/video-player.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script type="text/javascript">
+		$('.draggablesub').fitText(4);
+	</script>
 </body>
 </html>

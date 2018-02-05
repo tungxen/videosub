@@ -6,8 +6,12 @@
 		listsub: 'English',
 		fontSize: '2.5',
 		color: 'yellow',
+		percentposition: '0'
 	}
 	var hide = false;
+	betweenTop = 0;
+	height = 0;
+	percentposition = 0;
 	var textTracks = {}, 						p = $('.videoContainerFull'),
 	videoContainer = p.find('.videoContainer'), video = p.find('.video')[0],
 	videoControls = p.find('.videoControls'), 	stop = p.find('.stop'),
@@ -21,6 +25,9 @@
 	qtyminus = p.find(".qtyminus"), 			qtyplus = p.find(".qtyplus"),
 	svgprogress = p.find('.svgprogress'),		videocontrolsinside = p.find('.videocontrolsinside'),
 	fs = p.find(".fs"),							videojq = $(video),
+	draggablesub = p.find(".draggablesub"), 	videoContaineritem = p.find(".videoContaineritem");
+	tung = draggablesub;
+	tung2 = videojq;
 	flag= false;
 	svgprogress.on('mousemove', function (e) {
 		if (flag==true)
@@ -80,7 +87,6 @@
 	// Fullscreen
 	var handleFullscreen = function() {
 		// If fullscreen mode is active...	
-		console.log(isFullScreen());
 		if (isFullScreen()) {
 				// ...exit fullscreen mode
 				// (Note: this can only be called on document)
@@ -238,8 +244,19 @@
 		changeButtonState('mute');
 	});
 
-	fs.on('mousedown', function(e) {
+	fs.on('click', function(e) {
+  		var topv = videojq.position().top;
+  		var tops = draggablesub.position().top;
+  		betweenTop = topv - tops;
+  		height = videojq.height();
 		handleFullscreen();
+  		//draggablesub.trigger('drag');
+
+  		// var tops = draggablesub[0].getBoundingClientRect().top
+  		// if (topv + videojq.height() - tops  < 42) {
+  		// 	console.log(videojq.height() - draggablesub.position().top);
+  		// 	// return true;
+  		// }
 	});
 
 	// As the video is playing, update the progress bar
@@ -296,21 +313,26 @@
 		}
 		setting.listsub = el.getAttribute('value');
 		setLocal(setting);
+		if (el.getAttribute('value') == 'Off') {
+			p.find('.draggable').hide();
+		} else {
+			p.find('.draggable').show();
+		}
 	});
 	timelatesub.on('change', function(e) {
-		var activelang = document.querySelector(".subtitles-menu option[data-state='active']").lang;
+		var activelang = p.find(".listsub option[data-state='active']").attr('lang');
 		window.track = textTracks[activelang];
 		var time = parseFloat(this.value);
 		for (var i = 0; i < track.cues.length; i++) {
 			track.cues[i].startTime = track.cues[i].startTime + time;
 			track.cues[i].endTime = track.cues[i].endTime + time;
 		}
-		window.track.mode = 'hidden';
+		console.log(time);
+		//window.track.mode = 'hidden';
 		window.track.mode = 'showing';
 	});	
 	fontsizesub.on('change', function(e) {
-		//containsubtext.css('font-size', '20px');
-		containsubtext.css('font-size', fontsizesub.val() + 'vw');
+        draggablesub.css('font-size', draggablesub.width() / (fontsizesub.val()*10));
 		setting.fontSize = fontsizesub.val();
 		setLocal(setting);
 	});	
@@ -320,10 +342,12 @@
 		setLocal(setting);
 	});
 	qtyminus.on('click', function(e) {
-		timelatesub.value = parseInt(timelatesub.value) - 1;
+		timelatesub.val(parseInt(timelatesub.val()) - 1);
+		timelatesub.trigger('change');
 	});	
 	qtyplus.on('click', function(e) {
-		timelatesub.value = parseInt(timelatesub.value) + 1;
+		timelatesub.val(parseInt(timelatesub.val()) + 1);
+		timelatesub.trigger('change');
 	});
 
 	function seektimeupdate(){
@@ -373,7 +397,23 @@
 		videocontrolsinside.css('display', 'none'); hide = true;
 	}, 6000);
 	$( function() {
-		$( ".draggable" ).draggable({ containment: "parent" });
+		draggablesub.draggable({
+			containment: videoContaineritem,
+	      	revert: function ( event, ui ) {
+	      		var topv = videojq[0].getBoundingClientRect().top
+	      		var tops = draggablesub[0].getBoundingClientRect().top
+	      		if (topv + videojq.height() - tops  < 42) {
+	      			//console.log(videojq.height() - draggablesub.position().top);
+	      			return true;
+	      		}
+	      	},
+	      	stop: function( event, ui ) {
+	      		percentposition = draggablesub.position().top / videojq.height();
+				setting.percentposition = percentposition;
+				setLocal(setting);
+	      	},
+	      	stack: 'div'
+	  });
 		if (localStorage.getItem('setting')) {
 			setting = JSON.parse(localStorage.getItem('setting'));
 		}
@@ -383,8 +423,24 @@
 		fontsizesub.trigger('change');
 		colorsub.val(setting.color);
 		colorsub.trigger('change');
+        draggablesub.css('font-size', draggablesub.width() / (setting.fontSize*10));
+        percentposition = setting.percentposition;
+    	draggablesub.css('top',percentposition * videojq.height());
+      	$(window).on('resize.fittext orientationchange.fittext', function () {
+        	draggablesub.css('font-size', draggablesub.width() / (fontsizesub.val()*10));
+        	draggablesub.css('top', percentposition * videojq.height());
+      	});
 	});
 	function setLocal(setting){
 		localStorage.setItem('setting', JSON.stringify(setting));
 	}
+	$(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function () {
+  		// setTimeout(function(){
+  		// 	var hz = betweenTop * videojq.height()/height
+  		// 	var topv = videojq.position().top - hz;
+  			
+	  	// 	draggablesub.css('top', topv + 'px');
+	  	// 	console.log(topv);
+  		//  }, 40);
+	});
  })();
