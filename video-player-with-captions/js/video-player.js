@@ -25,7 +25,8 @@
 	qtyminus = p.find(".qtyminus"), 			qtyplus = p.find(".qtyplus"),
 	svgprogress = p.find('.svgprogress'),		videocontrolsinside = p.find('.videocontrolsinside'),
 	fs = p.find(".fs"),							videojq = $(video),
-	draggablesub = p.find(".draggablesub"), 	videoContaineritem = p.find(".videoContaineritem");
+	draggablesub = p.find(".draggablesub"), 	videoContaineritem = p.find(".videoContaineritem"),
+	subtemp = p.find(".subtemp");
 	tung = draggablesub;
 	tung2 = videojq;
 	flag= false;
@@ -145,9 +146,9 @@
 			video.play();
 		}
 		else {
-			//containsubtext[0].select();
-			//document.execCommand("Copy");
-			CopyToClipboard($('#tung')[0]);
+			CopyToClipboard(subtemp[0]);
+			subtemp.blur();
+			video.focus();
 			video.pause();
 		}
 	});	
@@ -295,7 +296,7 @@
 			containsubtext.html('');
 		} else {
 			console.log(cue);
-			$('#tung').val(cue.text);
+			subtemp.val(cue.text);
 			containsubtext.html(cue.getCueAsHTML());
 			console.log(cue.getCueAsHTML());
 		}
@@ -464,6 +465,7 @@ function CopyToClipboard(containerid) {
 	} else if (window.getSelection) {
 	    var range = document.createRange();
 	     range.selectNode(containerid);
+	     window.getSelection().removeAllRanges();
 	     window.getSelection().addRange(range);
 	     document.execCommand("copy");
 	}
