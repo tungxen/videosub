@@ -141,8 +141,15 @@
 		checkVolume();
 	}, false);
 	videojq.on('click', function(e) {
-		if (video.paused || video.ended) video.play();
-		else video.pause();
+		if (video.paused || video.ended) {
+			video.play();
+		}
+		else {
+			//containsubtext[0].select();
+			//document.execCommand("Copy");
+			CopyToClipboard($('#tung')[0]);
+			video.pause();
+		}
 	});	
 	videoContainer.on('mousemove', function(e) {
 		if (hide) {
@@ -287,6 +294,8 @@
 		if (cue == undefined) {
 			containsubtext.html('');
 		} else {
+			console.log(cue);
+			$('#tung').val(cue.text);
 			containsubtext.html(cue.getCueAsHTML());
 			console.log(cue.getCueAsHTML());
 		}
@@ -444,3 +453,18 @@
   		//  }, 40);
 	});
  })();
+
+function CopyToClipboard(containerid) {
+	if (document.selection) { 
+	    var range = document.body.createTextRange();
+	    range.moveToElementText(containerid);
+	    range.select().createTextRange();
+	    document.execCommand("copy"); 
+
+	} else if (window.getSelection) {
+	    var range = document.createRange();
+	     range.selectNode(containerid);
+	     window.getSelection().addRange(range);
+	     document.execCommand("copy");
+	}
+}
