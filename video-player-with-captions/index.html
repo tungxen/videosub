@@ -8,118 +8,19 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
-	<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv-printshiv.min.js" type="text/javascript"></script><![endif]-->
-	<style type="text/css">
-		.videoContainerFull .videoContainer video::-webkit-media-controls {
-			display:none !important;
-		}
-		.videoContainerFull .videoContainer[data-fullscreen=true]{
-			width: 100%;
-			height: 100%;
-			background-color: black;
-		}
-		.videoContainerFull .videoContainer[data-fullscreen=true] .videocontrolsinside {
-			z-index: 2147483648;
-		}
-		.videoContainerFull .videoContainer[data-fullscreen=true] .videoContaineritem {
-			position: absolute;
-		    top: 50%;
-		    transform: translate(0%, -50%);
-		}
-		.videoContainerFull .fs[data-state="go-fullscreen"] {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='green'%3E%3C/path%3E %3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull .fs[data-state="cancel-fullscreen"] {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-shrink2' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z' fill='green' %3E%3C/path%3E %3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull[data-paused="true"] .fs{
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z' fill='red'%3E%3C/path%3E %3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull[data-paused="true"] .videoContainer[data-fullscreen=true] .fs{
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-shrink2' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z' fill='red' %3E%3C/path%3E %3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull .playpause[data-state="play"] {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E%3Cpath d='M12 8l40 24-40 24z' fill='green' %3E%3C/path%3E%3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull .playpause[data-state="pause"] {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E %3Cpath d='M8 8h20v48h-20zM36 8h20v48h-20z' fill='green' %3E%3C/path%3E %3C/svg%3E");
-			background-repeat: no-repeat;
-		}
-		.videoContainerFull video::cue {
-			background-color: transparent;
-		    color: yellow;
-    		text-shadow: -1px 0 violet, 0 1px violet, 1px 0 violet, 0 -1px violet;
-    		/*text-shadow:2px 2px 0 #aaa;*/
-		    /*color: red; */
-		    font-size: 19px;
-		}
-		.videoContainerFull .containsubtext[data-color="yellow"] {
-			font-family: Helvetica;
-		    color: yellow;
-    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
-		}
-		.videoContainerFull .containsubtext[data-color="black"] {
-			font-family: Helvetica;
-		    color: black;
-    		text-shadow: -1.1px 0 white, 0 1.1px white, 1.1px 0 white, 0 -1.1px white;
-		}
-		.videoContainerFull .containsubtext[data-color="white"] {
-			font-family: Helvetica;
-		    color: white;
-    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
-		}
-		.videoContainerFull .containsubtext[data-color="red"] {
-			font-family: Helvetica;
-		    color: red;
-    		text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
-		}
-		.videoContainerFull .svgprogress .lineload{
-			stroke:red;
-			stroke-width:2;
-		}
-		.videoContainerFull .svgprogress .linecircle{
-			fill:red; 
-		}
-		.videoContainerFull[data-paused="false"] .svgprogress .lineload{
-			stroke: green;
-		}
-		.videoContainerFull[data-paused="false"] .svgprogress .linecircle {
-			fill: green;
-		}
-
-		.videoContainerFull .mute {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM16.828 13.172c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c0.781 0.781 0.781 2.047 0 2.828-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.414 0c1.562-1.562 1.562-4.095 0-5.657zM19.657 10.343c-0.39-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c2.343 2.343 2.343 6.142 0 8.485-0.39 0.391-0.39 1.024 0 1.414s1.024 0.39 1.414 0c3.124-3.124 3.124-8.19 0-11.314zM22.485 7.515c-0.391-0.391-1.024-0.391-1.414 0s-0.39 1.024 0 1.414c3.905 3.905 3.905 10.237 0 14.142-0.39 0.391-0.39 1.024 0 1.414s1.024 0.391 1.414 0c4.686-4.686 4.686-12.284 0-16.971z'%3E%3C/path%3E%3C/svg%3E ");
-			/*background-size: 100% 100%;*/
-		    background-repeat: no-repeat;
-		    background-size: contain;
-		}
-		.videoContainerFull .mute[data-state="unmute"] {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h-4v8h4l8 6h2v-20h-2l-8 6zM27 13l-2-2-3 3-3-3-1.969 1.984 2.969 3.016-3 3 2 2 3-3 3 3 2-2-3-3 3-3z'%3E%3C/path%3E%3C/svg%3E");
-			/*background-size: 100% 100%;*/
-		    background-repeat: no-repeat;
-		    background-size: contain;
-		}
-		.videoContainerFull .turnlight{
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 8.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5-3.358-7.5-7.5-7.5zM16 20.688v-9.375c2.585 0 4.688 2.103 4.688 4.688s-2.103 4.688-4.688 4.688zM16 25.375c1.036 0 1.875 0.839 1.875 1.875v1.875c0 1.036-0.839 1.875-1.875 1.875s-1.875-0.839-1.875-1.875v-1.875c0-1.036 0.839-1.875 1.875-1.875zM16 6.625c-1.036 0-1.875-0.839-1.875-1.875v-1.875c0-1.036 0.839-1.875 1.875-1.875s1.875 0.839 1.875 1.875v1.875c0 1.036-0.839 1.875-1.875 1.875zM29.125 14.125c1.036 0 1.875 0.839 1.875 1.875s-0.839 1.875-1.875 1.875h-1.875c-1.036 0-1.875-0.839-1.875-1.875s0.839-1.875 1.875-1.875h1.875zM6.625 16c0 1.036-0.839 1.875-1.875 1.875h-1.875c-1.036 0-1.875-0.839-1.875-1.875s0.839-1.875 1.875-1.875h1.875c1.036 0 1.875 0.839 1.875 1.875zM25.281 22.629l1.326 1.326c0.732 0.732 0.732 1.919 0 2.652s-1.919 0.732-2.652 0l-1.326-1.326c-0.732-0.732-0.732-1.919 0-2.652s1.919-0.732 2.652 0zM6.719 9.371l-1.326-1.326c-0.732-0.732-0.732-1.919 0-2.652s1.919-0.732 2.652 0l1.326 1.326c0.732 0.732 0.732 1.919 0 2.652s-1.919 0.732-2.652 0zM25.281 9.371c-0.732 0.732-1.919 0.732-2.652 0s-0.732-1.919 0-2.652l1.326-1.326c0.732-0.732 1.919-0.732 2.652 0s0.732 1.919 0 2.652l-1.326 1.326zM6.719 22.629c0.732-0.732 1.919-0.732 2.652 0s0.732 1.919 0 2.652l-1.326 1.326c-0.732 0.732-1.919 0.732-2.652 0s-0.732-1.919 0-2.652l1.326-1.326z'%3E%3C/path%3E%3C/svg%3E");
-		    background-repeat: no-repeat;
-		}
-	</style>
+	<script src="js/shortcut.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/play.css" />
 </head>
 <body>
 	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%"
 			data-paused="true">
-		<input style="position: absolute; top:100%; left: 100%" tabindex="-1" type="textl" class="subtemp" name="">
+		<input style="position: absolute; top:-100%; left: -100%" tabindex="-1" type="textl" class="subtemp" name="">
 		<div class="videoContainer" style="position: relative;" data-fullscreen="false">
 			<div class="videoContaineritem" style="position: relative;">
-				<div class="draggable divsub draggablesub" style="position: absolute; width: 100%; text-align: center; user-select: none; z-index: 10">
+				<div class="draggable divsub draggablesub" style="position: absolute; width: 100%; text-align: center; user-select: none;">
 					<div class="containsubtext" data-color="white">tung tung xen</div>
 				</div>
-				<video data="" class="video" width="100%" preload="metadata">
+				<video id="videotest" data="" class="video" width="100%" preload="metadata">
 					<!-- <source src="video/tung.mp4" type="video/mp4"> -->
 					<source src="https://r3---sn-npoe7n7s.c.drive.google.com/videoplayback?id=3f57a9d0ea6d0dbd&itag=18&source=webdrive&requiressl=yes&mm=30&mn=sn-npoe7n7s&ms=nxu&mv=m&pl=21&ttl=transient&ei=Ve13Wq-YKsy4uQXS1KOoCw&susc=dr&driveid=0B33q56-qh428Q1pYSjBxYXFMdFE&app=explorer&mime=video/mp4&lmt=1493821554352699&mt=1517808858&ip=14.161.5.67&ipbits=0&expire=1517812581&cp=QVNGWUlfUVVWQlhOOjIya1NYWlpIelB6&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,ms,mv,pl,ttl,ei,susc,driveid,app,mime,lmt,cp&signature=729CDCA79AADDE711C0583BEF480CA2126332351.738B713BAFFD8136EC1F395BCBCDA7DDBDF0E60A&key=ck2&cpn=fHYdx1NO4csD8gDF&c=WEB_EMBEDDED_PLAYER&cver=20180131" type="video/mp4">
 					<source src="video/developerStories-en.webm" type="video/webm">
@@ -133,21 +34,21 @@
 				</video>
 			</div>
 			<div class="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
-				<table style="width: 100%;">
+	    		<div style="display: inline-block; position: absolute; user-select: none; bottom: 2px; left: 1px;">
+	    			<span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span>
+	    		</div>
+				<table style="width: 100%; position: relative;" onclick="console.log('tung1')">
 					<tr>
 						<td>
 							<div class="svgprogress" data-state="red" style="padding-right: 9px">
 								<svg height="20" width="100%" style="overflow: visible;">
 								    <line class="linetotal line1" x1="0" y1="8" x2="100%" y2="8"
-								    	style="stroke:rgb(153, 102, 51);stroke-width:2" />
+								    	style="stroke:rgb(153, 102, 51);stroke:transparent;stroke-width:2" />
 								    <line class="lineload line2"  x1="0" y1="8" x2="0%" y2="8" />
 								  <circle class="linecircle line3"  cx="0%" cy="8" r="3" />
 								</svg>
 							</div>
 						</td>
-						<td style="width:100px; display: none;">
-	    					<div><span class="curtimetext">00:00</span> / <span class="durtimetext">00:00</span></div>
-	    				</td>
 						<td style="width:20px">
 							<div  style="height: 20px; width: 20px" class="fs" type="button" data-state="go-fullscreen"></div>
 						</td>
@@ -194,9 +95,5 @@
 		</div>
 	</div>
 	<script src="js/video-player.js"></script>
-	<script src="js/jquery.fittext.js"></script>
-	<script type="text/javascript">
-		$('.draggablesub').fitText(4);
-	</script>
 </body>
 </html>

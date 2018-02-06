@@ -1,4 +1,5 @@
-(function () {
+
+var VideoPlay = (function () {
 	var supportsVideo = !!document.createElement('video').canPlayType;
 	if (!supportsVideo) { return; }
 	var setting = {
@@ -161,7 +162,7 @@
 		idtimeout = setTimeout( function(){
 			videocontrolsinside.css('display', 'none');
 			hide = true;
-		}, 6000);
+		}, 4000);
 	});
 
 	turnlight.on('click', function(e) {
@@ -295,10 +296,10 @@
 		if (cue == undefined) {
 			containsubtext.html('');
 		} else {
-			console.log(cue);
+			// console.log(cue);
 			subtemp.val(cue.text);
 			containsubtext.html(cue.getCueAsHTML());
-			console.log(cue.getCueAsHTML());
+			// console.log(cue.getCueAsHTML());
 		}
 	}
 	listsub.on('change', function(e) {
@@ -313,7 +314,8 @@
 			video.textTracks[i].removeEventListener("cuechange", showSub);
 			// For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
 			if (video.textTracks[i].language == lang) {
-				video.textTracks[i].mode = 'showing';
+				// video.textTracks[i].mode = 'showing';
+				video.textTracks[i].mode = 'hidden';
 				el.setAttribute('data-state', 'active');
 				video.textTracks[i].addEventListener("cuechange", showSub);
 			}
@@ -337,9 +339,9 @@
 			track.cues[i].startTime = track.cues[i].startTime + time;
 			track.cues[i].endTime = track.cues[i].endTime + time;
 		}
-		console.log(time);
+		//console.log(time);
 		//window.track.mode = 'hidden';
-		window.track.mode = 'showing';
+		//window.track.mode = 'showing';
 	});	
 	fontsizesub.on('change', function(e) {
         draggablesub.css('font-size', draggablesub.width() / (fontsizesub.val()*10));
@@ -405,7 +407,7 @@
 	}
 	idtimeout = setTimeout(function(){
 		videocontrolsinside.css('display', 'none'); hide = true;
-	}, 6000);
+	}, 4000);
 	$( function() {
 		draggablesub.draggable({
 			containment: videoContaineritem,
@@ -444,29 +446,43 @@
 	function setLocal(setting){
 		localStorage.setItem('setting', JSON.stringify(setting));
 	}
-	$(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function () {
-  		// setTimeout(function(){
-  		// 	var hz = betweenTop * videojq.height()/height
-  		// 	var topv = videojq.position().top - hz;
-  			
-	  	// 	draggablesub.css('top', topv + 'px');
-	  	// 	console.log(topv);
-  		//  }, 40);
-	});
+
+	return {
+		togglePlay : function () {
+			videojq.trigger('click');
+		},
+		left : function () {
+			video.currentTime = video.currentTime - 5;
+		},
+		right : function () {
+			video.currentTime = video.currentTime + 5;
+		},
+	}
+	function CopyToClipboard(containerid) {
+		if (document.selection) { 
+		    var range = document.body.createTextRange();
+		    range.moveToElementText(containerid);
+		    range.select().createTextRange();
+		    document.execCommand("copy"); 
+
+		} else if (window.getSelection) {
+		    var range = document.createRange();
+		     range.selectNode(containerid);
+		     window.getSelection().removeAllRanges();
+		     window.getSelection().addRange(range);
+		     document.execCommand("copy");
+		}
+	}
  })();
 
-function CopyToClipboard(containerid) {
-	if (document.selection) { 
-	    var range = document.body.createTextRange();
-	    range.moveToElementText(containerid);
-	    range.select().createTextRange();
-	    document.execCommand("copy"); 
-
-	} else if (window.getSelection) {
-	    var range = document.createRange();
-	     range.selectNode(containerid);
-	     window.getSelection().removeAllRanges();
-	     window.getSelection().addRange(range);
-	     document.execCommand("copy");
-	}
-}
+$(function () {
+	shortcut.add("Left",function() {
+		VideoPlay.left();
+	});
+	shortcut.add("Right",function() {
+		VideoPlay.right();
+	});
+	shortcut.add("Space",function() {
+		VideoPlay.togglePlay();
+	});
+});
