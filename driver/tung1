@@ -1,0 +1,1015 @@
+Google_Service_Drive_Resource_Files Object
+(
+    [stackParameters:Google_Service_Resource:private] => Array
+        (
+            [alt] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [fields] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [trace] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [userIp] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [quotaUser] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [data] => Array
+                (
+                    [type] => string
+                    [location] => body
+                )
+
+            [mimeType] => Array
+                (
+                    [type] => string
+                    [location] => header
+                )
+
+            [uploadType] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+            [mediaUpload] => Array
+                (
+                    [type] => complex
+                    [location] => query
+                )
+
+            [prettyPrint] => Array
+                (
+                    [type] => string
+                    [location] => query
+                )
+
+        )
+
+    [rootUrl:Google_Service_Resource:private] => https://www.googleapis.com/
+    [client:Google_Service_Resource:private] => Google_Client Object
+        (
+            [auth:Google_Client:private] => 
+            [http:Google_Client:private] => GuzzleHttp\Client Object
+                (
+                    [config:GuzzleHttp\Client:private] => Array
+                        (
+                            [exceptions] => 
+                            [base_uri] => GuzzleHttp\Psr7\Uri Object
+                                (
+                                    [scheme:GuzzleHttp\Psr7\Uri:private] => https
+                                    [userInfo:GuzzleHttp\Psr7\Uri:private] => 
+                                    [host:GuzzleHttp\Psr7\Uri:private] => www.googleapis.com
+                                    [port:GuzzleHttp\Psr7\Uri:private] => 
+                                    [path:GuzzleHttp\Psr7\Uri:private] => 
+                                    [query:GuzzleHttp\Psr7\Uri:private] => 
+                                    [fragment:GuzzleHttp\Psr7\Uri:private] => 
+                                )
+
+                            [handler] => GuzzleHttp\HandlerStack Object
+                                (
+                                    [handler:GuzzleHttp\HandlerStack:private] => Closure Object
+                                        (
+                                            [static] => Array
+                                                (
+                                                    [default] => Closure Object
+                                                        (
+                                                            [static] => Array
+                                                                (
+                                                                    [default] => GuzzleHttp\Handler\CurlMultiHandler Object
+                                                                        (
+                                                                            [factory:GuzzleHttp\Handler\CurlMultiHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                (
+                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 50
+                                                                                )
+
+                                                                            [selectTimeout:GuzzleHttp\Handler\CurlMultiHandler:private] => 1
+                                                                            [active:GuzzleHttp\Handler\CurlMultiHandler:private] => 
+                                                                            [handles:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [delays:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                (
+                                                                                )
+
+                                                                        )
+
+                                                                    [sync] => GuzzleHttp\Handler\CurlHandler Object
+                                                                        (
+                                                                            [factory:GuzzleHttp\Handler\CurlHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                (
+                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                        (
+                                                                                            [0] => Resource id #78
+                                                                                        )
+
+                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 3
+                                                                                )
+
+                                                                        )
+
+                                                                )
+
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$request] => <required>
+                                                                    [$options] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [streaming] => GuzzleHttp\Handler\StreamHandler Object
+                                                        (
+                                                            [lastHeaders:GuzzleHttp\Handler\StreamHandler:private] => Array
+                                                                (
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [parameter] => Array
+                                                (
+                                                    [$request] => <required>
+                                                    [$options] => <required>
+                                                )
+
+                                        )
+
+                                    [stack:GuzzleHttp\HandlerStack:private] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [0] => Closure Object
+                                                        (
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$handler] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [1] => http_errors
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [0] => Closure Object
+                                                        (
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$handler] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [1] => allow_redirects
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [0] => Closure Object
+                                                        (
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$handler] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [1] => cookies
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [0] => Closure Object
+                                                        (
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$handler] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [1] => prepare_body
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [0] => Google\Auth\Middleware\ScopedAccessTokenMiddleware Object
+                                                        (
+                                                            [cache:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Google\Auth\Cache\MemoryCacheItemPool Object
+                                                                (
+                                                                    [items:Google\Auth\Cache\MemoryCacheItemPool:private] => Array
+                                                                        (
+                                                                            [dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321] => Google\Auth\Cache\Item Object
+                                                                                (
+                                                                                    [key:Google\Auth\Cache\Item:private] => dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321
+                                                                                    [value:Google\Auth\Cache\Item:private] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                    [expiration:Google\Auth\Cache\Item:private] => DateTime Object
+                                                                                        (
+                                                                                            [date] => 2018-02-08 08:31:44.872192
+                                                                                            [timezone_type] => 3
+                                                                                            [timezone] => Europe/Berlin
+                                                                                        )
+
+                                                                                    [isHit:Google\Auth\Cache\Item:private] => 1
+                                                                                )
+
+                                                                        )
+
+                                                                    [deferredItems:Google\Auth\Cache\MemoryCacheItemPool:private] => 
+                                                                )
+
+                                                            [cacheConfig:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Array
+                                                                (
+                                                                    [lifetime] => 1500
+                                                                    [prefix] => 
+                                                                )
+
+                                                            [tokenFunc:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Closure Object
+                                                                (
+                                                                    [static] => Array
+                                                                        (
+                                                                            [token] => Array
+                                                                                (
+                                                                                    [access_token] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                    [token_type] => Bearer
+                                                                                    [expires_in] => 3600
+                                                                                    [created] => 1518073125
+                                                                                    [refresh_token] => 1/FNMYSfjwww8CncRhldKp4C6wXZCr7jhpLcMggnOxzsE
+                                                                                )
+
+                                                                        )
+
+                                                                    [this] => Google_AuthHandler_Guzzle6AuthHandler Object
+                                                                        (
+                                                                            [cache:protected] => Google\Auth\Cache\MemoryCacheItemPool Object
+                                                                                (
+                                                                                    [items:Google\Auth\Cache\MemoryCacheItemPool:private] => Array
+                                                                                        (
+                                                                                            [dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321] => Google\Auth\Cache\Item Object
+                                                                                                (
+                                                                                                    [key:Google\Auth\Cache\Item:private] => dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321
+                                                                                                    [value:Google\Auth\Cache\Item:private] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                                    [expiration:Google\Auth\Cache\Item:private] => DateTime Object
+                                                                                                        (
+                                                                                                            [date] => 2018-02-08 08:31:44.872192
+                                                                                                            [timezone_type] => 3
+                                                                                                            [timezone] => Europe/Berlin
+                                                                                                        )
+
+                                                                                                    [isHit:Google\Auth\Cache\Item:private] => 1
+                                                                                                )
+
+                                                                                        )
+
+                                                                                    [deferredItems:Google\Auth\Cache\MemoryCacheItemPool:private] => 
+                                                                                )
+
+                                                                            [cacheConfig:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                        )
+
+                                                                    [parameter] => Array
+                                                                        (
+                                                                            [$scopes] => <required>
+                                                                        )
+
+                                                                )
+
+                                                            [scopes:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Array
+                                                                (
+                                                                    [0] => https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.photos.readonly https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.scripts
+                                                                )
+
+                                                            [maxKeyLength:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => 64
+                                                        )
+
+                                                    [1] => google_auth
+                                                )
+
+                                        )
+
+                                    [cached:GuzzleHttp\HandlerStack:private] => Closure Object
+                                        (
+                                            [static] => Array
+                                                (
+                                                    [handler] => GuzzleHttp\RedirectMiddleware Object
+                                                        (
+                                                            [nextHandler:GuzzleHttp\RedirectMiddleware:private] => Closure Object
+                                                                (
+                                                                    [static] => Array
+                                                                        (
+                                                                            [handler] => GuzzleHttp\PrepareBodyMiddleware Object
+                                                                                (
+                                                                                    [nextHandler:GuzzleHttp\PrepareBodyMiddleware:private] => Closure Object
+                                                                                        (
+                                                                                            [static] => Array
+                                                                                                (
+                                                                                                    [handler] => Closure Object
+                                                                                                        (
+                                                                                                            [static] => Array
+                                                                                                                (
+                                                                                                                    [default] => Closure Object
+                                                                                                                        (
+                                                                                                                            [static] => Array
+                                                                                                                                (
+                                                                                                                                    [default] => GuzzleHttp\Handler\CurlMultiHandler Object
+                                                                                                                                        (
+                                                                                                                                            [factory:GuzzleHttp\Handler\CurlMultiHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                                                                                (
+                                                                                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                                                                                        (
+                                                                                                                                                        )
+
+                                                                                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 50
+                                                                                                                                                )
+
+                                                                                                                                            [selectTimeout:GuzzleHttp\Handler\CurlMultiHandler:private] => 1
+                                                                                                                                            [active:GuzzleHttp\Handler\CurlMultiHandler:private] => 
+                                                                                                                                            [handles:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                                                                                (
+                                                                                                                                                )
+
+                                                                                                                                            [delays:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                                                                                (
+                                                                                                                                                )
+
+                                                                                                                                        )
+
+                                                                                                                                    [sync] => GuzzleHttp\Handler\CurlHandler Object
+                                                                                                                                        (
+                                                                                                                                            [factory:GuzzleHttp\Handler\CurlHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                                                                                (
+                                                                                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                                                                                        (
+                                                                                                                                                            [0] => Resource id #78
+                                                                                                                                                        )
+
+                                                                                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 3
+                                                                                                                                                )
+
+                                                                                                                                        )
+
+                                                                                                                                )
+
+                                                                                                                            [parameter] => Array
+                                                                                                                                (
+                                                                                                                                    [$request] => <required>
+                                                                                                                                    [$options] => <required>
+                                                                                                                                )
+
+                                                                                                                        )
+
+                                                                                                                    [streaming] => GuzzleHttp\Handler\StreamHandler Object
+                                                                                                                        (
+                                                                                                                            [lastHeaders:GuzzleHttp\Handler\StreamHandler:private] => Array
+                                                                                                                                (
+                                                                                                                                )
+
+                                                                                                                        )
+
+                                                                                                                )
+
+                                                                                                            [parameter] => Array
+                                                                                                                (
+                                                                                                                    [$request] => <required>
+                                                                                                                    [$options] => <required>
+                                                                                                                )
+
+                                                                                                        )
+
+                                                                                                )
+
+                                                                                            [this] => Google\Auth\Middleware\ScopedAccessTokenMiddleware Object
+                                                                                                (
+                                                                                                    [cache:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Google\Auth\Cache\MemoryCacheItemPool Object
+                                                                                                        (
+                                                                                                            [items:Google\Auth\Cache\MemoryCacheItemPool:private] => Array
+                                                                                                                (
+                                                                                                                    [dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321] => Google\Auth\Cache\Item Object
+                                                                                                                        (
+                                                                                                                            [key:Google\Auth\Cache\Item:private] => dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321
+                                                                                                                            [value:Google\Auth\Cache\Item:private] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                                                            [expiration:Google\Auth\Cache\Item:private] => DateTime Object
+                                                                                                                                (
+                                                                                                                                    [date] => 2018-02-08 08:31:44.872192
+                                                                                                                                    [timezone_type] => 3
+                                                                                                                                    [timezone] => Europe/Berlin
+                                                                                                                                )
+
+                                                                                                                            [isHit:Google\Auth\Cache\Item:private] => 1
+                                                                                                                        )
+
+                                                                                                                )
+
+                                                                                                            [deferredItems:Google\Auth\Cache\MemoryCacheItemPool:private] => 
+                                                                                                        )
+
+                                                                                                    [cacheConfig:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Array
+                                                                                                        (
+                                                                                                            [lifetime] => 1500
+                                                                                                            [prefix] => 
+                                                                                                        )
+
+                                                                                                    [tokenFunc:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Closure Object
+                                                                                                        (
+                                                                                                            [static] => Array
+                                                                                                                (
+                                                                                                                    [token] => Array
+                                                                                                                        (
+                                                                                                                            [access_token] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                                                            [token_type] => Bearer
+                                                                                                                            [expires_in] => 3600
+                                                                                                                            [created] => 1518073125
+                                                                                                                            [refresh_token] => 1/FNMYSfjwww8CncRhldKp4C6wXZCr7jhpLcMggnOxzsE
+                                                                                                                        )
+
+                                                                                                                )
+
+                                                                                                            [this] => Google_AuthHandler_Guzzle6AuthHandler Object
+                                                                                                                (
+                                                                                                                    [cache:protected] => Google\Auth\Cache\MemoryCacheItemPool Object
+                                                                                                                        (
+                                                                                                                            [items:Google\Auth\Cache\MemoryCacheItemPool:private] => Array
+                                                                                                                                (
+                                                                                                                                    [dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321] => Google\Auth\Cache\Item Object
+                                                                                                                                        (
+                                                                                                                                            [key:Google\Auth\Cache\Item:private] => dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321
+                                                                                                                                            [value:Google\Auth\Cache\Item:private] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                                                                                                                            [expiration:Google\Auth\Cache\Item:private] => DateTime Object
+                                                                                                                                                (
+                                                                                                                                                    [date] => 2018-02-08 08:31:44.872192
+                                                                                                                                                    [timezone_type] => 3
+                                                                                                                                                    [timezone] => Europe/Berlin
+                                                                                                                                                )
+
+                                                                                                                                            [isHit:Google\Auth\Cache\Item:private] => 1
+                                                                                                                                        )
+
+                                                                                                                                )
+
+                                                                                                                            [deferredItems:Google\Auth\Cache\MemoryCacheItemPool:private] => 
+                                                                                                                        )
+
+                                                                                                                    [cacheConfig:protected] => Array
+                                                                                                                        (
+                                                                                                                        )
+
+                                                                                                                )
+
+                                                                                                            [parameter] => Array
+                                                                                                                (
+                                                                                                                    [$scopes] => <required>
+                                                                                                                )
+
+                                                                                                        )
+
+                                                                                                    [scopes:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => Array
+                                                                                                        (
+                                                                                                            [0] => https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.photos.readonly https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.scripts
+                                                                                                        )
+
+                                                                                                    [maxKeyLength:Google\Auth\Middleware\ScopedAccessTokenMiddleware:private] => 64
+                                                                                                )
+
+                                                                                            [parameter] => Array
+                                                                                                (
+                                                                                                    [$request] => <required>
+                                                                                                    [$options] => <required>
+                                                                                                )
+
+                                                                                        )
+
+                                                                                )
+
+                                                                        )
+
+                                                                    [parameter] => Array
+                                                                        (
+                                                                            [$request] => <required>
+                                                                            [$options] => <required>
+                                                                        )
+
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [parameter] => Array
+                                                (
+                                                    [$request] => <required>
+                                                    [$options] => <required>
+                                                )
+
+                                        )
+
+                                )
+
+                            [allow_redirects] => Array
+                                (
+                                    [max] => 5
+                                    [protocols] => Array
+                                        (
+                                            [0] => http
+                                            [1] => https
+                                        )
+
+                                    [strict] => 
+                                    [referer] => 
+                                    [track_redirects] => 
+                                )
+
+                            [http_errors] => 1
+                            [decode_content] => 1
+                            [verify] => 1
+                            [cookies] => 
+                            [headers] => Array
+                                (
+                                    [User-Agent] => GuzzleHttp/6.2.1 curl/7.54.1 PHP/7.1.8
+                                )
+
+                        )
+
+                )
+
+            [cache:Google_Client:private] => Google\Auth\Cache\MemoryCacheItemPool Object
+                (
+                    [items:Google\Auth\Cache\MemoryCacheItemPool:private] => Array
+                        (
+                            [dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321] => Google\Auth\Cache\Item Object
+                                (
+                                    [key:Google\Auth\Cache\Item:private] => dd8f9d6cc50250e6abddc60cbc706d0740ede40c652b50414f0bfeb4697a6321
+                                    [value:Google\Auth\Cache\Item:private] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                                    [expiration:Google\Auth\Cache\Item:private] => DateTime Object
+                                        (
+                                            [date] => 2018-02-08 08:31:44.872192
+                                            [timezone_type] => 3
+                                            [timezone] => Europe/Berlin
+                                        )
+
+                                    [isHit:Google\Auth\Cache\Item:private] => 1
+                                )
+
+                        )
+
+                    [deferredItems:Google\Auth\Cache\MemoryCacheItemPool:private] => 
+                )
+
+            [token:Google_Client:private] => Array
+                (
+                    [access_token] => ya29.GltcBdyzXWoYrec-IBGQx7YgUoRXj43KSIttKJLJSKi-ezpN0Fp8YGPrJRdAEf7yQjMN3mTQirmv3bIr_UJbGgOOsbgkBPegvr6tlnmnppSzEceswnqVPMrHMcNE
+                    [token_type] => Bearer
+                    [expires_in] => 3600
+                    [created] => 1518073125
+                    [refresh_token] => 1/FNMYSfjwww8CncRhldKp4C6wXZCr7jhpLcMggnOxzsE
+                )
+
+            [config:Google_Client:private] => Array
+                (
+                    [application_name] => Drive API PHP Quickstart
+                    [base_path] => https://www.googleapis.com
+                    [client_id] => 143893350450-673o6al92a7un4je26e948s7bv9a88rv.apps.googleusercontent.com
+                    [client_secret] => MiSg1emBwbY9_QRbR2lgt-aT
+                    [redirect_uri] => http://localhost:8081/videosub/driver/index.php
+                    [state] => 
+                    [developer_key] => 
+                    [use_application_default_credentials] => 
+                    [signing_key] => 
+                    [signing_algorithm] => 
+                    [subject] => 
+                    [hd] => 
+                    [prompt] => 
+                    [openid.realm] => 
+                    [include_granted_scopes] => 
+                    [login_hint] => 
+                    [request_visible_actions] => 
+                    [access_type] => offline
+                    [approval_prompt] => auto
+                    [retry] => Array
+                        (
+                        )
+
+                    [cache_config] => Array
+                        (
+                        )
+
+                    [token_callback] => 
+                    [jwt] => 
+                )
+
+            [logger:Google_Client:private] => Monolog\Logger Object
+                (
+                    [name:protected] => google-api-php-client
+                    [handlers:protected] => Array
+                        (
+                            [0] => Monolog\Handler\StreamHandler Object
+                                (
+                                    [stream:protected] => 
+                                    [url:protected] => php://stderr
+                                    [errorMessage:Monolog\Handler\StreamHandler:private] => 
+                                    [filePermission:protected] => 
+                                    [useLocking:protected] => 
+                                    [dirCreated:Monolog\Handler\StreamHandler:private] => 
+                                    [level:protected] => 250
+                                    [bubble:protected] => 1
+                                    [formatter:protected] => 
+                                    [processors:protected] => Array
+                                        (
+                                        )
+
+                                )
+
+                        )
+
+                    [processors:protected] => Array
+                        (
+                        )
+
+                    [microsecondTimestamps:protected] => 1
+                )
+
+            [deferExecution:Google_Client:private] => 
+            [requestedScopes:protected] => Array
+                (
+                    [0] => https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.photos.readonly https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.scripts
+                )
+
+        )
+
+    [serviceName:Google_Service_Resource:private] => drive
+    [servicePath:Google_Service_Resource:private] => drive/v3/
+    [resourceName:Google_Service_Resource:private] => files
+    [methods:Google_Service_Resource:private] => Array
+        (
+            [copy] => Array
+                (
+                    [path] => files/{fileId}/copy
+                    [httpMethod] => POST
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [ignoreDefaultVisibility] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [keepRevisionForever] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [ocrLanguage] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+            [create] => Array
+                (
+                    [path] => files
+                    [httpMethod] => POST
+                    [parameters] => Array
+                        (
+                            [ignoreDefaultVisibility] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [keepRevisionForever] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [ocrLanguage] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [useContentAsIndexableText] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+            [delete] => Array
+                (
+                    [path] => files/{fileId}
+                    [httpMethod] => DELETE
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+            [emptyTrash] => Array
+                (
+                    [path] => files/trash
+                    [httpMethod] => DELETE
+                    [parameters] => Array
+                        (
+                        )
+
+                )
+
+            [export] => Array
+                (
+                    [path] => files/{fileId}/export
+                    [httpMethod] => GET
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [mimeType] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                        )
+
+                )
+
+            [generateIds] => Array
+                (
+                    [path] => files/generateIds
+                    [httpMethod] => GET
+                    [parameters] => Array
+                        (
+                            [count] => Array
+                                (
+                                    [location] => query
+                                    [type] => integer
+                                )
+
+                            [space] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                        )
+
+                )
+
+            [get] => Array
+                (
+                    [path] => files/{fileId}
+                    [httpMethod] => GET
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [acknowledgeAbuse] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+            [list] => Array
+                (
+                    [path] => files
+                    [httpMethod] => GET
+                    [parameters] => Array
+                        (
+                            [corpora] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [corpus] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [includeTeamDriveItems] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [orderBy] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [pageSize] => Array
+                                (
+                                    [location] => query
+                                    [type] => integer
+                                )
+
+                            [pageToken] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [q] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [spaces] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [teamDriveId] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                        )
+
+                )
+
+            [update] => Array
+                (
+                    [path] => files/{fileId}
+                    [httpMethod] => PATCH
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [addParents] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [keepRevisionForever] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [ocrLanguage] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [removeParents] => Array
+                                (
+                                    [location] => query
+                                    [type] => string
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [useContentAsIndexableText] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+            [watch] => Array
+                (
+                    [path] => files/{fileId}/watch
+                    [httpMethod] => POST
+                    [parameters] => Array
+                        (
+                            [fileId] => Array
+                                (
+                                    [location] => path
+                                    [type] => string
+                                    [required] => 1
+                                )
+
+                            [acknowledgeAbuse] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                            [supportsTeamDrives] => Array
+                                (
+                                    [location] => query
+                                    [type] => boolean
+                                )
+
+                        )
+
+                )
+
+        )
+
+)

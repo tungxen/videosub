@@ -1,0 +1,95 @@
+GuzzleHttp\Psr7\Response Object
+(
+    [reasonPhrase:GuzzleHttp\Psr7\Response:private] => OK
+    [statusCode:GuzzleHttp\Psr7\Response:private] => 200
+    [headers:GuzzleHttp\Psr7\Response:private] => Array
+        (
+            [X-GUploader-UploadID] => Array
+                (
+                    [0] => AEnB2UoBQmlopJCfyZWcMgmClaZ-rKski9AVadt2VfPH_MNnKnedMjlC5EZMfCK5J3q1Axun-skJA5L3SWFbcEz7kZWRpsum3CXkDSJeSfDY4M9je8c6XIE
+                )
+
+            [Content-Type] => Array
+                (
+                    [0] => video/mp4
+                )
+
+            [Content-Disposition] => Array
+                (
+                    [0] => attachment
+                )
+
+            [Vary] => Array
+                (
+                    [0] => Origin
+                    [1] => X-Origin
+                )
+
+            [Expires] => Array
+                (
+                    [0] => Thu, 08 Feb 2018 06:04:20 GMT
+                )
+
+            [Date] => Array
+                (
+                    [0] => Thu, 08 Feb 2018 06:04:20 GMT
+                )
+
+            [Cache-Control] => Array
+                (
+                    [0] => private, max-age=0, must-revalidate
+                )
+
+            [Content-Length] => Array
+                (
+                    [0] => 22306323
+                )
+
+            [X-Goog-Hash] => Array
+                (
+                    [0] => crc32c=rFCkIg==
+                )
+
+            [Server] => Array
+                (
+                    [0] => UploadServer
+                )
+
+            [Alt-Svc] => Array
+                (
+                    [0] => hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+                )
+
+        )
+
+    [headerNames:GuzzleHttp\Psr7\Response:private] => Array
+        (
+            [x-guploader-uploadid] => X-GUploader-UploadID
+            [content-type] => Content-Type
+            [content-disposition] => Content-Disposition
+            [vary] => Vary
+            [expires] => Expires
+            [date] => Date
+            [cache-control] => Cache-Control
+            [content-length] => Content-Length
+            [x-goog-hash] => X-Goog-Hash
+            [server] => Server
+            [alt-svc] => Alt-Svc
+        )
+
+    [protocol:GuzzleHttp\Psr7\Response:private] => 1.1
+    [stream:GuzzleHttp\Psr7\Response:private] => GuzzleHttp\Psr7\Stream Object
+        (
+            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #89
+            [size:GuzzleHttp\Psr7\Stream:private] => 
+            [seekable:GuzzleHttp\Psr7\Stream:private] => 1
+            [readable:GuzzleHttp\Psr7\Stream:private] => 1
+            [writable:GuzzleHttp\Psr7\Stream:private] => 1
+            [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
+            [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                (
+                )
+
+        )
+
+)
