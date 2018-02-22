@@ -1,10 +1,3 @@
-<?php 
-session_start();
-$_SESSION;
-var_dump($_SESSION);
-$_SESSION['name'] = 'tung';
-var_dump($_SESSION);
- ?>
 <!DOCTYPE html>
 <html lang="en-IE">
 <head>
@@ -16,7 +9,9 @@ var_dump($_SESSION);
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/shortcut.js"></script>
+	<script src="js/jquery.multi-select.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/play.css" />
+	<link rel="stylesheet" type="text/css" href="css/example-styles.css" />
 </head>
 <body>
 	<div class="videoContainerFull" style="display: inline-block;position:relative; width: 100%"
@@ -33,11 +28,11 @@ var_dump($_SESSION);
 					<source src="video/developerStories-en.webm" type="video/webm">
 					<source src="video/sintel-short.mp4" type="video/mp4">
 					<source src="video/sintel-short.webm" type="video/webm">
-					<track label="nhat" kind="subtitles" srclang="jp" src="subtitles/vtt/jp/ghoul1.vtt" default>
-					<track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/developerStories-subtitles-en.vtt" default>
+					<track label="Japanese" kind="subtitles" srclang="ja" src="subtitles/vtt/jp/ghoul1.vtt" default>
+					<track label="english" kind="subtitles" srclang="en" src="subtitles/vtt/developerStories-subtitles-en.vtt" default>
 					<!-- <track label="English" kind="subtitles" srclang="en" src="subtitles/vtt/sintel-en.vtt" default> -->
-					<track label="Deutsch" kind="subtitles" srclang="de" src="subtitles/vtt/sintel-de.vtt">
-					<track label="Español" kind="subtitles" srclang="es" src="subtitles/vtt/sintel-es.vtt">
+					<track label="Hiragana" kind="subtitles" srclang="hi" src="subtitles/vtt/sintel-de.vtt">
+					<track label="Katakana" kind="subtitles" srclang="ka" src="subtitles/vtt/sintel-es.vtt">
 				</video>
 			</div>
 			<div class="videocontrolsinside" data-state="show" class="controls" style="position: absolute; bottom: 0; left: 0; right: 0;">
@@ -78,8 +73,18 @@ var_dump($_SESSION);
   			<input style="width: 50px; display: none" type="range" step="0.1" min="0" max="1" value="1" class="rangemute">
 			<button class="turnlight" style="width: 30px; height: 30px" type="button" data-state="off"></button>
 			<button style="display: none" class="zoomvd" type="button" data-state="-">phong to</button>
-			<select class="listsub">
-			</select>
+			<!-- <select class="listsub">
+			</select> -->
+		    <div class="listsubnewdiv" style="display: inline-block;">
+		        <label for="listsubnew">chọn sub</label>
+		        <select class="listsub" multiple>
+		        <!--     <option value="ti">TiengViet</option>
+		            <option value="ja">Japanese</option>
+		            <option value="hi">Hiragana</option>
+		            <option value="ka">Katakana</option>
+		            <option value="ro">Romaji</option> -->
+		        </select>
+		    </div>
 			<select class="fontsizesub">
 				<option value="5">rất nhỏ</option>
 				<option value="4.5">nhỏ vừa</option>
@@ -101,6 +106,31 @@ var_dump($_SESSION);
 		    <button class='qtyplus'>+sub</button>
 		</div>
 	</div>
+	<div id="parentdivsub" style="height: 400px; overflow: scroll; width: 600px">
+		
+	</div>
+
+
+	<style type="text/css">
+		#parentdivsub div {
+			border: 1px solid black;
+		}
+		#parentdivsub div.selected {
+			background-color: red;
+		}
+		#parentdivsub>div>span:first-of-type {
+			display: inline-block;
+			height: 20px;
+			width: 50px;
+			border: 1px solid black;
+		}
+	</style>
 	<script src="js/video-player.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+	        $('.listsubnewdiv .listsub').val(["ja"]);
+	        $('.listsubnewdiv .listsub').multiSelect();
+	    });
+    </script>
 </body>
 </html>
