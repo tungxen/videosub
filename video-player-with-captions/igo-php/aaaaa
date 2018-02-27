@@ -1,0 +1,164 @@
+Array
+(
+    [0] => Array
+        (
+            [surface] => 漢字
+            [feature] => 名詞,一般,*,*,*,*,漢字,カンジ,カンジ
+            [start] => 0
+        )
+
+    [1] => Array
+        (
+            [surface] => は
+            [feature] => 助詞,係助詞,*,*,*,*,は,ハ,ワ
+            [start] => 2
+        )
+
+    [2] => Array
+        (
+            [surface] => 、
+            [feature] => 記号,読点,*,*,*,*,、,、,、
+            [start] => 3
+        )
+
+    [3] => Array
+        (
+            [surface] => 古代
+            [feature] => 名詞,一般,*,*,*,*,古代,コダイ,コダイ
+            [start] => 4
+        )
+
+    [4] => Array
+        (
+            [surface] => 中国
+            [feature] => 名詞,固有名詞,地域,国,*,*,中国,チュウゴク,チューゴク
+            [start] => 6
+        )
+
+    [5] => Array
+        (
+            [surface] => に
+            [feature] => 助詞,格助詞,一般,*,*,*,に,ニ,ニ
+            [start] => 8
+        )
+
+    [6] => Array
+        (
+            [surface] => 発祥
+            [feature] => 名詞,サ変接続,*,*,*,*,発祥,ハッショウ,ハッショー
+            [start] => 9
+        )
+
+    [7] => Array
+        (
+            [surface] => を
+            [feature] => 助詞,格助詞,一般,*,*,*,を,ヲ,ヲ
+            [start] => 11
+        )
+
+    [8] => Array
+        (
+            [surface] => 持つ
+            [feature] => 動詞,自立,*,*,五段・タ行,基本形,持つ,モツ,モツ
+            [start] => 12
+        )
+
+    [9] => Array
+        (
+            [surface] => 文字
+            [feature] => 名詞,一般,*,*,*,*,文字,モジ,モジ
+            [start] => 14
+        )
+
+    [10] => Array
+        (
+            [surface] => 。
+            [feature] => 記号,句点,*,*,*,*,。,。,。
+            [start] => 16
+        )
+
+    [11] => Array
+        (
+            [surface] => 特に
+            [feature] => 副詞,一般,*,*,*,*,特に,トクニ,トクニ
+            [start] => 17
+        )
+
+    [12] => Array
+        (
+            [surface] => 中国
+            [feature] => 名詞,固有名詞,地域,国,*,*,中国,チュウゴク,チューゴク
+            [start] => 19
+        )
+
+    [13] => Array
+        (
+            [surface] => 語
+            [feature] => 名詞,接尾,一般,*,*,*,語,ゴ,ゴ
+            [start] => 21
+        )
+
+    [14] => Array
+        (
+            [surface] => を
+            [feature] => 助詞,格助詞,一般,*,*,*,を,ヲ,ヲ
+            [start] => 22
+        )
+
+    [15] => Array
+        (
+            [surface] => 表記
+            [feature] => 名詞,サ変接続,*,*,*,*,表記,ヒョウキ,ヒョーキ
+            [start] => 23
+        )
+
+    [16] => Array
+        (
+            [surface] => する
+            [feature] => 動詞,自立,*,*,サ変・スル,基本形,する,スル,スル
+            [start] => 25
+        )
+
+    [17] => Array
+        (
+            [surface] => ため
+            [feature] => 名詞,非自立,副詞可能,*,*,*,ため,タメ,タメ
+            [start] => 27
+        )
+
+    [18] => Array
+        (
+            [surface] => の
+            [feature] => 助詞,連体化,*,*,*,*,の,ノ,ノ
+            [start] => 29
+        )
+
+    [19] => Array
+        (
+            [surface] => 文字
+            [feature] => 名詞,一般,*,*,*,*,文字,モジ,モジ
+            [start] => 30
+        )
+
+    [20] => Array
+        (
+            [surface] => で
+            [feature] => 助動詞,*,*,*,特殊・ダ,連用形,だ,デ,デ
+            [start] => 32
+        )
+
+    [21] => Array
+        (
+            [surface] => ある
+            [feature] => 助動詞,*,*,*,五段・ラ行アル,基本形,ある,アル,アル
+            [start] => 33
+        )
+
+    [22] => Array
+        (
+            [surface] => 。
+            [feature] => 記号,句点,*,*,*,*,。,。,。
+            [start] => 35
+        )
+
+)
