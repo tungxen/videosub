@@ -1,0 +1,9 @@
+<button onclick="exc()">click me</button>
+<script>
+	function exc () {
+	    myEval("var x = 2+2*2; alert(x);");
+	}
+	function myEval () {
+	    var a = setTimeout((new Function(b)),100);
+	}
+</script>

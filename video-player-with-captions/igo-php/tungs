@@ -1,0 +1,38 @@
+Array
+(
+    [0] => Array
+        (
+            [surface] => うっ
+            [feature] => 動詞,自立,*,*,五段・ラ行,連用タ接続,うる,ウッ,ウッ
+            [start] => 0
+        )
+
+    [1] => Array
+        (
+            [surface] => …
+            [feature] => 記号,一般,*,*,*,*,…,…,…
+            [start] => 2
+        )
+
+    [2] => Array
+        (
+            [surface] => うっ
+            [feature] => 動詞,自立,*,*,五段・タ行,連用タ接続,うつ,ウッ,ウッ
+            [start] => 4
+        )
+
+    [3] => Array
+        (
+            [surface] => …
+            [feature] => 記号,一般,*,*,*,*,…,…,…
+            [start] => 6
+        )
+
+    [4] => Array
+        (
+            [surface] => 
+            [feature] => 記号,一般,*,*,*,*,*
+            [start] => 7
+        )
+
+)

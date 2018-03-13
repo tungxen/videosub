@@ -1,0 +1,3211 @@
+Array
+(
+    [0] => Array
+        (
+            [order] => 1
+            [time_ini] => 00:00:06.047
+            [time_end] => 00:00:10.677
+            [subtitle] => NETFLIX オリジナルシリーズ 
+        )
+
+    [1] => Array
+        (
+            [order] => 2
+            [time_ini] => 00:00:31.322
+            [time_end] => 00:00:33.867
+            [subtitle] => （ギルベルト）ン？ ドウシタ？ 
+        )
+
+    [2] => Array
+        (
+            [order] => 3
+            [time_ini] => 00:00:35.160
+            [time_end] => 00:00:36.995
+            [subtitle] => （ヴァイオレット）ショウサノヒトミガアリマス 
+        )
+
+    [3] => Array
+        (
+            [order] => 4
+            [time_ini] => 00:00:38.872
+            [time_end] => 00:00:42.167
+            [subtitle] => ショウサノヒトミトオナジイロデス 
+        )
+
+    [4] => Array
+        (
+            [order] => 5
+            [time_ini] => 00:00:46.838
+            [time_end] => 00:00:48.590
+            [subtitle] => コレヲミタトキノ… 
+        )
+
+    [5] => Array
+        (
+            [order] => 6
+            [time_ini] => 00:00:50.467
+            [time_end] => 00:00:51.593
+            [subtitle] => コウイウノヲ… 
+        )
+
+    [6] => Array
+        (
+            [order] => 7
+            [time_ini] => 00:00:55.221
+            [time_end] => 00:00:57.307
+            [subtitle] => ナントイウノデショウ？ 
+        )
+
+    [7] => Array
+        (
+            [order] => 8
+            [time_ini] => 00:01:17.994
+            [time_end] => 00:01:20.246
+            [subtitle] => ウッ… ウッ… 
+        )
+
+    [8] => Array
+        (
+            [order] => 9
+            [time_ini] => 00:01:31.382
+            [time_end] => 00:01:33.134
+            [subtitle] => &lrm;（ヴァイオレット）“ギルベルトショウサ” 
+        )
+
+    [9] => Array
+        (
+            [order] => 10
+            [time_ini] => 00:01:33.259
+            [time_end] => 00:01:36.137
+            [subtitle] => “ホンジツ ニュウイン120ニチメ” 
+        )
+
+    [10] => Array
+        (
+            [order] => 11
+            [time_ini] => 00:01:36.971
+            [time_end] => 00:01:39.307
+            [subtitle] => “タイリョクハ ホボカイフク” 
+        )
+
+    [11] => Array
+        (
+            [order] => 12
+            [time_ini] => 00:01:39.432
+            [time_end] => 00:01:41.476
+            [subtitle] => “ドウサニタショウ シショウアルモ―” 
+        )
+
+    [12] => Array
+        (
+            [order] => 13
+            [time_ini] => 00:01:41.601
+            [time_end] => 00:01:43.478
+            [subtitle] => “ニンムノスイコウハカノウ” 
+        )
+
+    [13] => Array
+        (
+            [order] => 14
+            [time_ini] => 00:01:44.020
+            [time_end] => 00:01:46.481
+            [subtitle] => “スミヤカニ ショクムヘノフッキヲ…” 
+        )
+
+    [14] => Array
+        (
+            [order] => 15
+            [time_ini] => 00:02:48.877
+            [time_end] => 00:02:50.795
+            [subtitle] => （ホッジンズ）ソノショウジョノソンザイハ― 
+        )
+
+    [15] => Array
+        (
+            [order] => 16
+            [time_ini] => 00:02:50.920
+            [time_end] => 00:02:53.089
+            [subtitle] => ヒソカニカクサレテイタ 
+        )
+
+    [16] => Array
+        (
+            [order] => 17
+            [time_ini] => 00:02:53.631
+            [time_end] => 00:02:55.550
+            [subtitle] => ダガ ソノショウジョヲシルモノハ― 
+        )
+
+    [17] => Array
+        (
+            [order] => 18
+            [time_ini] => 00:02:55.675
+            [time_end] => 00:02:58.344
+            [subtitle] => カノジョヲ“ブキ”ダトイッタ 
+        )
+
+    [18] => Array
+        (
+            [order] => 19
+            [time_ini] => 00:02:58.803
+            [time_end] => 00:03:00.847
+            [subtitle] => メイレイスレバタタカウ 
+        )
+
+    [19] => Array
+        (
+            [order] => 20
+            [time_ini] => 00:03:00.972
+            [time_end] => 00:03:03.391
+            [subtitle] => ヒトノカタチヲモシテイルダケノ― 
+        )
+
+    [20] => Array
+        (
+            [order] => 21
+            [time_ini] => 00:03:03.516
+            [time_end] => 00:03:05.393
+            [subtitle] => ココロヲモタナイ― 
+        )
+
+    [21] => Array
+        (
+            [order] => 22
+            [time_ini] => 00:03:05.518
+            [time_end] => 00:03:07.562
+            [subtitle] => タダノドウグダト 
+        )
+
+    [22] => Array
+        (
+            [order] => 23
+            [time_ini] => 00:03:10.106
+            [time_end] => 00:03:11.858
+            [subtitle] => （カンゴシ）ホッジンズチュウサ 
+        )
+
+    [23] => Array
+        (
+            [order] => 24
+            [time_ini] => 00:03:12.233
+            [time_end] => 00:03:13.776
+            [subtitle] => コチラデス 
+        )
+
+    [24] => Array
+        (
+            [order] => 25
+            [time_ini] => 00:03:13.902
+            [time_end] => 00:03:15.653
+            [subtitle] => （ホッジンズ）アッ… アア 
+        )
+
+    [25] => Array
+        (
+            [order] => 26
+            [time_ini] => 00:03:19.657
+            [time_end] => 00:03:20.158
+            [subtitle] => スマナイ 
+        )
+
+    [26] => Array
+        (
+            [order] => 27
+            [time_ini] => 00:03:20.158
+            [time_end] => 00:03:21.200
+            [subtitle] => スマナイ 
+        )
+
+    [27] => Array
+        (
+            [order] => 28
+            [time_ini] => 00:03:20.158
+            [time_end] => 00:03:21.200
+            [subtitle] => （モノオト） 
+        )
+
+    [28] => Array
+        (
+            [order] => 29
+            [time_ini] => 00:03:21.910
+            [time_end] => 00:03:22.785
+            [subtitle] => （カンゴシ）アッ 
+        )
+
+    [29] => Array
+        (
+            [order] => 30
+            [time_ini] => 00:03:23.578
+            [time_end] => 00:03:25.038
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン！ 
+        )
+
+    [30] => Array
+        (
+            [order] => 31
+            [time_ini] => 00:03:25.663
+            [time_end] => 00:03:26.998
+            [subtitle] => ダイジョウブ？ 
+        )
+
+    [31] => Array
+        (
+            [order] => 32
+            [time_ini] => 00:03:27.540
+            [time_end] => 00:03:28.958
+            [subtitle] => ケガハナイ？ 
+        )
+
+    [32] => Array
+        (
+            [order] => 33
+            [time_ini] => 00:03:33.296
+            [time_end] => 00:03:34.339
+            [subtitle] => ショウサハ… 
+        )
+
+    [33] => Array
+        (
+            [order] => 34
+            [time_ini] => 00:03:35.131
+            [time_end] => 00:03:37.091
+            [subtitle] => ギルベルトショウサハ？ 
+        )
+
+    [34] => Array
+        (
+            [order] => 35
+            [time_ini] => 00:03:37.800
+            [time_end] => 00:03:39.219
+            [subtitle] => アイツハキテナイ 
+        )
+
+    [35] => Array
+        (
+            [order] => 36
+            [time_ini] => 00:03:39.761
+            [time_end] => 00:03:41.804
+            [subtitle] => （ヴァイオレット）ドチラニ イラッシャルノデスカ？ 
+        )
+
+    [36] => Array
+        (
+            [order] => 37
+            [time_ini] => 00:03:42.388
+            [time_end] => 00:03:44.724
+            [subtitle] => ゴジッカニモドラレテイルノデショウカ？ 
+        )
+
+    [37] => Array
+        (
+            [order] => 38
+            [time_ini] => 00:03:45.308
+            [time_end] => 00:03:47.560
+            [subtitle] => ショウサノオケガノグアイハ？ 
+        )
+
+    [38] => Array
+        (
+            [order] => 39
+            [time_ini] => 00:03:47.769
+            [time_end] => 00:03:50.438
+            [subtitle] => ショウサモジュウショウヲオワレタハズデス 
+        )
+
+    [39] => Array
+        (
+            [order] => 40
+            [time_ini] => 00:03:50.980
+            [time_end] => 00:03:54.817
+            [subtitle] => イキテイラッシャルノデスカ？ 
+        )
+
+    [40] => Array
+        (
+            [order] => 41
+            [time_ini] => 00:03:54.943
+            [time_end] => 00:03:55.818
+            [subtitle] => ショウサハ 
+        )
+
+    [41] => Array
+        (
+            [order] => 42
+            [time_ini] => 00:03:58.404
+            [time_end] => 00:03:59.405
+            [subtitle] => アイツハ… 
+        )
+
+    [42] => Array
+        (
+            [order] => 43
+            [time_ini] => 00:03:59.530
+            [time_end] => 00:04:02.075
+            [subtitle] => （カンゴシ）アナタノタイインノキョカガデタノ 
+        )
+
+    [43] => Array
+        (
+            [order] => 44
+            [time_ini] => 00:04:02.450
+            [time_end] => 00:04:06.412
+            [subtitle] => ホッジンズチュウサハ ワザワザムカエニキテクダサッタノヨ 
+        )
+
+    [44] => Array
+        (
+            [order] => 45
+            [time_ini] => 00:04:07.455
+            [time_end] => 00:04:10.124
+            [subtitle] => マア ソウイウコト 
+        )
+
+    [45] => Array
+        (
+            [order] => 46
+            [time_ini] => 00:04:10.250
+            [time_end] => 00:04:11.668
+            [subtitle] => （ヴァイオレット）シツレイイタシマシタ 
+        )
+
+    [46] => Array
+        (
+            [order] => 47
+            [time_ini] => 00:04:11.793
+            [time_end] => 00:04:12.919
+            [subtitle] => ホッジンズチュウサ 
+        )
+
+    [47] => Array
+        (
+            [order] => 48
+            [time_ini] => 00:04:13.753
+            [time_end] => 00:04:14.963
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン 
+        )
+
+    [48] => Array
+        (
+            [order] => 49
+            [time_ini] => 00:04:15.088
+            [time_end] => 00:04:16.631
+            [subtitle] => ラクニシテ 
+        )
+
+    [49] => Array
+        (
+            [order] => 50
+            [time_ini] => 00:04:16.756
+            [time_end] => 00:04:19.092
+            [subtitle] => （ヴァイオレット）チュウサノコトヲシツネンシテオリマシタ 
+        )
+
+    [50] => Array
+        (
+            [order] => 51
+            [time_ini] => 00:04:19.217
+            [time_end] => 00:04:20.718
+            [subtitle] => モウシワケゴザイマセン 
+        )
+
+    [51] => Array
+        (
+            [order] => 52
+            [time_ini] => 00:04:20.843
+            [time_end] => 00:04:22.011
+            [subtitle] => （ホッジンズ）イインダヨ 
+        )
+
+    [52] => Array
+        (
+            [order] => 53
+            [time_ini] => 00:04:22.136
+            [time_end] => 00:04:24.138
+            [subtitle] => サア スワルンダ 
+        )
+
+    [53] => Array
+        (
+            [order] => 54
+            [time_ini] => 00:04:25.473
+            [time_end] => 00:04:26.683
+            [subtitle] => トイウカ― 
+        )
+
+    [54] => Array
+        (
+            [order] => 55
+            [time_ini] => 00:04:26.808
+            [time_end] => 00:04:29.602
+            [subtitle] => オレノコトオボエテクレテタンダネ 
+        )
+
+    [55] => Array
+        (
+            [order] => 56
+            [time_ini] => 00:04:29.727
+            [time_end] => 00:04:31.604
+            [subtitle] => クンレンシセツノサイト 
+        )
+
+    [56] => Array
+        (
+            [order] => 57
+            [time_ini] => 00:04:31.729
+            [time_end] => 00:04:34.524
+            [subtitle] => ケッセンゼンヤノニカイオアイシマシタ 
+        )
+
+    [57] => Array
+        (
+            [order] => 58
+            [time_ini] => 00:04:34.649
+            [time_end] => 00:04:36.276
+            [subtitle] => ウン　ソウダネ 
+        )
+
+    [58] => Array
+        (
+            [order] => 59
+            [time_ini] => 00:04:38.569
+            [time_end] => 00:04:40.488
+            [subtitle] => ナニシテタノ？ 
+        )
+
+    [59] => Array
+        (
+            [order] => 60
+            [time_ini] => 00:04:40.905
+            [time_end] => 00:04:42.198
+            [subtitle] => （ヴァイオレット）ギルベルトショウサニ― 
+        )
+
+    [60] => Array
+        (
+            [order] => 61
+            [time_ini] => 00:04:42.323
+            [time_end] => 00:04:43.992
+            [subtitle] => ホウコクショヲカイテオリマシタ 
+        )
+
+    [61] => Array
+        (
+            [order] => 62
+            [time_ini] => 00:04:44.450
+            [time_end] => 00:04:45.660
+            [subtitle] => モジヲカクコトハ 
+        )
+
+    [62] => Array
+        (
+            [order] => 63
+            [time_ini] => 00:04:45.785
+            [time_end] => 00:04:48.663
+            [subtitle] => ジョウタイフッキニモイイトイワレマシタノデ 
+        )
+
+    [63] => Array
+        (
+            [order] => 64
+            [time_ini] => 00:04:49.497
+            [time_end] => 00:04:50.790
+            [subtitle] => ソレデ ショウサハ？ 
+        )
+
+    [64] => Array
+        (
+            [order] => 65
+            [time_ini] => 00:04:59.007
+            [time_end] => 00:05:01.592
+            [subtitle] => （ホッジンズ）アンシンシテヨヴァイオレットチャン 
+        )
+
+    [65] => Array
+        (
+            [order] => 66
+            [time_ini] => 00:05:02.302
+            [time_end] => 00:05:04.721
+            [subtitle] => オレハ アイツカラタノマレテキタンダ 
+        )
+
+    [66] => Array
+        (
+            [order] => 67
+            [time_ini] => 00:05:06.806
+            [time_end] => 00:05:08.725
+            [subtitle] => （ヴァイオレット）ハァ… 
+        )
+
+    [67] => Array
+        (
+            [order] => 68
+            [time_ini] => 00:05:09.809
+            [time_end] => 00:05:11.894
+            [subtitle] => デハ ゴブジナノデスネ 
+        )
+
+    [68] => Array
+        (
+            [order] => 69
+            [time_ini] => 00:05:13.604
+            [time_end] => 00:05:17.066
+            [subtitle] => タイセンニハカッタトオイシャサマカラオシエテイタダキマシタ 
+        )
+
+    [69] => Array
+        (
+            [order] => 70
+            [time_ini] => 00:05:17.191
+            [time_end] => 00:05:19.360
+            [subtitle] => ショウサハイマドンナニンムニ？ 
+        )
+
+    [70] => Array
+        (
+            [order] => 71
+            [time_ini] => 00:05:19.944
+            [time_end] => 00:05:22.488
+            [subtitle] => イツ ゴウリュウスレバヨロシイデショウカ？ 
+        )
+
+    [71] => Array
+        (
+            [order] => 72
+            [time_ini] => 00:05:23.489
+            [time_end] => 00:05:25.366
+            [subtitle] => （ホッジンズ）トニカク キガエテ 
+        )
+
+    [72] => Array
+        (
+            [order] => 73
+            [time_ini] => 00:05:25.491
+            [time_end] => 00:05:28.077
+            [subtitle] => ソノカンニ クルマヲダシテモラウカラ 
+        )
+
+    [73] => Array
+        (
+            [order] => 74
+            [time_ini] => 00:05:30.038
+            [time_end] => 00:05:33.624
+            [subtitle] => （カンゴシ）コレ ヤットトドイタアナタノニモツヨ 
+        )
+
+    [74] => Array
+        (
+            [order] => 75
+            [time_ini] => 00:05:35.668
+            [time_end] => 00:05:37.795
+            [subtitle] => ズイブントオクノリクグンキチニ― 
+        )
+
+    [75] => Array
+        (
+            [order] => 76
+            [time_ini] => 00:05:37.920
+            [time_end] => 00:05:40.673
+            [subtitle] => マチガッテ ハコバレチャッテタミタイ 
+        )
+
+    [76] => Array
+        (
+            [order] => 77
+            [time_ini] => 00:05:41.299
+            [time_end] => 00:05:42.925
+            [subtitle] => （ヴァイオレット）ブローチ… 
+        )
+
+    [77] => Array
+        (
+            [order] => 78
+            [time_ini] => 00:05:43.801
+            [time_end] => 00:05:45.219
+            [subtitle] => エメラルドノブローチガ… 
+        )
+
+    [78] => Array
+        (
+            [order] => 79
+            [time_ini] => 00:05:45.636
+            [time_end] => 00:05:46.471
+            [subtitle] => エ？ 
+        )
+
+    [79] => Array
+        (
+            [order] => 80
+            [time_ini] => 00:05:46.596
+            [time_end] => 00:05:49.766
+            [subtitle] => アナタガミツカッタゲンバトチュウトンチニアッタニモツハ― 
+        )
+
+    [80] => Array
+        (
+            [order] => 81
+            [time_ini] => 00:05:49.891
+            [time_end] => 00:05:51.601
+            [subtitle] => コレダケダト… 
+        )
+
+    [81] => Array
+        (
+            [order] => 82
+            [time_ini] => 00:05:51.726
+            [time_end] => 00:05:53.269
+            [subtitle] => （ヴァイオレット）ナイナラ サガシニイカナケレバ… 
+        )
+
+    [82] => Array
+        (
+            [order] => 83
+            [time_ini] => 00:05:53.394
+            [time_end] => 00:05:54.896
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン！ 
+        )
+
+    [83] => Array
+        (
+            [order] => 84
+            [time_ini] => 00:05:55.104
+            [time_end] => 00:05:56.856
+            [subtitle] => （ヴァイオレット）イタダイタモノナノデス 
+        )
+
+    [84] => Array
+        (
+            [order] => 85
+            [time_ini] => 00:05:57.440
+            [time_end] => 00:05:59.192
+            [subtitle] => ショウサニ イタダイタモノナノデス！ 
+        )
+
+    [85] => Array
+        (
+            [order] => 86
+            [time_ini] => 00:06:04.614
+            [time_end] => 00:06:05.615
+            [subtitle] => ワカッタ 
+        )
+
+    [86] => Array
+        (
+            [order] => 87
+            [time_ini] => 00:06:06.282
+            [time_end] => 00:06:07.617
+            [subtitle] => サガシテオクカラ 
+        )
+
+    [87] => Array
+        (
+            [order] => 88
+            [time_ini] => 00:06:08.409
+            [time_end] => 00:06:09.660
+            [subtitle] => オレガカナラズ 
+        )
+
+    [88] => Array
+        (
+            [order] => 89
+            [time_ini] => 00:06:09.786
+            [time_end] => 00:06:10.620
+            [subtitle] => デスガ… 
+        )
+
+    [89] => Array
+        (
+            [order] => 90
+            [time_ini] => 00:06:10.745
+            [time_end] => 00:06:12.121
+            [subtitle] => （ホッジンズ）トニカク― 
+        )
+
+    [90] => Array
+        (
+            [order] => 91
+            [time_ini] => 00:06:12.246
+            [time_end] => 00:06:14.332
+            [subtitle] => キミハオレニドウコウスル 
+        )
+
+    [91] => Array
+        (
+            [order] => 92
+            [time_ini] => 00:06:14.624
+            [time_end] => 00:06:16.417
+            [subtitle] => ソレガ アイツノメイレイダ 
+        )
+
+    [92] => Array
+        (
+            [order] => 93
+            [time_ini] => 00:06:18.836
+            [time_end] => 00:06:20.129
+            [subtitle] => メイレイ？ 
+        )
+
+    [93] => Array
+        (
+            [order] => 94
+            [time_ini] => 00:06:21.756
+            [time_end] => 00:06:23.382
+            [subtitle] => ワカリマシタ 
+        )
+
+    [94] => Array
+        (
+            [order] => 95
+            [time_ini] => 00:06:28.262
+            [time_end] => 00:06:29.263
+            [subtitle] => （ヴァイオレット）ショウサニ― 
+        )
+
+    [95] => Array
+        (
+            [order] => 96
+            [time_ini] => 00:06:30.139
+            [time_end] => 00:06:33.309
+            [subtitle] => ツギノメイレイヲイタダケルノハイツナノデショウ？ 
+        )
+
+    [96] => Array
+        (
+            [order] => 97
+            [time_ini] => 00:06:33.559
+            [time_end] => 00:06:35.144
+            [subtitle] => コノヨウナジョウタイデハ 
+        )
+
+    [97] => Array
+        (
+            [order] => 98
+            [time_ini] => 00:06:35.269
+            [time_end] => 00:06:38.272
+            [subtitle] => デキルニンムニセイゲンガアルトオモイマスガ 
+        )
+
+    [98] => Array
+        (
+            [order] => 99
+            [time_ini] => 00:06:38.898
+            [time_end] => 00:06:39.899
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン 
+        )
+
+    [99] => Array
+        (
+            [order] => 100
+            [time_ini] => 00:06:40.441
+            [time_end] => 00:06:41.901
+            [subtitle] => タイインイワイ 
+        )
+
+    [100] => Array
+        (
+            [order] => 101
+            [time_ini] => 00:06:42.026
+            [time_end] => 00:06:44.404
+            [subtitle] => コノミガワカンナクテミッツカッタンダケド― 
+        )
+
+    [101] => Array
+        (
+            [order] => 102
+            [time_ini] => 00:06:44.987
+            [time_end] => 00:06:45.905
+            [subtitle] => ドウカナ？ 
+        )
+
+    [102] => Array
+        (
+            [order] => 103
+            [time_ini] => 00:06:46.197
+            [time_end] => 00:06:47.156
+            [subtitle] => フヨウデス 
+        )
+
+    [103] => Array
+        (
+            [order] => 104
+            [time_ini] => 00:06:48.658
+            [time_end] => 00:06:50.535
+            [subtitle] => イヤア… ドレカエラバナイト 
+        )
+
+    [104] => Array
+        (
+            [order] => 105
+            [time_ini] => 00:06:50.660
+            [time_end] => 00:06:52.829
+            [subtitle] => セカイガオワルトカテイシテハイ 
+        )
+
+    [105] => Array
+        (
+            [order] => 106
+            [time_ini] => 00:06:53.037
+            [time_end] => 00:06:54.205
+            [subtitle] => サン ニ… 
+        )
+
+    [106] => Array
+        (
+            [order] => 107
+            [time_ini] => 00:06:54.747
+            [time_end] => 00:06:56.707
+            [subtitle] => （ヴァイオレット）デハ コイヌヲ（ホッジンズ）ハイ 
+        )
+
+    [107] => Array
+        (
+            [order] => 108
+            [time_ini] => 00:07:08.302
+            [time_end] => 00:07:10.721
+            [subtitle] => （ホッジンズ）ドウシテ コイヌヲエランダノ？ 
+        )
+
+    [108] => Array
+        (
+            [order] => 109
+            [time_ini] => 00:07:12.306
+            [time_end] => 00:07:14.684
+            [subtitle] => イゼン ショウサノアニジョウニ 
+        )
+
+    [109] => Array
+        (
+            [order] => 110
+            [time_ini] => 00:07:14.809
+            [time_end] => 00:07:18.146
+            [subtitle] => “オマエハギルベルトノイヌダナ”トイワレマシタノデ 
+        )
+
+    [110] => Array
+        (
+            [order] => 111
+            [time_ini] => 00:07:18.855
+            [time_end] => 00:07:20.189
+            [subtitle] => （セキバライ） 
+        )
+
+    [111] => Array
+        (
+            [order] => 112
+            [time_ini] => 00:07:20.314
+            [time_end] => 00:07:22.150
+            [subtitle] => スコシナガイタビニナルヨ 
+        )
+
+    [112] => Array
+        (
+            [order] => 113
+            [time_ini] => 00:07:23.359
+            [time_end] => 00:07:27.280
+            [subtitle] => コノアタリノセンロガバクゲキデコワレテツカエナイカラ 
+        )
+
+    [113] => Array
+        (
+            [order] => 114
+            [time_ini] => 00:07:28.364
+            [time_end] => 00:07:29.907
+            [subtitle] => ライデンニハオコナッタコトアッタッケ？ 
+        )
+
+    [114] => Array
+        (
+            [order] => 115
+            [time_ini] => 00:07:31.075
+            [time_end] => 00:07:32.201
+            [subtitle] => イエ 
+        )
+
+    [115] => Array
+        (
+            [order] => 116
+            [time_ini] => 00:07:39.917
+            [time_end] => 00:07:43.421
+            [subtitle] => （ヴァイオレットノアライイキヅカイ） 
+        )
+
+    [116] => Array
+        (
+            [order] => 117
+            [time_ini] => 00:07:44.505
+            [time_end] => 00:07:45.631
+            [subtitle] => （ギルベルト）ヴァイオレット 
+        )
+
+    [117] => Array
+        (
+            [order] => 118
+            [time_ini] => 00:07:46.841
+            [time_end] => 00:07:49.260
+            [subtitle] => キミハイキテ― 
+        )
+
+    [118] => Array
+        (
+            [order] => 119
+            [time_ini] => 00:07:50.094
+            [time_end] => 00:07:51.721
+            [subtitle] => ジユウニナリナサイ 
+        )
+
+    [119] => Array
+        (
+            [order] => 120
+            [time_ini] => 00:07:52.054
+            [time_end] => 00:07:54.765
+            [subtitle] => （アライイキヅカイ） 
+        )
+
+    [120] => Array
+        (
+            [order] => 121
+            [time_ini] => 00:07:57.852
+            [time_end] => 00:07:58.978
+            [subtitle] => ココロカラ… 
+        )
+
+    [121] => Array
+        (
+            [order] => 122
+            [time_ini] => 00:08:08.112
+            [time_end] => 00:08:09.655
+            [subtitle] => （ホッジンズ）ココニ イタノ？ 
+        )
+
+    [122] => Array
+        (
+            [order] => 123
+            [time_ini] => 00:08:10.823
+            [time_end] => 00:08:11.782
+            [subtitle] => チュウサ 
+        )
+
+    [123] => Array
+        (
+            [order] => 124
+            [time_ini] => 00:08:12.575
+            [time_end] => 00:08:14.243
+            [subtitle] => （ホッジンズ）ミエテキタネ 
+        )
+
+    [124] => Array
+        (
+            [order] => 125
+            [time_ini] => 00:08:14.368
+            [time_end] => 00:08:15.995
+            [subtitle] => ライデンノミナト 
+        )
+
+    [125] => Array
+        (
+            [order] => 126
+            [time_ini] => 00:08:29.217
+            [time_end] => 00:08:31.636
+            [subtitle] => （ホッジンズ）ギルベルトハセンソウガオワッタアトノ― 
+        )
+
+    [126] => Array
+        (
+            [order] => 127
+            [time_ini] => 00:08:31.761
+            [time_end] => 00:08:35.056
+            [subtitle] => キミノミノフリカタヲズットアンジテイテネ 
+        )
+
+    [127] => Array
+        (
+            [order] => 128
+            [time_ini] => 00:08:35.431
+            [time_end] => 00:08:37.475
+            [subtitle] => ダカラ ジブンノシンセキスジデ― 
+        )
+
+    [128] => Array
+        (
+            [order] => 129
+            [time_ini] => 00:08:37.600
+            [time_end] => 00:08:39.894
+            [subtitle] => イチバン シンライデキルエヴァーガーデンカニ― 
+        )
+
+    [129] => Array
+        (
+            [order] => 130
+            [time_ini] => 00:08:40.144
+            [time_end] => 00:08:41.896
+            [subtitle] => キミヲアヅケタイトイッテイタンダ 
+        )
+
+    [130] => Array
+        (
+            [order] => 131
+            [time_ini] => 00:08:46.317
+            [time_end] => 00:08:48.819
+            [subtitle] => （ホッジンズ）レンラクヲトッタラ ゴフサイトモ― 
+        )
+
+    [131] => Array
+        (
+            [order] => 132
+            [time_ini] => 00:08:48.945
+            [time_end] => 00:08:51.531
+            [subtitle] => ヨロコンデ キミノミモトヒキウケジンニナルコトヲ― 
+        )
+
+    [132] => Array
+        (
+            [order] => 133
+            [time_ini] => 00:08:51.656
+            [time_end] => 00:08:53.574
+            [subtitle] => リョウショウシテクダサッタヨ 
+        )
+
+    [133] => Array
+        (
+            [order] => 134
+            [time_ini] => 00:08:57.036
+            [time_end] => 00:08:59.205
+            [subtitle] => （ドアガヒラクオト） 
+        )
+
+    [134] => Array
+        (
+            [order] => 135
+            [time_ini] => 00:09:01.707
+            [time_end] => 00:09:02.959
+            [subtitle] => （ティファニー）ヨクキタワネ 
+        )
+
+    [135] => Array
+        (
+            [order] => 136
+            [time_ini] => 00:09:04.544
+            [time_end] => 00:09:06.212
+            [subtitle] => （ホッジンズ）サア　ヴァイオレットチャン 
+        )
+
+    [136] => Array
+        (
+            [order] => 137
+            [time_ini] => 00:09:06.837
+            [time_end] => 00:09:09.715
+            [subtitle] => コチラエヴァーガーデンカノオクガタ 
+        )
+
+    [137] => Array
+        (
+            [order] => 138
+            [time_ini] => 00:09:10.424
+            [time_end] => 00:09:11.467
+            [subtitle] => ゴアイサツシテ 
+        )
+
+    [138] => Array
+        (
+            [order] => 139
+            [time_ini] => 00:09:13.553
+            [time_end] => 00:09:15.388
+            [subtitle] => イヤ オジギデイインダケド… 
+        )
+
+    [139] => Array
+        (
+            [order] => 140
+            [time_ini] => 00:09:16.430
+            [time_end] => 00:09:19.475
+            [subtitle] => （ティファニー）イマダト アンシェネカラサンニチガカリカシラ？ 
+        )
+
+    [140] => Array
+        (
+            [order] => 141
+            [time_ini] => 00:09:19.600
+            [time_end] => 00:09:20.601
+            [subtitle] => （ホッジンズ）エエ 
+        )
+
+    [141] => Array
+        (
+            [order] => 142
+            [time_ini] => 00:09:20.726
+            [time_end] => 00:09:22.603
+            [subtitle] => ホンライナライチニチデモドレタンデスガ― 
+        )
+
+    [142] => Array
+        (
+            [order] => 143
+            [time_ini] => 00:09:23.312
+            [time_end] => 00:09:26.023
+            [subtitle] => ヨンネンモタイセンガツヅキマシタカラネ 
+        )
+
+    [143] => Array
+        (
+            [order] => 144
+            [time_ini] => 00:09:26.148
+            [time_end] => 00:09:29.235
+            [subtitle] => フッキュウニハ マダマダジカンガカカリソウデス 
+        )
+
+    [144] => Array
+        (
+            [order] => 145
+            [time_ini] => 00:09:30.111
+            [time_end] => 00:09:31.612
+            [subtitle] => サア ヴァイオレット 
+        )
+
+    [145] => Array
+        (
+            [order] => 146
+            [time_ini] => 00:09:32.154
+            [time_end] => 00:09:34.198
+            [subtitle] => アナタモノンデチョウダイ 
+        )
+
+    [146] => Array
+        (
+            [order] => 147
+            [time_ini] => 00:09:37.451
+            [time_end] => 00:09:39.453
+            [subtitle] => アッ！ ゴメンナサイ 
+        )
+
+    [147] => Array
+        (
+            [order] => 148
+            [time_ini] => 00:09:39.579
+            [time_end] => 00:09:40.871
+            [subtitle] => ムリシナクテイイノヨ 
+        )
+
+    [148] => Array
+        (
+            [order] => 149
+            [time_ini] => 00:09:42.164
+            [time_end] => 00:09:44.542
+            [subtitle] => タイヘン！ ヤケドスルワ 
+        )
+
+    [149] => Array
+        (
+            [order] => 150
+            [time_ini] => 00:09:44.792
+            [time_end] => 00:09:46.002
+            [subtitle] => モンダイアリマセン 
+        )
+
+    [150] => Array
+        (
+            [order] => 151
+            [time_ini] => 00:09:46.502
+            [time_end] => 00:09:47.962
+            [subtitle] => アツサハカンジマセン 
+        )
+
+    [151] => Array
+        (
+            [order] => 152
+            [time_ini] => 00:09:48.296
+            [time_end] => 00:09:50.464
+            [subtitle] => デモ ホウタイガ…ハヤクヒヤサナイト 
+        )
+
+    [152] => Array
+        (
+            [order] => 153
+            [time_ini] => 00:09:50.590
+            [time_end] => 00:09:52.133
+            [subtitle] => オリバー コオリヲモッテキテ！ 
+        )
+
+    [153] => Array
+        (
+            [order] => 154
+            [time_ini] => 00:09:52.258
+            [time_end] => 00:09:53.718
+            [subtitle] => （オリバー）ショウチシマシタ 
+        )
+
+    [154] => Array
+        (
+            [order] => 155
+            [time_ini] => 00:09:55.595
+            [time_end] => 00:09:56.470
+            [subtitle] => アッ！ 
+        )
+
+    [155] => Array
+        (
+            [order] => 156
+            [time_ini] => 00:09:56.596
+            [time_end] => 00:09:58.598
+            [subtitle] => （ヴァイオレット）アダマンギンデデキタウデデス 
+        )
+
+    [156] => Array
+        (
+            [order] => 157
+            [time_ini] => 00:09:59.348
+            [time_end] => 00:10:01.350
+            [subtitle] => ブコツデスガガンジョウデス 
+        )
+
+    [157] => Array
+        (
+            [order] => 158
+            [time_ini] => 00:10:02.101
+            [time_end] => 00:10:03.769
+            [subtitle] => マダ フナレデスガ 
+        )
+
+    [158] => Array
+        (
+            [order] => 159
+            [time_ini] => 00:10:03.894
+            [time_end] => 00:10:06.105
+            [subtitle] => イズレ シショウナクナルトオモワレマス 
+        )
+
+    [159] => Array
+        (
+            [order] => 160
+            [time_ini] => 00:10:08.816
+            [time_end] => 00:10:10.484
+            [subtitle] => ン… 
+        )
+
+    [160] => Array
+        (
+            [order] => 161
+            [time_ini] => 00:10:11.027
+            [time_end] => 00:10:13.738
+            [subtitle] => チョット コッチヘキテモラエルカシラ？ 
+        )
+
+    [161] => Array
+        (
+            [order] => 162
+            [time_ini] => 00:10:14.864
+            [time_end] => 00:10:17.742
+            [subtitle] => ワタシガワカイコロニツカッテタモノダケド 
+        )
+
+    [162] => Array
+        (
+            [order] => 163
+            [time_ini] => 00:10:18.367
+            [time_end] => 00:10:19.910
+            [subtitle] => イイデスネ 
+        )
+
+    [163] => Array
+        (
+            [order] => 164
+            [time_ini] => 00:10:20.036
+            [time_end] => 00:10:21.245
+            [subtitle] => ハメテゴラン 
+        )
+
+    [164] => Array
+        (
+            [order] => 165
+            [time_ini] => 00:10:24.874
+            [time_end] => 00:10:27.043
+            [subtitle] => ウン　ニアッテルヨ 
+        )
+
+    [165] => Array
+        (
+            [order] => 166
+            [time_ini] => 00:10:27.168
+            [time_end] => 00:10:28.586
+            [subtitle] => （ティファニー）ホント 
+        )
+
+    [166] => Array
+        (
+            [order] => 167
+            [time_ini] => 00:10:31.339
+            [time_end] => 00:10:32.673
+            [subtitle] => ジャア ワタシハ コレデ 
+        )
+
+    [167] => Array
+        (
+            [order] => 168
+            [time_ini] => 00:10:33.549
+            [time_end] => 00:10:35.551
+            [subtitle] => カイシャニモドラナクテハナラナイノデ 
+        )
+
+    [168] => Array
+        (
+            [order] => 169
+            [time_ini] => 00:10:35.676
+            [time_end] => 00:10:36.510
+            [subtitle] => （ティファニー）アラ 
+        )
+
+    [169] => Array
+        (
+            [order] => 170
+            [time_ini] => 00:10:36.969
+            [time_end] => 00:10:38.512
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン 
+        )
+
+    [170] => Array
+        (
+            [order] => 171
+            [time_ini] => 00:10:38.888
+            [time_end] => 00:10:40.348
+            [subtitle] => ティファニーサンノオッシャルコトヲ 
+        )
+
+    [171] => Array
+        (
+            [order] => 172
+            [time_ini] => 00:10:40.473
+            [time_end] => 00:10:41.557
+            [subtitle] => ヨクキクンダヨ 
+        )
+
+    [172] => Array
+        (
+            [order] => 173
+            [time_ini] => 00:10:41.682
+            [time_end] => 00:10:42.725
+            [subtitle] => （ティファニー）イイノヨ 
+        )
+
+    [173] => Array
+        (
+            [order] => 174
+            [time_ini] => 00:10:43.100
+            [time_end] => 00:10:45.603
+            [subtitle] => ソンナニキヲツカワナクテモ 
+        )
+
+    [174] => Array
+        (
+            [order] => 175
+            [time_ini] => 00:10:45.728
+            [time_end] => 00:10:49.273
+            [subtitle] => ホントウノオヤダトオモッテナニデモイッテチョウダイ 
+        )
+
+    [175] => Array
+        (
+            [order] => 176
+            [time_ini] => 00:10:49.398
+            [time_end] => 00:10:50.399
+            [subtitle] => ネッ？ 
+        )
+
+    [176] => Array
+        (
+            [order] => 177
+            [time_ini] => 00:10:52.568
+            [time_end] => 00:10:53.861
+            [subtitle] => （ヴァイオレット）ワタシニハ― 
+        )
+
+    [177] => Array
+        (
+            [order] => 178
+            [time_ini] => 00:10:54.945
+            [time_end] => 00:10:58.157
+            [subtitle] => モトモトオヤハオリマセンノデカワリモフヨウデス 
+        )
+
+    [178] => Array
+        (
+            [order] => 179
+            [time_ini] => 00:10:59.992
+            [time_end] => 00:11:01.410
+            [subtitle] => ソウイワナイデ 
+        )
+
+    [179] => Array
+        (
+            [order] => 180
+            [time_ini] => 00:11:02.620
+            [time_end] => 00:11:04.830
+            [subtitle] => ウチニハムスコガイタンダケド― 
+        )
+
+    [180] => Array
+        (
+            [order] => 181
+            [time_ini] => 00:11:04.955
+            [time_end] => 00:11:07.375
+            [subtitle] => タイセンデナクナッテシマッテ 
+        )
+
+    [181] => Array
+        (
+            [order] => 182
+            [time_ini] => 00:11:08.084
+            [time_end] => 00:11:10.878
+            [subtitle] => （ヴァイオレット）ワタシハナクナッタコドモノカワリニハナリエマセン 
+        )
+
+    [182] => Array
+        (
+            [order] => 183
+            [time_ini] => 00:11:11.003
+            [time_end] => 00:11:12.046
+            [subtitle] => マア 
+        )
+
+    [183] => Array
+        (
+            [order] => 184
+            [time_ini] => 00:11:12.838
+            [time_end] => 00:11:13.923
+            [subtitle] => ヴァイオレットチャン 
+        )
+
+    [184] => Array
+        (
+            [order] => 185
+            [time_ini] => 00:11:14.632
+            [time_end] => 00:11:18.427
+            [subtitle] => ココデシアワセニクラスコトガギルベルトノノゾミナンダ 
+        )
+
+    [185] => Array
+        (
+            [order] => 186
+            [time_ini] => 00:11:19.345
+            [time_end] => 00:11:22.431
+            [subtitle] => ダカラ ワカッタネ？ 
+        )
+
+    [186] => Array
+        (
+            [order] => 187
+            [time_ini] => 00:11:36.362
+            [time_end] => 00:11:37.571
+            [subtitle] => （ヴァイオレット）ショウサハ― 
+        )
+
+    [187] => Array
+        (
+            [order] => 188
+            [time_ini] => 00:11:38.239
+            [time_end] => 00:11:39.407
+            [subtitle] => ギルベルトショウサハ― 
+        )
+
+    [188] => Array
+        (
+            [order] => 189
+            [time_ini] => 00:11:39.532
+            [time_end] => 00:11:41.909
+            [subtitle] => ドウシテワタシヲココニオクノデスカ？ 
+        )
+
+    [189] => Array
+        (
+            [order] => 190
+            [time_ini] => 00:11:42.284
+            [time_end] => 00:11:43.828
+            [subtitle] => ワタシガウデヲウシナッテ― 
+        )
+
+    [190] => Array
+        (
+            [order] => 191
+            [time_ini] => 00:11:43.953
+            [time_end] => 00:11:46.038
+            [subtitle] => ブキトシテノカチガナクナッタカラデスカ？ 
+        )
+
+    [191] => Array
+        (
+            [order] => 192
+            [time_ini] => 00:11:46.789
+            [time_end] => 00:11:49.917
+            [subtitle] => クンレンサエスレバワタシハ マダタタカエマス！ 
+        )
+
+    [192] => Array
+        (
+            [order] => 193
+            [time_ini] => 00:11:52.044
+            [time_end] => 00:11:55.172
+            [subtitle] => ヴァイオレットチャンモウ センソウハオワッタンダ 
+        )
+
+    [193] => Array
+        (
+            [order] => 194
+            [time_ini] => 00:11:56.799
+            [time_end] => 00:11:58.884
+            [subtitle] => （ヴァイオレット）ワタシハショウサノドウグデス 
+        )
+
+    [194] => Array
+        (
+            [order] => 195
+            [time_ini] => 00:11:59.218
+            [time_end] => 00:12:01.429
+            [subtitle] => デスガ フヨウニナッタノナラ― 
+        )
+
+    [195] => Array
+        (
+            [order] => 196
+            [time_ini] => 00:12:02.096
+            [time_end] => 00:12:03.931
+            [subtitle] => ショブンサレルベキデス 
+        )
+
+    [196] => Array
+        (
+            [order] => 197
+            [time_ini] => 00:12:05.182
+            [time_end] => 00:12:06.684
+            [subtitle] => ステテクダサイ 
+        )
+
+    [197] => Array
+        (
+            [order] => 198
+            [time_ini] => 00:12:08.185
+            [time_end] => 00:12:09.937
+            [subtitle] => ドコカニステテクダサイ 
+        )
+
+    [198] => Array
+        (
+            [order] => 199
+            [time_ini] => 00:12:21.073
+            [time_end] => 00:12:22.533
+            [subtitle] => （ヴァイオレット）ホッジンズチュウサ… 
+        )
+
+    [199] => Array
+        (
+            [order] => 200
+            [time_ini] => 00:12:22.658
+            [time_end] => 00:12:25.244
+            [subtitle] => （ホッジンズ）アア イイワスレタンダケド― 
+        )
+
+    [200] => Array
+        (
+            [order] => 201
+            [time_ini] => 00:12:25.369
+            [time_end] => 00:12:26.704
+            [subtitle] => グンハヤメタンダ 
+        )
+
+    [201] => Array
+        (
+            [order] => 202
+            [time_ini] => 00:12:26.829
+            [time_end] => 00:12:28.205
+            [subtitle] => オレハモウ チュウサジャナイ 
+        )
+
+    [202] => Array
+        (
+            [order] => 203
+            [time_ini] => 00:12:29.165
+            [time_end] => 00:12:31.041
+            [subtitle] => （ヴァイオレット）デハ ナントオヨビスレバ？ 
+        )
+
+    [203] => Array
+        (
+            [order] => 204
+            [time_ini] => 00:12:31.167
+            [time_end] => 00:12:32.960
+            [subtitle] => （ホッジンズ）“シャチョウ”カナ 
+        )
+
+    [204] => Array
+        (
+            [order] => 205
+            [time_ini] => 00:12:35.212
+            [time_end] => 00:12:37.339
+            [subtitle] => ココハオレノカイシャダ 
+        )
+
+    [205] => Array
+        (
+            [order] => 206
+            [time_ini] => 00:12:38.466
+            [time_end] => 00:12:41.677
+            [subtitle] => フルイテイタクヲカイトッテスコシテヲイレタンダ 
+        )
+
+    [206] => Array
+        (
+            [order] => 207
+            [time_ini] => 00:12:42.636
+            [time_end] => 00:12:45.431
+            [subtitle] => イチカイハウケツケマドグチニナッテル 
+        )
+
+    [207] => Array
+        (
+            [order] => 208
+            [time_ini] => 00:12:46.056
+            [time_end] => 00:12:47.016
+            [subtitle] => （リリアン）オキャクサマ 
+        )
+
+    [208] => Array
+        (
+            [order] => 209
+            [time_ini] => 00:12:47.141
+            [time_end] => 00:12:49.101
+            [subtitle] => コチラノデンピョウニ ハイタツサキト 
+        )
+
+    [209] => Array
+        (
+            [order] => 210
+            [time_ini] => 00:12:49.226
+            [time_end] => 00:12:51.395
+            [subtitle] => サシダシニンサマノゴジュウショヲオネガイイタシマス 
+        )
+
+    [210] => Array
+        (
+            [order] => 211
+            [time_ini] => 00:12:51.520
+            [time_end] => 00:12:55.441
+            [subtitle] => （ネリネ）ハイタツマデニハ サンニチショウショウオジカンヲイタダイテオリマス 
+        )
+
+    [211] => Array
+        (
+            [order] => 212
+            [time_ini] => 00:12:56.066
+            [time_end] => 00:12:58.486
+            [subtitle] => （ホッジンズ）ニカイハジムショトダイヒツブモン 
+        )
+
+    [212] => Array
+        (
+            [order] => 213
+            [time_ini] => 00:12:58.611
+            [time_end] => 00:13:00.446
+            [subtitle] => （ヴァイオレット）ダイヒツ？（ホッジンズ）アア 
+        )
+
+    [213] => Array
+        (
+            [order] => 214
+            [time_ini] => 00:13:00.946
+            [time_end] => 00:13:05.117
+            [subtitle] => （ホッジンズ）イライシャノヨウボウニオウジテテガミトカヲカワリニカクブモンナンダ 
+        )
+
+    [214] => Array
+        (
+            [order] => 215
+            [time_ini] => 00:13:05.493
+            [time_end] => 00:13:07.912
+            [subtitle] => マダジガカケナイヒトモオオイカラネ 
+        )
+
+    [215] => Array
+        (
+            [order] => 216
+            [time_ini] => 00:13:09.079
+            [time_end] => 00:13:10.664
+            [subtitle] => （ヴァイオレット）ワタシモカケマセンデシタ 
+        )
+
+    [216] => Array
+        (
+            [order] => 217
+            [time_ini] => 00:13:11.332
+            [time_end] => 00:13:13.751
+            [subtitle] => ショウサニオシエテイタダクマエハ 
+        )
+
+    [217] => Array
+        (
+            [order] => 218
+            [time_ini] => 00:13:14.627
+            [time_end] => 00:13:16.253
+            [subtitle] => ソッカ 
+        )
+
+    [218] => Array
+        (
+            [order] => 219
+            [time_ini] => 00:13:17.963
+            [time_end] => 00:13:21.926
+            [subtitle] => センソウガオワッタラナニカジギョウヲハジメヨウトオモッテイテネ 
+        )
+
+    [219] => Array
+        (
+            [order] => 220
+            [time_ini] => 00:13:22.051
+            [time_end] => 00:13:25.179
+            [subtitle] => セイフノユウセイギョウムハミンカンニマデテガマワッテイナイカラ― 
+        )
+
+    [220] => Array
+        (
+            [order] => 221
+            [time_ini] => 00:13:25.304
+            [time_end] => 00:13:27.515
+            [subtitle] => イケルンジャナイカトオモッテサ 
+        )
+
+    [221] => Array
+        (
+            [order] => 222
+            [time_ini] => 00:13:28.098
+            [time_end] => 00:13:29.683
+            [subtitle] => デ メイレイダ 
+        )
+
+    [222] => Array
+        (
+            [order] => 223
+            [time_ini] => 00:13:30.643
+            [time_end] => 00:13:32.186
+            [subtitle] => ヴァイオレット･エヴァーガーデン 
+        )
+
+    [223] => Array
+        (
+            [order] => 224
+            [time_ini] => 00:13:32.978
+            [time_end] => 00:13:35.773
+            [subtitle] => ギルベルトハ キミヲオレニタクシタ 
+        )
+
+    [224] => Array
+        (
+            [order] => 225
+            [time_ini] => 00:13:36.065
+            [time_end] => 00:13:38.192
+            [subtitle] => ダカラ カワリニメイレイヲクダス 
+        )
+
+    [225] => Array
+        (
+            [order] => 226
+            [time_ini] => 00:13:39.235
+            [time_end] => 00:13:40.694
+            [subtitle] => キミハ マダヤクニタツ 
+        )
+
+    [226] => Array
+        (
+            [order] => 227
+            [time_ini] => 00:13:41.487
+            [time_end] => 00:13:44.406
+            [subtitle] => ハタラケル　ココデナ 
+        )
+
+    [227] => Array
+        (
+            [order] => 228
+            [time_ini] => 00:13:46.742
+            [time_end] => 00:13:47.701
+            [subtitle] => ベネディクト 
+        )
+
+    [228] => Array
+        (
+            [order] => 229
+            [time_ini] => 00:13:48.536
+            [time_end] => 00:13:49.870
+            [subtitle] => （ベネディクト）ナニダヨ？ シャチョウ 
+        )
+
+    [229] => Array
+        (
+            [order] => 230
+            [time_ini] => 00:13:50.371
+            [time_end] => 00:13:52.706
+            [subtitle] => （ホッジンズ）ソコハ“ナニデショウカ？ シャチョウ”ダロ 
+        )
+
+    [230] => Array
+        (
+            [order] => 231
+            [time_ini] => 00:13:53.249
+            [time_end] => 00:13:54.833
+            [subtitle] => （ベネディクト）デ ナニダヨ？ 
+        )
+
+    [231] => Array
+        (
+            [order] => 232
+            [time_ini] => 00:13:55.125
+            [time_end] => 00:13:56.335
+            [subtitle] => イッテーナ！ ナニナンダヨ！ 
+        )
+
+    [232] => Array
+        (
+            [order] => 233
+            [time_ini] => 00:13:56.460
+            [time_end] => 00:13:57.586
+            [subtitle] => （ホッジンズ）オマエ イマ ワザト！ 
+        )
+
+    [233] => Array
+        (
+            [order] => 234
+            [time_ini] => 00:13:58.254
+            [time_end] => 00:14:00.673
+            [subtitle] => コイツハポストマンノベネディクト 
+        )
+
+    [234] => Array
+        (
+            [order] => 235
+            [time_ini] => 00:14:00.923
+            [time_end] => 00:14:03.551
+            [subtitle] => カイシャ ツクルマエカラノクサレエンデネ 
+        )
+
+    [235] => Array
+        (
+            [order] => 236
+            [time_ini] => 00:14:03.759
+            [time_end] => 00:14:04.927
+            [subtitle] => ベネディクト 
+        )
+
+    [236] => Array
+        (
+            [order] => 237
+            [time_ini] => 00:14:05.052
+            [time_end] => 00:14:07.179
+            [subtitle] => カノジョハ ヴァイオレット 
+        )
+
+    [237] => Array
+        (
+            [order] => 238
+            [time_ini] => 00:14:09.515
+            [time_end] => 00:14:11.892
+            [subtitle] => キョウカラ ポストマントシテハタラク 
+        )
+
+    [238] => Array
+        (
+            [order] => 239
+            [time_ini] => 00:14:12.560
+            [time_end] => 00:14:13.686
+            [subtitle] => コンナガキガ？ 
+        )
+
+    [239] => Array
+        (
+            [order] => 240
+            [time_ini] => 00:14:14.270
+            [time_end] => 00:14:17.022
+            [subtitle] => （ホッジンズ）ニンムスイコウノウリョクハバツグンダ 
+        )
+
+    [240] => Array
+        (
+            [order] => 241
+            [time_ini] => 00:14:17.273
+            [time_end] => 00:14:19.191
+            [subtitle] => オレハ ギンコウ マワッテクルンデ― 
+        )
+
+    [241] => Array
+        (
+            [order] => 242
+            [time_ini] => 00:14:19.567
+            [time_end] => 00:14:21.944
+            [subtitle] => オマエ イロイロオシエテヤッテネ 
+        )
+
+    [242] => Array
+        (
+            [order] => 243
+            [time_ini] => 00:14:25.948
+            [time_end] => 00:14:26.782
+            [subtitle] => ハァ… 
+        )
+
+    [243] => Array
+        (
+            [order] => 244
+            [time_ini] => 00:14:28.450
+            [time_end] => 00:14:29.743
+            [subtitle] => ニモツ ココナ 
+        )
+
+    [244] => Array
+        (
+            [order] => 245
+            [time_ini] => 00:14:29.869
+            [time_end] => 00:14:30.870
+            [subtitle] => （ヴァイオレット）リョウカイシマシタ 
+        )
+
+    [245] => Array
+        (
+            [order] => 246
+            [time_ini] => 00:14:30.995
+            [time_end] => 00:14:32.121
+            [subtitle] => （ベネディクト）セイフク 
+        )
+
+    [246] => Array
+        (
+            [order] => 247
+            [time_ini] => 00:14:32.621
+            [time_end] => 00:14:33.455
+            [subtitle] => キガエテ 
+        )
+
+    [247] => Array
+        (
+            [order] => 248
+            [time_ini] => 00:14:33.581
+            [time_end] => 00:14:34.790
+            [subtitle] => リョウカイシマシタ 
+        )
+
+    [248] => Array
+        (
+            [order] => 249
+            [time_ini] => 00:14:35.958
+            [time_end] => 00:14:38.878
+            [subtitle] => オマエ！ チョ… チョットマテ！ 
+        )
+
+    [249] => Array
+        (
+            [order] => 250
+            [time_ini] => 00:14:40.963
+            [time_end] => 00:14:43.007
+            [subtitle] => アー デカイナ 
+        )
+
+    [250] => Array
+        (
+            [order] => 251
+            [time_ini] => 00:14:43.507
+            [time_end] => 00:14:44.633
+            [subtitle] => モンダイアリマセン 
+        )
+
+    [251] => Array
+        (
+            [order] => 252
+            [time_ini] => 00:14:45.801
+            [time_end] => 00:14:47.595
+            [subtitle] => （ベネディクト）ソレハハズシタホウガ ヨクナイカ？ 
+        )
+
+    [252] => Array
+        (
+            [order] => 253
+            [time_ini] => 00:14:53.684
+            [time_end] => 00:14:56.020
+            [subtitle] => ユウビンブツ ワケルノハムズカシイカ？ 
+        )
+
+    [253] => Array
+        (
+            [order] => 254
+            [time_ini] => 00:14:56.145
+            [time_end] => 00:14:58.939
+            [subtitle] => （ヴァイオレット）イエ オオキクモンダイハアリマセン 
+        )
+
+    [254] => Array
+        (
+            [order] => 255
+            [time_ini] => 00:14:59.732
+            [time_end] => 00:15:01.692
+            [subtitle] => （ベネディクト）ココニカイテアルトオリベツニ― 
+        )
+
+    [255] => Array
+        (
+            [order] => 256
+            [time_ini] => 00:15:01.817
+            [time_end] => 00:15:03.694
+            [subtitle] => ソコノタナニイレルンダ 
+        )
+
+    [256] => Array
+        (
+            [order] => 257
+            [time_ini] => 00:15:04.111
+            [time_end] => 00:15:07.573
+            [subtitle] => ユウビンブツハ ドッサリアルケドアセンナクテイイカラナ 
+        )
+
+    [257] => Array
+        (
+            [order] => 258
+            [time_ini] => 00:15:08.991
+            [time_end] => 00:15:10.826
+            [subtitle] => ニカイニキュウケイシツモアッカラ 
+        )
+
+    [258] => Array
+        (
+            [order] => 259
+            [time_ini] => 00:15:11.493
+            [time_end] => 00:15:12.578
+            [subtitle] => リョウカイシマシタ 
+        )
+
+    [259] => Array
+        (
+            [order] => 260
+            [time_ini] => 00:15:14.705
+            [time_end] => 00:15:16.123
+            [subtitle] => （ベネディクト）ジャアナ 
+        )
+
+    [260] => Array
+        (
+            [order] => 261
+            [time_ini] => 00:15:33.974
+            [time_end] => 00:15:36.685
+            [subtitle] => （ヴァイオレット）モウスグ ニンムカンリョウデス 
+        )
+
+    [261] => Array
+        (
+            [order] => 262
+            [time_ini] => 00:15:36.810
+            [time_end] => 00:15:38.062
+            [subtitle] => （ベネディクト）ズットヤッテタノカ？ 
+        )
+
+    [262] => Array
+        (
+            [order] => 263
+            [time_ini] => 00:15:38.187
+            [time_end] => 00:15:39.813
+            [subtitle] => キュウケイモトラズニ？ 
+        )
+
+    [263] => Array
+        (
+            [order] => 264
+            [time_ini] => 00:15:39.939
+            [time_end] => 00:15:42.399
+            [subtitle] => （ヴァイオレット）チョウジカンノサクセンニハナレテイマス 
+        )
+
+    [264] => Array
+        (
+            [order] => 265
+            [time_ini] => 00:15:42.816
+            [time_end] => 00:15:44.443
+            [subtitle] => ハァ… 
+        )
+
+    [265] => Array
+        (
+            [order] => 266
+            [time_ini] => 00:15:44.985
+            [time_end] => 00:15:48.906
+            [subtitle] => ジャア コンドハハイタツ イッテミルカ 
+        )
+
+    [266] => Array
+        (
+            [order] => 267
+            [time_ini] => 00:15:49.365
+            [time_end] => 00:15:50.741
+            [subtitle] => ハイタツ？ 
+        )
+
+    [267] => Array
+        (
+            [order] => 268
+            [time_ini] => 00:15:50.866
+            [time_end] => 00:15:54.286
+            [subtitle] => （ベネディクト）カカレタジュウショノトオリニテガミヲトドケルンダヨ 
+        )
+
+    [268] => Array
+        (
+            [order] => 269
+            [time_ini] => 00:15:58.707
+            [time_end] => 00:16:01.335
+            [subtitle] => ジャア オレ カエルカラ 
+        )
+
+    [269] => Array
+        (
+            [order] => 270
+            [time_ini] => 00:16:04.088
+            [time_end] => 00:16:05.506
+            [subtitle] => マタアシタナ 
+        )
+
+    [270] => Array
+        (
+            [order] => 271
+            [time_ini] => 00:16:10.678
+            [time_end] => 00:16:11.679
+            [subtitle] => （ホッジンズ）ハァ… 
+        )
+
+    [271] => Array
+        (
+            [order] => 272
+            [time_ini] => 00:16:12.763
+            [time_end] => 00:16:17.184
+            [subtitle] => “ギョウセキヲミテカラユウシヲケントウスル”ネ 
+        )
+
+    [272] => Array
+        (
+            [order] => 273
+            [time_ini] => 00:16:18.894
+            [time_end] => 00:16:21.855
+            [subtitle] => ヤカンノハイタツヤッテルトコモアルノカ 
+        )
+
+    [273] => Array
+        (
+            [order] => 274
+            [time_ini] => 00:16:21.981
+            [time_end] => 00:16:23.899
+            [subtitle] => ウチニハ マダムリ… 
+        )
+
+    [274] => Array
+        (
+            [order] => 275
+            [time_ini] => 00:16:26.944
+            [time_end] => 00:16:28.237
+            [subtitle] => （ホッジンズ）ヴァイオレットチャン！ 
+        )
+
+    [275] => Array
+        (
+            [order] => 276
+            [time_ini] => 00:16:28.529
+            [time_end] => 00:16:31.073
+            [subtitle] => ハァ ハァ… 
+        )
+
+    [276] => Array
+        (
+            [order] => 277
+            [time_ini] => 00:16:31.573
+            [time_end] => 00:16:33.117
+            [subtitle] => ナニヤッテルノ？ 
+        )
+
+    [277] => Array
+        (
+            [order] => 278
+            [time_ini] => 00:16:33.575
+            [time_end] => 00:16:34.576
+            [subtitle] => ハイタツデス 
+        )
+
+    [278] => Array
+        (
+            [order] => 279
+            [time_ini] => 00:16:37.079
+            [time_end] => 00:16:39.957
+            [subtitle] => （ベネディクト）イヤ オレハイタツハアシタノツモリダッタンダケド 
+        )
+
+    [279] => Array
+        (
+            [order] => 280
+            [time_ini] => 00:16:40.916
+            [time_end] => 00:16:43.961
+            [subtitle] => （ホッジンズ）ソレト シゴトノトチュウニチャントキュウケイ トッテネ 
+        )
+
+    [280] => Array
+        (
+            [order] => 281
+            [time_ini] => 00:16:44.545
+            [time_end] => 00:16:46.380
+            [subtitle] => タイインシタバカリナンダシ 
+        )
+
+    [281] => Array
+        (
+            [order] => 282
+            [time_ini] => 00:16:46.505
+            [time_end] => 00:16:48.090
+            [subtitle] => モンダイアリマセン 
+        )
+
+    [282] => Array
+        (
+            [order] => 283
+            [time_ini] => 00:16:48.215
+            [time_end] => 00:16:49.466
+            [subtitle] => オマエナ 
+        )
+
+    [283] => Array
+        (
+            [order] => 284
+            [time_ini] => 00:16:49.591
+            [time_end] => 00:16:51.885
+            [subtitle] => アルンダヨ モンダイガ 
+        )
+
+    [284] => Array
+        (
+            [order] => 285
+            [time_ini] => 00:16:52.428
+            [time_end] => 00:16:54.972
+            [subtitle] => ヴァイオレットチャンタベテイイヨ 
+        )
+
+    [285] => Array
+        (
+            [order] => 286
+            [time_ini] => 00:16:58.017
+            [time_end] => 00:16:59.018
+            [subtitle] => タベマス 
+        )
+
+    [286] => Array
+        (
+            [order] => 287
+            [time_ini] => 00:17:00.936
+            [time_end] => 00:17:03.022
+            [subtitle] => タベタラカイシャマデオクッテイクヨ 
+        )
+
+    [287] => Array
+        (
+            [order] => 288
+            [time_ini] => 00:17:03.897
+            [time_end] => 00:17:05.524
+            [subtitle] => ヤネウラシカアイテナイケド― 
+        )
+
+    [288] => Array
+        (
+            [order] => 289
+            [time_ini] => 00:17:05.649
+            [time_end] => 00:17:08.027
+            [subtitle] => ネトマリデキルヨウニシテオイタカラ 
+        )
+
+    [289] => Array
+        (
+            [order] => 290
+            [time_ini] => 00:17:08.318
+            [time_end] => 00:17:11.030
+            [subtitle] => アア… エヴァーガーデンカハ 
+        )
+
+    [290] => Array
+        (
+            [order] => 291
+            [time_ini] => 00:17:11.155
+            [time_end] => 00:17:14.033
+            [subtitle] => ミモトヒキウケジンニハナッテクレルソウダ 
+        )
+
+    [291] => Array
+        (
+            [order] => 292
+            [time_ini] => 00:17:14.366
+            [time_end] => 00:17:16.535
+            [subtitle] => キミガセイジンスルマデ 
+        )
+
+    [292] => Array
+        (
+            [order] => 293
+            [time_ini] => 00:17:16.827
+            [time_end] => 00:17:19.663
+            [subtitle] => デモ ヤシキニオクノハ… 
+        )
+
+    [293] => Array
+        (
+            [order] => 294
+            [time_ini] => 00:17:20.622
+            [time_end] => 00:17:22.082
+            [subtitle] => モンダイアッタンダナ 
+        )
+
+    [294] => Array
+        (
+            [order] => 295
+            [time_ini] => 00:17:22.207
+            [time_end] => 00:17:23.417
+            [subtitle] => オマエ！オレガヤンワリイッテンノニ！ 
+        )
+
+    [295] => Array
+        (
+            [order] => 296
+            [time_ini] => 00:17:22.207
+            [time_end] => 00:17:23.417
+            [subtitle] => （ベネディクト）イッタ！ 
+        )
+
+    [296] => Array
+        (
+            [order] => 297
+            [time_ini] => 00:17:23.417
+            [time_end] => 00:17:24.752
+            [subtitle] => オマエ！オレガヤンワリイッテンノニ！ 
+        )
+
+    [297] => Array
+        (
+            [order] => 298
+            [time_ini] => 00:17:24.877
+            [time_end] => 00:17:26.628
+            [subtitle] => （ベネディクト）シラネエヨ 
+        )
+
+    [298] => Array
+        (
+            [order] => 299
+            [time_ini] => 00:17:27.671
+            [time_end] => 00:17:29.006
+            [subtitle] => （ベネディクト）ジャ マタアシタナ 
+        )
+
+    [299] => Array
+        (
+            [order] => 300
+            [time_ini] => 00:17:32.342
+            [time_end] => 00:17:33.635
+            [subtitle] => （ホッジンズ）オクルヨ 
+        )
+
+    [300] => Array
+        (
+            [order] => 301
+            [time_ini] => 00:17:35.596
+            [time_end] => 00:17:39.975
+            [subtitle] => キミハギルベルトカラサイゴニ ドンナメイレイヲモラッタ？ 
+        )
+
+    [301] => Array
+        (
+            [order] => 302
+            [time_ini] => 00:17:40.267
+            [time_end] => 00:17:43.145
+            [subtitle] => （ヴァイオレット）“ニゲテジユウニイキロ”ト 
+        )
+
+    [302] => Array
+        (
+            [order] => 303
+            [time_ini] => 00:17:44.772
+            [time_end] => 00:17:46.106
+            [subtitle] => ソレカラ 
+        )
+
+    [303] => Array
+        (
+            [order] => 304
+            [time_ini] => 00:17:46.231
+            [time_end] => 00:17:47.649
+            [subtitle] => ア… 
+        )
+
+    [304] => Array
+        (
+            [order] => 305
+            [time_ini] => 00:17:50.402
+            [time_end] => 00:17:54.406
+            [subtitle] => （ホッジンズ）クンハチイサイコロカラズットグンニイテ― 
+        )
+
+    [305] => Array
+        (
+            [order] => 306
+            [time_ini] => 00:17:54.531
+            [time_end] => 00:17:57.576
+            [subtitle] => ニンムヲスイコウスルダケノマイニチヲオクッテキタ 
+        )
+
+    [306] => Array
+        (
+            [order] => 307
+            [time_ini] => 00:17:57.951
+            [time_end] => 00:18:01.163
+            [subtitle] => デモ コレカラキミハタクサンノコトヲマナブヨ 
+        )
+
+    [307] => Array
+        (
+            [order] => 308
+            [time_ini] => 00:18:03.290
+            [time_end] => 00:18:05.751
+            [subtitle] => ダケド マナバナイホウガ― 
+        )
+
+    [308] => Array
+        (
+            [order] => 309
+            [time_ini] => 00:18:06.210
+            [time_end] => 00:18:10.005
+            [subtitle] => シラナイホウガラクニイキラレルカモシレナイ 
+        )
+
+    [309] => Array
+        (
+            [order] => 310
+            [time_ini] => 00:18:10.714
+            [time_end] => 00:18:13.884
+            [subtitle] => キミハ ジブンガシテキタコトデ― 
+        )
+
+    [310] => Array
+        (
+            [order] => 311
+            [time_ini] => 00:18:14.009
+            [time_end] => 00:18:15.928
+            [subtitle] => ドンドンカラダニヒガツイテ― 
+        )
+
+    [311] => Array
+        (
+            [order] => 312
+            [time_ini] => 00:18:16.053
+            [time_end] => 00:18:18.889
+            [subtitle] => モエアガッテイルコトヲマダシラナイ 
+        )
+
+    [312] => Array
+        (
+            [order] => 313
+            [time_ini] => 00:18:21.100
+            [time_end] => 00:18:22.392
+            [subtitle] => モエテイマセン 
+        )
+
+    [313] => Array
+        (
+            [order] => 314
+            [time_ini] => 00:18:22.684
+            [time_end] => 00:18:23.894
+            [subtitle] => （ホッジンズ）モエテルヨ 
+        )
+
+    [314] => Array
+        (
+            [order] => 315
+            [time_ini] => 00:18:24.311
+            [time_end] => 00:18:26.480
+            [subtitle] => モエテイマセンオカシイデス 
+        )
+
+    [315] => Array
+        (
+            [order] => 316
+            [time_ini] => 00:18:26.605
+            [time_end] => 00:18:27.648
+            [subtitle] => （ホッジンズ）イヤ― 
+        )
+
+    [316] => Array
+        (
+            [order] => 317
+            [time_ini] => 00:18:29.233
+            [time_end] => 00:18:30.651
+            [subtitle] => モエテルンダ 
+        )
+
+    [317] => Array
+        (
+            [order] => 318
+            [time_ini] => 00:18:32.194
+            [time_end] => 00:18:35.364
+            [subtitle] => オレハ ソンナキミヲミテイテホウチシタ 
+        )
+
+    [318] => Array
+        (
+            [order] => 319
+            [time_ini] => 00:18:36.824
+            [time_end] => 00:18:39.618
+            [subtitle] => ダカラ ギルベルトニクンヲタクサレタトキ 
+        )
+
+    [319] => Array
+        (
+            [order] => 320
+            [time_ini] => 00:18:39.743
+            [time_end] => 00:18:41.620
+            [subtitle] => コレハ オレノキカイダトオモッタ 
+        )
+
+    [320] => Array
+        (
+            [order] => 321
+            [time_ini] => 00:18:42.371
+            [time_end] => 00:18:45.666
+            [subtitle] => イツカ オレガイッタコトガワカルトキガクル 
+        )
+
+    [321] => Array
+        (
+            [order] => 322
+            [time_ini] => 00:18:45.916
+            [time_end] => 00:18:47.417
+            [subtitle] => ソシテ ハジメテ― 
+        )
+
+    [322] => Array
+        (
+            [order] => 323
+            [time_ini] => 00:18:47.543
+            [time_end] => 00:18:50.379
+            [subtitle] => ジブンガ タクサンヤケドシテイルコトニキヅクンダ 
+        )
+
+    [323] => Array
+        (
+            [order] => 324
+            [time_ini] => 00:18:54.967
+            [time_end] => 00:18:56.969
+            [subtitle] => （ヴァイオレットガテヲヒラクオト） 
+        )
+
+    [324] => Array
+        (
+            [order] => 325
+            [time_ini] => 00:19:18.740
+            [time_end] => 00:19:20.159
+            [subtitle] => （ダンセイ）ドールサン？ 
+        )
+
+    [325] => Array
+        (
+            [order] => 326
+            [time_ini] => 00:19:20.284
+            [time_end] => 00:19:22.578
+            [subtitle] => イエ　ワタシハヴァイオレットデス 
+        )
+
+    [326] => Array
+        (
+            [order] => 327
+            [time_ini] => 00:19:22.828
+            [time_end] => 00:19:23.787
+            [subtitle] => （ダンセイ）アッ… 
+        )
+
+    [327] => Array
+        (
+            [order] => 328
+            [time_ini] => 00:19:25.205
+            [time_end] => 00:19:27.749
+            [subtitle] => エット…ミス･ヴァイオレット 
+        )
+
+    [328] => Array
+        (
+            [order] => 329
+            [time_ini] => 00:19:27.875
+            [time_end] => 00:19:29.793
+            [subtitle] => ダイヒツヲタノミタインダケド 
+        )
+
+    [329] => Array
+        (
+            [order] => 330
+            [time_ini] => 00:19:30.544
+            [time_end] => 00:19:31.545
+            [subtitle] => ダイヒツ？ 
+        )
+
+    [330] => Array
+        (
+            [order] => 331
+            [time_ini] => 00:19:31.962
+            [time_end] => 00:19:33.046
+            [subtitle] => （ダンセイ）ウン 
+        )
+
+    [331] => Array
+        (
+            [order] => 332
+            [time_ini] => 00:19:33.172
+            [time_end] => 00:19:35.257
+            [subtitle] => ボク ジガカケナクテ 
+        )
+
+    [332] => Array
+        (
+            [order] => 333
+            [time_ini] => 00:19:35.591
+            [time_end] => 00:19:38.594
+            [subtitle] => ダカラ カワリニテガミヲカイテホシインダ 
+        )
+
+    [333] => Array
+        (
+            [order] => 334
+            [time_ini] => 00:19:38.719
+            [time_end] => 00:19:40.053
+            [subtitle] => （ヴァイオレット）ナニヲカクノデスカ？ 
+        )
+
+    [334] => Array
+        (
+            [order] => 335
+            [time_ini] => 00:19:40.554
+            [time_end] => 00:19:41.889
+            [subtitle] => アッ… 
+        )
+
+    [335] => Array
+        (
+            [order] => 336
+            [time_ini] => 00:19:42.014
+            [time_end] => 00:19:43.515
+            [subtitle] => ココデハナスノカイ？ 
+        )
+
+    [336] => Array
+        (
+            [order] => 337
+            [time_ini] => 00:19:44.141
+            [time_end] => 00:19:45.642
+            [subtitle] => ナニカモンダイガアリマスカ？ 
+        )
+
+    [337] => Array
+        (
+            [order] => 338
+            [time_ini] => 00:19:46.226
+            [time_end] => 00:19:47.269
+            [subtitle] => エ？ 
+        )
+
+    [338] => Array
+        (
+            [order] => 339
+            [time_ini] => 00:19:47.728
+            [time_end] => 00:19:49.563
+            [subtitle] => エット ソノ… 
+        )
+
+    [339] => Array
+        (
+            [order] => 340
+            [time_ini] => 00:19:49.688
+            [time_end] => 00:19:51.982
+            [subtitle] => イナカニイルオサナナジミニ 
+        )
+
+    [340] => Array
+        (
+            [order] => 341
+            [time_ini] => 00:19:52.399
+            [time_end] => 00:19:56.153
+            [subtitle] => アイツ ホカノオトコトノエンダンガアルッテキイテ 
+        )
+
+    [341] => Array
+        (
+            [order] => 342
+            [time_ini] => 00:19:56.278
+            [time_end] => 00:19:57.321
+            [subtitle] => ダカラ― 
+        )
+
+    [342] => Array
+        (
+            [order] => 343
+            [time_ini] => 00:19:57.946
+            [time_end] => 00:19:59.698
+            [subtitle] => ツタエテホシインダ！ 
+        )
+
+    [343] => Array
+        (
+            [order] => 344
+            [time_ini] => 00:20:02.784
+            [time_end] => 00:20:06.538
+            [subtitle] => （ダンセイ）“ボクニハジメテヤサシクシテクレタノハ…” 
+        )
+
+    [344] => Array
+        (
+            [order] => 345
+            [time_ini] => 00:20:06.663
+            [time_end] => 00:20:08.624
+            [subtitle] => （カトレア）“キミダッタ” 
+        )
+
+    [345] => Array
+        (
+            [order] => 346
+            [time_ini] => 00:20:10.500
+            [time_end] => 00:20:13.170
+            [subtitle] => “キミガセカイノスベテダッタ” 
+        )
+
+    [346] => Array
+        (
+            [order] => 347
+            [time_ini] => 00:20:15.714
+            [time_end] => 00:20:19.468
+            [subtitle] => “キミノタメナラボクハナニデモデキタ” 
+        )
+
+    [347] => Array
+        (
+            [order] => 348
+            [time_ini] => 00:20:20.135
+            [time_end] => 00:20:21.136
+            [subtitle] => （ギルベルト）イケ！ 
+        )
+
+    [348] => Array
+        (
+            [order] => 349
+            [time_ini] => 00:20:25.224
+            [time_end] => 00:20:27.476
+            [subtitle] => （カトレア）“キミノキモチガシリタイ” 
+        )
+
+    [349] => Array
+        (
+            [order] => 350
+            [time_ini] => 00:20:29.978
+            [time_end] => 00:20:32.147
+            [subtitle] => “キミノココロヲワカリタイ” 
+        )
+
+    [350] => Array
+        (
+            [order] => 351
+            [time_ini] => 00:20:34.942
+            [time_end] => 00:20:38.570
+            [subtitle] => “イマハハナレテイルケレド” 
+        )
+
+    [351] => Array
+        (
+            [order] => 352
+            [time_ini] => 00:20:40.322
+            [time_end] => 00:20:41.990
+            [subtitle] => “キミノコトヲ…” 
+        )
+
+    [352] => Array
+        (
+            [order] => 353
+            [time_ini] => 00:20:45.535
+            [time_end] => 00:20:46.954
+            [subtitle] => “アイシテル” 
+        )
+
+    [353] => Array
+        (
+            [order] => 354
+            [time_ini] => 00:20:47.079
+            [time_end] => 00:20:48.664
+            [subtitle] => デ ヨロシイデショウカ？ 
+        )
+
+    [354] => Array
+        (
+            [order] => 355
+            [time_ini] => 00:20:49.581
+            [time_end] => 00:20:50.582
+            [subtitle] => ハイ 
+        )
+
+    [355] => Array
+        (
+            [order] => 356
+            [time_ini] => 00:20:52.918
+            [time_end] => 00:20:54.836
+            [subtitle] => “アイシテル” 
+        )
+
+    [356] => Array
+        (
+            [order] => 357
+            [time_ini] => 00:20:57.256
+            [time_end] => 00:20:58.674
+            [subtitle] => デハ ハイソウテツヅキハ― 
+        )
+
+    [357] => Array
+        (
+            [order] => 358
+            [time_ini] => 00:20:58.799
+            [time_end] => 00:21:01.343
+            [subtitle] => イチカイノウケツケデオネガイイタシマス 
+        )
+
+    [358] => Array
+        (
+            [order] => 359
+            [time_ini] => 00:21:02.386
+            [time_end] => 00:21:03.887
+            [subtitle] => ダンナサマ 
+        )
+
+    [359] => Array
+        (
+            [order] => 360
+            [time_ini] => 00:21:04.680
+            [time_end] => 00:21:07.474
+            [subtitle] => ジドウシュキニンギョウサービスノゴリヨウ 
+        )
+
+    [360] => Array
+        (
+            [order] => 361
+            [time_ini] => 00:21:08.100
+            [time_end] => 00:21:10.185
+            [subtitle] => マコトニアリガトウゴザイマシタ 
+        )
+
+    [361] => Array
+        (
+            [order] => 362
+            [time_ini] => 00:21:15.857
+            [time_end] => 00:21:17.943
+            [subtitle] => （ドアノカイヘイオン） 
+        )
+
+    [362] => Array
+        (
+            [order] => 363
+            [time_ini] => 00:21:18.068
+            [time_end] => 00:21:20.821
+            [subtitle] => デ アナタハダレ？ 
+        )
+
+    [363] => Array
+        (
+            [order] => 364
+            [time_ini] => 00:21:25.409
+            [time_end] => 00:21:27.160
+            [subtitle] => ドウシテワカルノデスカ？ 
+        )
+
+    [364] => Array
+        (
+            [order] => 365
+            [time_ini] => 00:21:27.286
+            [time_end] => 00:21:28.161
+            [subtitle] => エ？ 
+        )
+
+    [365] => Array
+        (
+            [order] => 366
+            [time_ini] => 00:21:29.037
+            [time_end] => 00:21:32.040
+            [subtitle] => （ヴァイオレット）サキホドノホウノ“アイシテル”ガ 
+        )
+
+    [366] => Array
+        (
+            [order] => 367
+            [time_ini] => 00:21:32.874
+            [time_end] => 00:21:35.168
+            [subtitle] => ナゼワカルノデスカ？ 
+        )
+
+    [367] => Array
+        (
+            [order] => 368
+            [time_ini] => 00:21:37.004
+            [time_end] => 00:21:39.589
+            [subtitle] => （ホッジンズ）ジドウシュキニンギョウノシゴトガシタイ？ 
+        )
+
+    [368] => Array
+        (
+            [order] => 369
+            [time_ini] => 00:21:39.715
+            [time_end] => 00:21:40.549
+            [subtitle] => （ヴァイオレット）ハイ 
+        )
+
+    [369] => Array
+        (
+            [order] => 370
+            [time_ini] => 00:21:41.341
+            [time_end] => 00:21:43.635
+            [subtitle] => ペンヲニギルノハマダコンナンデスガ― 
+        )
+
+    [370] => Array
+        (
+            [order] => 371
+            [time_ini] => 00:21:43.760
+            [time_end] => 00:21:46.179
+            [subtitle] => タイプライターナラソウサカノウデス 
+        )
+
+    [371] => Array
+        (
+            [order] => 372
+            [time_ini] => 00:21:46.471
+            [time_end] => 00:21:48.181
+            [subtitle] => （ホッジンズ）イヤ ソウジャナクテ 
+        )
+
+    [372] => Array
+        (
+            [order] => 373
+            [time_ini] => 00:21:48.307
+            [time_end] => 00:21:50.142
+            [subtitle] => キキタイノハドウシテ ソノシゴトガ？ 
+        )
+
+    [373] => Array
+        (
+            [order] => 374
+            [time_ini] => 00:21:50.267
+            [time_end] => 00:21:51.351
+            [subtitle] => シリタイノデス！ 
+        )
+
+    [374] => Array
+        (
+            [order] => 375
+            [time_ini] => 00:21:55.439
+            [time_end] => 00:21:56.940
+            [subtitle] => “アイシテル”ヲ 
+        )
+
+    [375] => Array
+        (
+            [order] => 376
+            [time_ini] => 00:21:57.941
+            [time_end] => 00:21:59.318
+            [subtitle] => シリタイノデス 
+        )
+
+    [376] => Array
+        (
+            [order] => 377
+            [time_ini] => 00:22:02.070
+            [time_end] => 00:22:04.448
+            [subtitle] => ショウサハ サイゴノメイレイノアトニ― 
+        )
+
+    [377] => Array
+        (
+            [order] => 378
+            [time_ini] => 00:22:04.573
+            [time_end] => 00:22:07.326
+            [subtitle] => ソノコトバヲワタシニ オッシャイマシタ 
+        )
+
+    [378] => Array
+        (
+            [order] => 379
+            [time_ini] => 00:22:08.160
+            [time_end] => 00:22:12.456
+            [subtitle] => ショウサカラ ソノコトバガデタノハハジメテデシタ 
+        )
+
+    [379] => Array
+        (
+            [order] => 380
+            [time_ini] => 00:22:13.206
+            [time_end] => 00:22:16.793
+            [subtitle] => ソレハドノヨウナジョウタイヲイミスルノカ― 
+        )
+
+    [380] => Array
+        (
+            [order] => 381
+            [time_ini] => 00:22:16.918
+            [time_end] => 00:22:20.756
+            [subtitle] => ワタシニハリカイデキナイノデス 
+        )
+
+    [381] => Array
+        (
+            [order] => 382
+            [time_ini] => 00:22:22.591
+            [time_end] => 00:22:23.800
+            [subtitle] => （ホッジンズ）フツウハ 
+        )
+
+    [382] => Array
+        (
+            [order] => 383
+            [time_ini] => 00:22:24.301
+            [time_end] => 00:22:28.013
+            [subtitle] => ソレガワカルカラジドウシュキニンギョウニナルンダケドネ 
+        )
+
+    [383] => Array
+        (
+            [order] => 384
+            [time_ini] => 00:22:28.930
+            [time_end] => 00:22:30.390
+            [subtitle] => デモ 
+        )
+
+    [384] => Array
+        (
+            [order] => 385
+            [time_ini] => 00:22:31.266
+            [time_end] => 00:22:31.767
+            [subtitle] => イイヨ 
+        )
+
+    [385] => Array
+        (
+            [order] => 386
+            [time_ini] => 00:22:37.856
+            [time_end] => 00:22:42.027
+            [subtitle] => （ホッジンズ）ギルベルトノメイレイニタダシタガッテイタカノジョガ― 
+        )
+
+    [386] => Array
+        (
+            [order] => 387
+            [time_ini] => 00:22:42.152
+            [time_end] => 00:22:44.321
+            [subtitle] => （ドアガヒラクオト）ハジメテジブンノイシヲシュチョウシタ 
+        )
+
+    [387] => Array
+        (
+            [order] => 388
+            [time_ini] => 00:22:44.988
+            [time_end] => 00:22:48.909
+            [subtitle] => ココロヲモタナイドウグトイワレタカノジョガ― 
+        )
+
+    [388] => Array
+        (
+            [order] => 389
+            [time_ini] => 00:22:49.034
+            [time_end] => 00:22:51.036
+            [subtitle] => “アイシテルヲシリタイ”トイッタ 
+        )
+
+    [389] => Array
+        (
+            [order] => 390
+            [time_ini] => 00:22:54.039
+            [time_end] => 00:22:55.499
+            [subtitle] => （ヴァイオレットアライイキ） 
+        )
+
+    [390] => Array
+        (
+            [order] => 391
+            [time_ini] => 00:22:55.999
+            [time_end] => 00:22:56.750
+            [subtitle] => ウッ 
+        )
+
+    [391] => Array
+        (
+            [order] => 392
+            [time_ini] => 00:22:57.292
+            [time_end] => 00:23:00.796
+            [subtitle] => ゼッタイ！ゼッタイ ショウサヲシナセマセン！ 
+        )
+
+    [392] => Array
+        (
+            [order] => 393
+            [time_ini] => 00:23:01.588
+            [time_end] => 00:23:04.758
+            [subtitle] => ンッ… ンンー！ 
+        )
+
+    [393] => Array
+        (
+            [order] => 394
+            [time_ini] => 00:23:04.883
+            [time_end] => 00:23:06.051
+            [subtitle] => （ギルベルト）ヤメロ 
+        )
+
+    [394] => Array
+        (
+            [order] => 395
+            [time_ini] => 00:23:09.429
+            [time_end] => 00:23:10.931
+            [subtitle] => モウ ヤメテクレ！ 
+        )
+
+    [395] => Array
+        (
+            [order] => 396
+            [time_ini] => 00:23:16.520
+            [time_end] => 00:23:17.521
+            [subtitle] => イキルンダ 
+        )
+
+    [396] => Array
+        (
+            [order] => 397
+            [time_ini] => 00:23:22.359
+            [time_end] => 00:23:23.610
+            [subtitle] => ヴァイオレット 
+        )
+
+    [397] => Array
+        (
+            [order] => 398
+            [time_ini] => 00:23:24.861
+            [time_end] => 00:23:27.239
+            [subtitle] => キミハイキテ― 
+        )
+
+    [398] => Array
+        (
+            [order] => 399
+            [time_ini] => 00:23:28.198
+            [time_end] => 00:23:29.950
+            [subtitle] => ジユウニナリナサイ 
+        )
+
+    [399] => Array
+        (
+            [order] => 400
+            [time_ini] => 00:23:36.123
+            [time_end] => 00:23:37.207
+            [subtitle] => ココロカラ― 
+        )
+
+    [400] => Array
+        (
+            [order] => 401
+            [time_ini] => 00:23:43.463
+            [time_end] => 00:23:44.840
+            [subtitle] => アイシテル 
+        )
+
+)
